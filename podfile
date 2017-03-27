@@ -1,0 +1,9 @@
+platform :ios,'7.0'
+target 'Bayern_Review' do
+pod 'AFNetworking'
+pod 'Masonry'
+pod 'SDWebImage'
+pod 'HMSegmentedControl'
+pod 'MJRefresh', '~> 3.1.10'
+pod 'JPush', '~> 2.2.0'
+end
