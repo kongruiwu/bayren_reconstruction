@@ -19,4 +19,6 @@
 + (UIImageView *)creatImageViewWithImage:(NSString *)imageName;
 
 + (UIView *)creatLineView;
+
++ (UIView *)creatViewWithColor:(UIColor *)color;
 @end

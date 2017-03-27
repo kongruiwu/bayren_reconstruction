@@ -23,14 +23,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self setNavigationTitle:@"视屏"];
+    [self drawMainTabItem];
     [self creatUI];
     [self loadFocusImage];
     [self loadData];
 }
 - (void)creatUI{
     self.dataArray = [NSMutableArray new];
-    self.tabview = [BYFactory creatTabviewWithFrame:CGRectMake(0, 0, UI_WIDTH, UI_HEGIHT) style:UITableViewStylePlain];
+    self.tabview = [BYFactory creatTabviewWithFrame:CGRectMake(0, 0, UI_WIDTH, UI_HEGIHT - 64) style:UITableViewStylePlain];
     self.tabview.delegate = self;
     self.tabview.dataSource = self;
     [self.view addSubview:self.tabview];

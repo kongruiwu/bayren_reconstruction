@@ -44,11 +44,11 @@
     [self.webview removeObserver:self forKeyPath:@"estimatedProgress"];
 }
 - (void)creatUI{
-    self.webview = [[WKWebView alloc]initWithFrame:CGRectMake(0, 0, UI_WIDTH, UI_HEGIHT)];
+    self.webview = [[WKWebView alloc]initWithFrame:CGRectMake(0, 0, UI_WIDTH, UI_HEGIHT - 64)];
     [self.webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.urlStr]]];
     [self.view addSubview:self.webview];
     
-    self.progressView = [[UIProgressView alloc]initWithFrame:CGRectMake(0, 64, UI_WIDTH, Anno750(30))];
+    self.progressView = [[UIProgressView alloc]initWithFrame:CGRectMake(0, 0, UI_WIDTH, Anno750(30))];
     self.progressView.trackTintColor = BYColor_Line;
     self.progressView.progressTintColor = BYColor_Main;
     [self.view addSubview:self.progressView];

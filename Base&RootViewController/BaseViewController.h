@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "ConfigHeader.h"
+#import "RESideMenu.h"
 @interface BaseViewController : UIViewController
+@property (nonatomic) SelectorBackType backType;
 
+- (void)drawMainTabItem;
+- (void)setNavigationTitle:(NSString *)title;
+- (void)doBack;
 @end

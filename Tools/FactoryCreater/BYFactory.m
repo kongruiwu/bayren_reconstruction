@@ -46,7 +46,7 @@
 }
 
 /**
- creat image
+ creat imgView with img
  */
 + (UIImageView *)creatImageViewWithImage:(NSString *)imageName{
     UIImageView * imgView = [[UIImageView alloc]init];
@@ -61,4 +61,13 @@
     view.backgroundColor = BYColor_Line;
     return view;
 }
+/**
+ creat color view
+ */
++ (UIView *)creatViewWithColor:(UIColor *)color{
+    UIView * view = [[UIView alloc]init];
+    view.backgroundColor = color;
+    return view;
+}
+
 @end

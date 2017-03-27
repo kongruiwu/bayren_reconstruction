@@ -14,6 +14,16 @@
 #import "ToastView.h"
 #import "NetWorkManger.h"
 
+//全局返回通用配置选项
+typedef NS_ENUM(NSInteger, SelectorBackType){
+    SelectorBackTypePopBack = 0,
+    SelectorBackTypeDismiss,
+    SelectorBackTypePoptoRoot
+};
+
+
+
+
 //750状态下字体适配
 #define font750(x) ((x)/ 1334.0f) * UI_HEGIHT
 //750状态下像素适配宏

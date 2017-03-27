@@ -11,9 +11,6 @@
 
 /**
  * 得到当前toast显示文本
- *
- * @param text:当前toast展示的文本
- *
  */
 - (void)queryToastText:(NSString*)text;
 

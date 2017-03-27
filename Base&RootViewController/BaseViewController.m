@@ -18,20 +18,58 @@
     [super viewDidLoad];
     self.view.backgroundColor = BYColor_Ground;
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+//用于首页，左右切换页面滑动
+- (void)drawMainTabItem {
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"item"] style:UIBarButtonItemStylePlain target:self action:@selector(presentLeftViewController)];
+    self.navigationItem.leftBarButtonItem = item;
+    
+    UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"game"] style:UIBarButtonItemStylePlain target:self action:@selector(presentRightViewController)];
+    self.navigationItem.rightBarButtonItem = item2;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)presentLeftViewController{
+    [self.sideMenuViewController presentLeftMenuViewController];
 }
-*/
-
+- (void)presentRightViewController{
+    [self.sideMenuViewController presentRightMenuViewController];
+}
+- (void)setNavigationTitle:(NSString *)title{
+    
+    UIView * titleView = [BYFactory creatViewWithColor:[UIColor clearColor]];
+    titleView.frame = CGRectMake(0, 0, 100, 40);
+    
+    UIImageView * icon = [BYFactory creatImageViewWithImage:@"logo"];
+    UILabel * titleLabel = [BYFactory creatLabelWithText:title fontValue:font750(36)
+                                               textColor:[UIColor whiteColor] textAlignment:NSTextAlignmentLeft];
+    [titleView addSubview:icon];
+    [titleView addSubview:titleLabel];
+    [icon mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(@0);
+        make.left.equalTo(@0);
+        make.height.with.equalTo(@(Anno750(48)));
+    }];
+    [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(icon.mas_right).offset(Anno750(20));
+        make.centerY.equalTo(@0);
+    }];
+    
+    self.navigationItem.titleView = titleView;
+    self.navigationController.navigationBar.translucent = NO;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.barTintColor = BYColor_Main;
+}
+- (void)doBack{
+    switch (self.backType) {
+        case SelectorBackTypeDismiss:
+            [self dismissViewControllerAnimated:YES completion:nil];
+            break;
+        case SelectorBackTypePopBack:
+            [self.navigationController popViewControllerAnimated:YES];
+            break;
+        case SelectorBackTypePoptoRoot:
+            [self.navigationController popToRootViewControllerAnimated:YES];
+            break;
+        default:
+            break;
+    }
+}
 @end
