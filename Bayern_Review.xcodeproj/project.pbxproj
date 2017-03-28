@@ -45,6 +45,7 @@
 		8BBF31C41E8120B20037A3E7 /* AutoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF31C31E8120B20037A3E7 /* AutoScrollView.m */; };
 		8BBF31C71E812E700037A3E7 /* BYPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF31C61E812E700037A3E7 /* BYPageControl.m */; };
 		8BBF31CA1E813C570037A3E7 /* VideoFocusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF31C91E813C570037A3E7 /* VideoFocusModel.m */; };
+		8BED374A1E8A0FB40025726E /* NetNullView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BED37491E8A0FB40025726E /* NetNullView.m */; };
 		C8E33C8580BA99D74ACA536A /* libPods-Bayern_Review.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D6D50E3352DAEA4E5F2A91 /* libPods-Bayern_Review.a */; };
 /* End PBXBuildFile section */
 
@@ -142,6 +143,8 @@
 		8BBF31C61E812E700037A3E7 /* BYPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYPageControl.m; sourceTree = "<group>"; };
 		8BBF31C81E813C570037A3E7 /* VideoFocusModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoFocusModel.h; sourceTree = "<group>"; };
 		8BBF31C91E813C570037A3E7 /* VideoFocusModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoFocusModel.m; sourceTree = "<group>"; };
+		8BED37481E8A0FB40025726E /* NetNullView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetNullView.h; sourceTree = "<group>"; };
+		8BED37491E8A0FB40025726E /* NetNullView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetNullView.m; sourceTree = "<group>"; };
 		E2E3E0C82FB11C99B2844D7D /* Pods-Bayern_Review.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bayern_Review.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bayern_Review/Pods-Bayern_Review.debug.xcconfig"; sourceTree = "<group>"; };
 		F3D6D50E3352DAEA4E5F2A91 /* libPods-Bayern_Review.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bayern_Review.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -515,6 +518,8 @@
 				8BBF31C31E8120B20037A3E7 /* AutoScrollView.m */,
 				8BBF31C51E812E700037A3E7 /* BYPageControl.h */,
 				8BBF31C61E812E700037A3E7 /* BYPageControl.m */,
+				8BED37481E8A0FB40025726E /* NetNullView.h */,
+				8BED37491E8A0FB40025726E /* NetNullView.m */,
 			);
 			name = Common;
 			path = "Base&RootViewController/Common";
@@ -741,6 +746,7 @@
 				8B349AD41E7F8A77001FFF06 /* RootViewController.m in Sources */,
 				8B5904891E8504A100474E52 /* RESideMenu.m in Sources */,
 				8B349A9A1E7F83DA001FFF06 /* main.m in Sources */,
+				8BED374A1E8A0FB40025726E /* NetNullView.m in Sources */,
 				8BBF31C71E812E700037A3E7 /* BYPageControl.m in Sources */,
 				8B349AF41E7FB42D001FFF06 /* BYFactory.m in Sources */,
 				8BBF31C41E8120B20037A3E7 /* AutoScrollView.m in Sources */,

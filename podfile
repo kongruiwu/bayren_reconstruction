@@ -6,4 +6,5 @@ pod 'SDWebImage'
 pod 'HMSegmentedControl'
 pod 'MJRefresh', '~> 3.1.10'
 pod 'JPush', '~> 2.2.0'
+pod 'MJRefresh'
 end

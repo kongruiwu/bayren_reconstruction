@@ -27,6 +27,7 @@ DEPENDENCIES:
   - HMSegmentedControl
   - JPush (~> 2.2.0)
   - Masonry
+  - MJRefresh
   - MJRefresh (~> 3.1.10)
   - SDWebImage
 
@@ -38,6 +39,6 @@ SPEC CHECKSUMS:
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: 9377a91d109609c5a76d5bfa56f213f3bd605dda
+PODFILE CHECKSUM: 6f62a799cd65fdd6a817788fccfce2ab789a1da5
 
 COCOAPODS: 1.1.1

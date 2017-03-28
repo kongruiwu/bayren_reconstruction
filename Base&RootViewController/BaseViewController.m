@@ -26,6 +26,15 @@
     UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"game"] style:UIBarButtonItemStylePlain target:self action:@selector(presentRightViewController)];
     self.navigationItem.rightBarButtonItem = item2;
 }
+- (void)creatNullView{
+    self.nullview = [[NetNullView alloc]initWithFrame:CGRectMake(0, 0, UI_WIDTH, UI_HEGIHT)];
+    self.nullview.hidden = YES;
+    [self.nullview.reloadButton addTarget:self action:@selector(nullViewClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.nullview];
+}
+- (void)nullViewClick{
+    
+}
 - (void)presentLeftViewController{
     [self.sideMenuViewController presentLeftMenuViewController];
 }
@@ -71,5 +80,16 @@
         default:
             break;
     }
+}
+- (void)RefreshSetting{
+    [self.refreshHeader setTitle:@"继续下拉" forState:MJRefreshStateIdle];
+    [self.refreshHeader setTitle:@"松开就刷新" forState:MJRefreshStatePulling];
+    [self.refreshHeader setTitle:@"刷新中 ..." forState:MJRefreshStateRefreshing];
+    
+    
+    [self.refreshFooter setTitle:@"" forState:MJRefreshStateIdle];
+    [self.refreshFooter setTitle:@"就是要加载" forState:MJRefreshStateWillRefresh];
+    [self.refreshFooter setTitle:@"加载中 ..." forState:MJRefreshStateRefreshing];
+    [self.refreshFooter setTitle:@"已经全部加载完毕" forState:MJRefreshStateNoMoreData];
 }
 @end
