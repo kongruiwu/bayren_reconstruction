@@ -18,7 +18,8 @@
     return self;
 }
 - (void)creatUI{
-    self.imgView = [[UIImageView alloc]init];
+    self.backgroundColor = BYColor_Ground;
+    self.imgView = [BYFactory creatImageViewWithImage:@"icon_loading_failure"];
     self.titleLabel = [BYFactory creatLabelWithText:@"信号出小差了"
                                           fontValue:font750(30)
                                           textColor:BYColor_Main textAlignment:NSTextAlignmentCenter];

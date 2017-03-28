@@ -46,6 +46,7 @@
 		8BBF31C71E812E700037A3E7 /* BYPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF31C61E812E700037A3E7 /* BYPageControl.m */; };
 		8BBF31CA1E813C570037A3E7 /* VideoFocusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF31C91E813C570037A3E7 /* VideoFocusModel.m */; };
 		8BED374A1E8A0FB40025726E /* NetNullView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BED37491E8A0FB40025726E /* NetNullView.m */; };
+		8BED374E1E8A3CE20025726E /* BQActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BED374D1E8A3CE20025726E /* BQActivityView.m */; };
 		C8E33C8580BA99D74ACA536A /* libPods-Bayern_Review.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D6D50E3352DAEA4E5F2A91 /* libPods-Bayern_Review.a */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +146,8 @@
 		8BBF31C91E813C570037A3E7 /* VideoFocusModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoFocusModel.m; sourceTree = "<group>"; };
 		8BED37481E8A0FB40025726E /* NetNullView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetNullView.h; sourceTree = "<group>"; };
 		8BED37491E8A0FB40025726E /* NetNullView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetNullView.m; sourceTree = "<group>"; };
+		8BED374C1E8A3CE20025726E /* BQActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQActivityView.h; sourceTree = "<group>"; };
+		8BED374D1E8A3CE20025726E /* BQActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQActivityView.m; sourceTree = "<group>"; };
 		E2E3E0C82FB11C99B2844D7D /* Pods-Bayern_Review.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bayern_Review.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bayern_Review/Pods-Bayern_Review.debug.xcconfig"; sourceTree = "<group>"; };
 		F3D6D50E3352DAEA4E5F2A91 /* libPods-Bayern_Review.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bayern_Review.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -257,6 +260,7 @@
 		8B349ACB1E7F8444001FFF06 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				8BED374B1E8A3CAD0025726E /* ProgressHUD */,
 				8BBF31B11E81182F0037A3E7 /* ToastView */,
 				8B349AF11E7FB41B001FFF06 /* FactoryCreater */,
 				8B349ADA1E7FA489001FFF06 /* DeviceTool */,
@@ -525,6 +529,15 @@
 			path = "Base&RootViewController/Common";
 			sourceTree = "<group>";
 		};
+		8BED374B1E8A3CAD0025726E /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				8BED374C1E8A3CE20025726E /* BQActivityView.h */,
+				8BED374D1E8A3CE20025726E /* BQActivityView.m */,
+			);
+			path = ProgressHUD;
+			sourceTree = "<group>";
+		};
 		E8D31A3230D6CF17BB5FC8B2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -742,6 +755,7 @@
 				8B59047D1E84FB2800474E52 /* LeftViewController.m in Sources */,
 				8B349AFA1E7FB9F7001FFF06 /* VideoListTableViewCell.m in Sources */,
 				8B06D8C31E88F02C007B270B /* LeftViewModel.m in Sources */,
+				8BED374E1E8A3CE20025726E /* BQActivityView.m in Sources */,
 				8B349AF71E7FB918001FFF06 /* BaseModel.m in Sources */,
 				8B349AD41E7F8A77001FFF06 /* RootViewController.m in Sources */,
 				8B5904891E8504A100474E52 /* RESideMenu.m in Sources */,

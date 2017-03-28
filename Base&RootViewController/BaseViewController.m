@@ -85,7 +85,7 @@
     [self.refreshHeader setTitle:@"继续下拉" forState:MJRefreshStateIdle];
     [self.refreshHeader setTitle:@"松开就刷新" forState:MJRefreshStatePulling];
     [self.refreshHeader setTitle:@"刷新中 ..." forState:MJRefreshStateRefreshing];
-    
+    self.refreshHeader.lastUpdatedTimeLabel.hidden = YES;
     
     [self.refreshFooter setTitle:@"" forState:MJRefreshStateIdle];
     [self.refreshFooter setTitle:@"就是要加载" forState:MJRefreshStateWillRefresh];

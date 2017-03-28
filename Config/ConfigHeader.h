@@ -13,6 +13,7 @@
 #import <Masonry.h>
 #import "ToastView.h"
 #import "NetWorkManger.h"
+#import "BQActivityView.h"
 
 //全局返回通用配置选项
 typedef NS_ENUM(NSInteger, SelectorBackType){

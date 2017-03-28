@@ -55,8 +55,8 @@
     self.titleLabel.text = @"拜仁足球";
     
     [self addSubview:self.mainScrol];
-    [self addSubview:self.pageControl];
     [self addSubview:self.titleLabel];
+    [self addSubview:self.pageControl];
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@(Anno750(24)));
         make.centerY.equalTo(@(frame.size.height/2 - font750(30)));
