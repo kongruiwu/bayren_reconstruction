@@ -156,6 +156,8 @@
     [self.dataArray removeAllObjects];
     [self.bannerFocus removeAllObjects];
     [self creatNetWorkQueue];
+
+//1231231
 }
 
 #pragma mark 加载更多，只需要加载视屏列表即可
