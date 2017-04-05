@@ -45,9 +45,6 @@
 		8BBF31C41E8120B20037A3E7 /* AutoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF31C31E8120B20037A3E7 /* AutoScrollView.m */; };
 		8BBF31C71E812E700037A3E7 /* BYPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF31C61E812E700037A3E7 /* BYPageControl.m */; };
 		8BBF31CA1E813C570037A3E7 /* VideoFocusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF31C91E813C570037A3E7 /* VideoFocusModel.m */; };
-		8BE8C0691E8E0D4500738737 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C0681E8E0D4500738737 /* TestViewController.m */; };
-		8BE8C06C1E8E33BF00738737 /* CaculatorMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C06B1E8E33BF00738737 /* CaculatorMaker.m */; };
-		8BE8C06F1E8E539100738737 /* NewsListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE8C06E1E8E539100738737 /* NewsListTableViewCell.m */; };
 		8BED374A1E8A0FB40025726E /* NetNullView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BED37491E8A0FB40025726E /* NetNullView.m */; };
 		8BED374E1E8A3CE20025726E /* BQActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BED374D1E8A3CE20025726E /* BQActivityView.m */; };
 		C8E33C8580BA99D74ACA536A /* libPods-Bayern_Review.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D6D50E3352DAEA4E5F2A91 /* libPods-Bayern_Review.a */; };
@@ -147,12 +144,6 @@
 		8BBF31C61E812E700037A3E7 /* BYPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYPageControl.m; sourceTree = "<group>"; };
 		8BBF31C81E813C570037A3E7 /* VideoFocusModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoFocusModel.h; sourceTree = "<group>"; };
 		8BBF31C91E813C570037A3E7 /* VideoFocusModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoFocusModel.m; sourceTree = "<group>"; };
-		8BE8C0671E8E0D4500738737 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		8BE8C0681E8E0D4500738737 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
-		8BE8C06A1E8E33BF00738737 /* CaculatorMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaculatorMaker.h; sourceTree = "<group>"; };
-		8BE8C06B1E8E33BF00738737 /* CaculatorMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaculatorMaker.m; sourceTree = "<group>"; };
-		8BE8C06D1E8E539100738737 /* NewsListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsListTableViewCell.h; sourceTree = "<group>"; };
-		8BE8C06E1E8E539100738737 /* NewsListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListTableViewCell.m; sourceTree = "<group>"; };
 		8BED37481E8A0FB40025726E /* NetNullView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetNullView.h; sourceTree = "<group>"; };
 		8BED37491E8A0FB40025726E /* NetNullView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetNullView.m; sourceTree = "<group>"; };
 		8BED374C1E8A3CE20025726E /* BQActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQActivityView.h; sourceTree = "<group>"; };
@@ -198,7 +189,6 @@
 		8B349A8C1E7F83DA001FFF06 = {
 			isa = PBXGroup;
 			children = (
-				8BE8C0661E8E067100738737 /* Test */,
 				8B5904811E8504A100474E52 /* RESideMenu */,
 				8B5904771E84FB1C00474E52 /* RightViewController */,
 				8B5904731E84FB1100474E52 /* LeftViewController */,
@@ -489,8 +479,6 @@
 		8BAE928A1E8256760065C057 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				8BE8C06D1E8E539100738737 /* NewsListTableViewCell.h */,
-				8BE8C06E1E8E539100738737 /* NewsListTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -539,17 +527,6 @@
 			);
 			name = Common;
 			path = "Base&RootViewController/Common";
-			sourceTree = "<group>";
-		};
-		8BE8C0661E8E067100738737 /* Test */ = {
-			isa = PBXGroup;
-			children = (
-				8BE8C0671E8E0D4500738737 /* TestViewController.h */,
-				8BE8C0681E8E0D4500738737 /* TestViewController.m */,
-				8BE8C06A1E8E33BF00738737 /* CaculatorMaker.h */,
-				8BE8C06B1E8E33BF00738737 /* CaculatorMaker.m */,
-			);
-			path = Test;
 			sourceTree = "<group>";
 		};
 		8BED374B1E8A3CAD0025726E /* ProgressHUD */ = {
@@ -763,7 +740,6 @@
 				8B349AE91E7FADDA001FFF06 /* BYError.m in Sources */,
 				8B349AF01E7FB3F5001FFF06 /* VideoViewController.m in Sources */,
 				8B349AE01E7FA4A2001FFF06 /* NSString+MD5Addition.m in Sources */,
-				8BE8C06C1E8E33BF00738737 /* CaculatorMaker.m in Sources */,
 				8BBF31B01E8114070037A3E7 /* MainWebViewController.m in Sources */,
 				8B06D8C01E88C5C7007B270B /* LeftTableViewCell.m in Sources */,
 				8B5904801E84FB3700474E52 /* RightViewController.m in Sources */,
@@ -773,9 +749,7 @@
 				8B59048A1E8504A100474E52 /* UIViewController+RESideMenu.m in Sources */,
 				8B349AD11E7F8A62001FFF06 /* BaseViewController.m in Sources */,
 				8B349ADD1E7FA48F001FFF06 /* UIDevice+IdentifierAddition.m in Sources */,
-				8BE8C06F1E8E539100738737 /* NewsListTableViewCell.m in Sources */,
 				8B349AE31E7FAA32001FFF06 /* NSDictionary+AXNetworkingMethods.m in Sources */,
-				8BE8C0691E8E0D4500738737 /* TestViewController.m in Sources */,
 				8BBF31CA1E813C570037A3E7 /* VideoFocusModel.m in Sources */,
 				8BBF31C01E81182F0037A3E7 /* ToastView.m in Sources */,
 				8B59047D1E84FB2800474E52 /* LeftViewController.m in Sources */,

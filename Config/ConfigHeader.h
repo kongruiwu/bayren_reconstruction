@@ -46,7 +46,6 @@ typedef NS_ENUM(NSInteger, SelectorBackType){
 #define UIColorFromRGBA(rgbValue,sec) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:sec]
 
 #define BYColor_Title   UIColorFromRGB(0x444444)
-
 #define BYColor_Tag     UIColorFromRGB(0x999999)
 //总体背景色
 #define BYColor_Ground  UIColorFromRGB(0xf2f2f2)
