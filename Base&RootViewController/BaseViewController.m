@@ -18,6 +18,15 @@
     [super viewDidLoad];
     self.view.backgroundColor = BYColor_Ground;
 }
+
+- (void)creatBackGroundImage{
+    UIImageView * imgView = [BYFactory creatImageViewWithImage:@"groundImage"];
+    [self.view addSubview:imgView];
+    [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(@0);
+    }];
+}
+
 //用于首页，左右切换页面滑动
 - (void)drawMainTabItem {
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"item"] style:UIBarButtonItemStylePlain target:self action:@selector(presentLeftViewController)];
@@ -26,21 +35,34 @@
     UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"game"] style:UIBarButtonItemStylePlain target:self action:@selector(presentRightViewController)];
     self.navigationItem.rightBarButtonItem = item2;
 }
+
+- (void)drawBackButton{
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back_2"] style:UIBarButtonItemStylePlain target:self action:@selector(doBack)];
+    self.navigationItem.leftBarButtonItem = leftItem;
+}
 - (void)creatNullView{
     self.nullview = [[NetNullView alloc]initWithFrame:CGRectMake(0, 0, UI_WIDTH, UI_HEGIHT)];
     self.nullview.hidden = YES;
     [self.nullview.reloadButton addTarget:self action:@selector(nullViewClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.nullview];
 }
+- (void)nullviewShow{
+    self.nullview.hidden = NO;
+    [self.view bringSubviewToFront:self.nullview];
+}
+- (void)nullViewHidden{
+    self.nullview.hidden = YES;
+}
+- (void)presentLeftViewController{
+    [self.sidePanelController showLeftPanelAnimated:YES];
+}
+- (void)presentRightViewController{
+    [self.sidePanelController showRightPanelAnimated:YES];
+}
 - (void)nullViewClick{
     
 }
-- (void)presentLeftViewController{
-    [self.sideMenuViewController presentLeftMenuViewController];
-}
-- (void)presentRightViewController{
-    [self.sideMenuViewController presentRightMenuViewController];
-}
+
 - (void)setNavigationTitle:(NSString *)title{
     
     UIView * titleView = [BYFactory creatViewWithColor:[UIColor clearColor]];

@@ -10,7 +10,18 @@
 #import "LeftTableViewCell.h"
 #import "LeftUserHeadCell.h"
 #import "LeftViewModel.h"
-
+#import "AppDelegate.h"
+#import "UIViewController+JASidePanel.h"
+#import "LoginViewController.h"
+#import "FixtureViewController.h"
+#import "StandingViewController.h"
+#import "TeamerViewController.h"
+#import "VideoViewController.h"
+#import "MainWebViewController.h"
+#import "SettingViewController.h"
+#import "PhotoListViewController.h"
+#import "NewsListViewController.h"
+#import "HomeViewController.h"
 @interface LeftViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView * tabview;
@@ -71,6 +82,30 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    UINavigationController * nav;
+    if (indexPath.row == 0) {
+        nav = [[UINavigationController alloc]initWithRootViewController:[HomeViewController new]];
+    }else if(indexPath.row == 1){
+        nav = [[UINavigationController alloc]initWithRootViewController:[NewsListViewController new]];
+    }else if(indexPath.row == 2){
+        nav = [[UINavigationController alloc]initWithRootViewController:[PhotoListViewController new]];
+    }else if(indexPath.row == 3){
+        nav = [[UINavigationController alloc]initWithRootViewController:[VideoViewController new]];
+    }else if(indexPath.row == 4){
+        nav = [[UINavigationController alloc]initWithRootViewController:[FixtureViewController new]];
+    }else if(indexPath.row == 5){
+        nav = [[UINavigationController alloc]initWithRootViewController:[StandingViewController new]];
+    }else if(indexPath.row == 6){
+        nav = [[UINavigationController alloc]initWithRootViewController:[TeamerViewController new]];
+    }else if(indexPath.row == 7){
+        MainWebViewController * web = [[MainWebViewController alloc]initWithTitle:@"俱乐部" url:@"http://www.fcbayern.cn/club?app=1"];
+        nav = [[UINavigationController alloc]initWithRootViewController:web];
+    }else if(indexPath.row == 8){
+        MainWebViewController * web = [[MainWebViewController alloc]initWithTitle:@"商店" url:@"http://fcb.tmall.hk"];
+        nav = [[UINavigationController alloc]initWithRootViewController:web];
+    }else if(indexPath.row == 9){
+        nav = [[UINavigationController alloc]initWithRootViewController:[SettingViewController new]];
+    }
+    self.sidePanelController.centerPanel = nav;
 }
 @end

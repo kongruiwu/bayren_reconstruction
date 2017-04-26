@@ -12,6 +12,9 @@
 #import "LeftViewController.h"
 #import "RightViewController.h"
 #import "VideoViewController.h"
+
+
+
 @interface AppDelegate ()
 
 @end
@@ -22,24 +25,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc]initWithFrame:UI_BOUNDS];
-    UINavigationController * nvc = [[UINavigationController alloc]initWithRootViewController:[VideoViewController new]];
-    LeftViewController  * leftvc = [[LeftViewController alloc]init];
-    RightViewController * rightvc = [[RightViewController alloc]init];
-    RESideMenu * sidevc = [[RESideMenu alloc]initWithContentViewController:nvc leftMenuViewController:leftvc rightMenuViewController:rightvc];
-    sidevc.menuPreferredStatusBarStyle = 1;
-    sidevc.delegate = self;
-    sidevc.backgroundImage = [UIImage imageNamed:@"groundImage"];
-    sidevc.contentViewShadowColor = [UIColor blackColor];
-    sidevc.contentViewShadowOffset = CGSizeMake(0, 0);
-    sidevc.contentViewShadowOpacity = 0.6;
-    sidevc.contentViewShadowRadius = 12;
-    sidevc.contentViewShadowEnabled = YES;
-    //设置偏移量
-//    sidevc.contentViewInPortraitOffsetCenterX = 30;
-    self.window.rootViewController = sidevc;
-    
-    [self.window setRootViewController:sidevc];
+    self.sidePaneVC = [[JASidePanelController alloc]init];
+    self.sidePaneVC.shouldDelegateAutorotateToVisiblePanel = NO;
+    self.sidePaneVC.leftPanel = [LeftViewController new];
+    self.sidePaneVC.rightPanel = [RightViewController new];
+    self.sidePaneVC.centerPanel = [[UINavigationController alloc]initWithRootViewController:[VideoViewController new]];
+    [self.window setRootViewController:self.sidePaneVC];
+
     [self.window makeKeyAndVisible];
+    
+    
     
     return YES;
 }

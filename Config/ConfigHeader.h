@@ -14,6 +14,8 @@
 #import "ToastView.h"
 #import "NetWorkManger.h"
 #import "BQActivityView.h"
+#import <ReactiveObjC.h>
+#import <UIImageView+WebCache.h>
 
 //全局返回通用配置选项
 typedef NS_ENUM(NSInteger, SelectorBackType){
@@ -47,13 +49,17 @@ typedef NS_ENUM(NSInteger, SelectorBackType){
 
 #define BYColor_Title   UIColorFromRGB(0x444444)
 #define BYColor_Tag     UIColorFromRGB(0x999999)
+#define BYColor_gray_3  UIColorFromRGB(0x333333)
 //总体背景色
 #define BYColor_Ground  UIColorFromRGB(0xf2f2f2)
 //线条色
 #define BYColor_Line    UIColorFromRGBA(0x000000,0.2)
 //拜仁主色调
 #define BYColor_Main    UIColorFromRGB(0x961432)
+//登录界面灰色背景
+#define BYColor_login   UIColorFromRGBA(0x000000,0.8)
 
+#define BYColor_Alpha_gray  UIColorFromRGBA(0x000000,0.6)
 //规避空值
 #define INCASE_EMPTY(str, replace) \
 ( ([(str) length]==0)?(replace):(str) )

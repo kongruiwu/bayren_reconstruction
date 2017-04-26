@@ -7,7 +7,8 @@
 //
 
 #import "BaseViewController.h"
-#import "RESideMenu.h"
+#import "JASidePanelController.h"
+#import "UIViewController+JASidePanel.h"
 @interface RootViewController : BaseViewController
 
 @end

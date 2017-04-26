@@ -32,7 +32,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [self setNavigationTitle:self.titleStr];
+    if (self.needBack) {
+        [self drawBackButton];
+    }else{
+        [self drawMainTabItem];
+    }
+    
     [self creatUI];
 }
 - (void)viewWillAppear:(BOOL)animated{
@@ -44,7 +50,7 @@
     [self.webview removeObserver:self forKeyPath:@"estimatedProgress"];
 }
 - (void)creatUI{
-    self.webview = [[WKWebView alloc]initWithFrame:CGRectMake(0, 0, UI_WIDTH, UI_HEGIHT - 64)];
+    self.webview = [[WKWebView alloc]initWithFrame:CGRectMake(0, 0, UI_WIDTH, UI_HEGIHT - 49)];
     [self.webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.urlStr]]];
     [self.view addSubview:self.webview];
     

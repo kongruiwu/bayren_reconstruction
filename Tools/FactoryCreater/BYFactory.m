@@ -44,6 +44,14 @@
     button.titleLabel.font = [UIFont systemFontOfSize:fontValue];
     return button;
 }
++ (UIButton *)creatButtonWithNormalImage:(NSString *)normalImage selectImage:(NSString *)selectImage{
+    UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:[UIImage imageNamed:normalImage] forState:UIControlStateNormal];
+    if (selectImage != nil) {
+        [button setImage:[UIImage imageNamed:selectImage] forState:UIControlStateSelected];
+    }
+    return button;
+}
 
 /**
  creat imgView with img
@@ -52,6 +60,14 @@
     UIImageView * imgView = [[UIImageView alloc]init];
     imgView.image = [UIImage imageNamed:imageName];
     return imgView;
+}
+/**
+ creat arrrowimage
+ */
++ (UIImageView *)creatArrowImage{
+    UIImageView * imgview = [[UIImageView alloc]init];
+    imgview.image = [UIImage imageNamed:@"arrows"];
+    return imgview;
 }
 /**
  creat line
@@ -69,5 +85,25 @@
     view.backgroundColor = color;
     return view;
 }
+/**
+ creat TextField
+ */
++ (UITextField *)creatLoginTextFieldWithPlaceHolder:(NSString *)placeHolder cornerRadius:(CGFloat)cornerRadius textFont:(CGFloat)font textAlignment:(NSTextAlignment)aligment{
+    UITextField * textF = [[UITextField alloc]init];
+    textF.layer.borderColor = [UIColor whiteColor].CGColor;
+    textF.layer.borderWidth = 1.0f;
+    textF.font = [UIFont systemFontOfSize:font];
+    textF.layer.cornerRadius = cornerRadius;
+    NSMutableAttributedString * attStr = [[NSMutableAttributedString alloc]initWithString:placeHolder];
+    [attStr addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:NSMakeRange(0, placeHolder.length)];
+    textF.attributedPlaceholder = attStr;
+    textF.textAlignment = aligment;
+    textF.textColor = [UIColor whiteColor];
+    return textF;
+}
 
++ (CGSize)getSize:(NSString *)text maxSize:(CGSize)maxSize font:(UIFont*)font{
+    CGSize sizeFirst = [text boundingRectWithSize:maxSize options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingTruncatesLastVisibleLine attributes:@{NSFontAttributeName:font} context:nil].size;
+    return sizeFirst;
+}
 @end

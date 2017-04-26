@@ -135,6 +135,7 @@
     if (self.dataArray[indexPath.row].link.length>0) {
         NSString * link = self.dataArray[indexPath.row].link;
         MainWebViewController * webVC = [[MainWebViewController alloc]initWithTitle:@"视屏" url:link];
+        webVC.needBack = YES;
         [self.navigationController pushViewController:webVC animated:YES];
     }else{
         [ToastView presentToastWithin:self.view withIcon:APToastIconNone text:@"链接丢失啦～～～" duration:1.5f];
@@ -146,6 +147,7 @@
     NSString * link = self.bannerFocus[index].url;
     if (link.length>0) {
         MainWebViewController * webVC = [[MainWebViewController alloc]initWithTitle:@"视屏" url:link];
+        webVC.needBack = YES;
         [self.navigationController pushViewController:webVC animated:YES];
     }else{
         [ToastView presentToastWithin:self.view withIcon:APToastIconNone text:@"链接丢失啦～～～" duration:1.5f];
@@ -156,8 +158,6 @@
     [self.dataArray removeAllObjects];
     [self.bannerFocus removeAllObjects];
     [self creatNetWorkQueue];
-
-//1231231
 }
 
 #pragma mark 加载更多，只需要加载视屏列表即可
@@ -167,12 +167,12 @@
                              };
     [[NetWorkManger manager] sendRequest:Page_VideoList route:Route_Video withParams:params complete:^(NSDictionary *result) {
         NSArray * datas = result[@"data"];
+        if (self.dataArray.count>10 && datas.count<10) {
+            [ToastView presentToastWithin:self.view withIcon:APToastIconNone text:@"没有更多了" duration:1.0f];
+        }
         for (int i = 0; i<datas.count; i++) {
             VideoListModel * model = [[VideoListModel alloc]initWithDictionary:datas[i]];
             [self.dataArray addObject:model];
-        }
-        if (self.dataArray.count>10 && datas.count<10) {
-            [ToastView presentToastWithin:self.view withIcon:APToastIconNone text:@"没有更多了" duration:1.0f];
         }
         [self.tabview reloadData];
         [self.refreshFooter endRefreshing];

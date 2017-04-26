@@ -15,10 +15,17 @@
 + (UILabel *)creatLabelWithText:(NSString *)title fontValue:(float)font textColor:(UIColor *)color textAlignment:(NSTextAlignment)alignment;
 
 + (UIButton *)creatButtonWithTitle:(NSString *)title backGroundColor:(UIColor *)groundColor textColor:(UIColor *)textColor textSize:(float)fontValue;
++ (UIButton *)creatButtonWithNormalImage:(NSString *)normalImage selectImage:(NSString *)selectImage;
+
++ (UIImageView *)creatArrowImage;
 
 + (UIImageView *)creatImageViewWithImage:(NSString *)imageName;
 
 + (UIView *)creatLineView;
 
 + (UIView *)creatViewWithColor:(UIColor *)color;
+
++ (UITextField *)creatLoginTextFieldWithPlaceHolder:(NSString *)placeHolder cornerRadius:(CGFloat)cornerRadius textFont:(CGFloat)font textAlignment:(NSTextAlignment)aligment;
+
++ (CGSize)getSize:(NSString *)text maxSize:(CGSize)maxSize font:(UIFont*)font;
 @end

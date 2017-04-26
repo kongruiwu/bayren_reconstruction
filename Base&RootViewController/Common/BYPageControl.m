@@ -28,7 +28,7 @@
 
 
 @implementation BYPageControl
-
+//
 //- (instancetype)init{
 //    self = [super init];
 //    if (self) {
@@ -39,53 +39,19 @@
 //- (instancetype)initWithFrame:(CGRect)frame{
 //    self = [super initWithFrame:frame];
 //    if (self) {
-//        self.currentPage = 0;
 //        self.Spots = [NSMutableArray new];
 //    }
 //    return self;
 //}
 //- (void)setCount:(NSInteger)count{
-//    self.count = count;
-//    if (self.Spots.count>0) {
-//        for (int i = 0; i<self.Spots.count; i++) {
-//            UIControl * spot = self.Spots[i];
-//            [spot removeFromSuperview];
-//        }
-//        [self.Spots removeAllObjects];
-//    }
-//    for (int i = 0; i<self.count ; i++) {
-//        UIControl * spot = [[UIControl alloc]init];
-//        [self.Spots addObject:spot];
-//        [self addSubview:spot];
-//    }
-//}
-//- (void)updateStatus{
-//    float x = (self.frame.size.width - (NomalW * self.count) - SpaceW * (self.count -1))/2;
-//    for (int i = 0; i<self.Spots.count; i++) {
-//        UIControl * spot = self.Spots[i];
-//        float width ;
-//        UIColor * color ;
-//        if (i == self.currentPage) {
-//            color = CurrentC;
-//            width = CurrentW;
-//        }else{
-//            color = NomalC;
-//            width = NomalW;
-//        }
-//        spot.backgroundColor = color;
-//        spot.frame = CGRectMake(x + i * (SpaceW + NomalW), 0, width, width);
-//        spot.layer.cornerRadius = (spot.frame.size.width)/2;
+//    for (int i = 0; i<count; i++) {
+//        UIView * spot = [[UIView alloc]init];
+//        
+//        self needsUpdateConstraints
 //    }
 //}
 //
-//- (void)setCurrentWith:(CGFloat)currentWith{
-//    self.currentWith = currentWith;
-//    [self updateStatus];
+//- (void)layoutSubviews{
+//    
 //}
-//- (void)setCurrentPage:(NSInteger)currentPage{
-//    self.currentPage = currentPage;
-//    [self updateStatus];
-//}
-
-
 @end

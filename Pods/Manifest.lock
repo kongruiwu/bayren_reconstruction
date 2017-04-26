@@ -18,6 +18,7 @@ PODS:
   - JPush (2.2.0.1)
   - Masonry (1.0.2)
   - MJRefresh (3.1.12)
+  - ReactiveObjC (2.1.2)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
@@ -29,6 +30,7 @@ DEPENDENCIES:
   - Masonry
   - MJRefresh
   - MJRefresh (~> 3.1.10)
+  - ReactiveObjC
   - SDWebImage
 
 SPEC CHECKSUMS:
@@ -37,8 +39,9 @@ SPEC CHECKSUMS:
   JPush: c891ec9f6fae587db642c4ac28d19d5abc5d61bb
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  ReactiveObjC: 7b6782ae39f9ac0f57205c3b0c0b69b9dd7048c0
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: 6f62a799cd65fdd6a817788fccfce2ab789a1da5
+PODFILE CHECKSUM: d809572456e2e5e16422b9b89eb47e4a387e0f29
 
 COCOAPODS: 1.1.1

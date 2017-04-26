@@ -9,6 +9,7 @@
 #import "RootViewController.h"
 #import "ConfigHeader.h"
 #import "VideoViewController.h"
+
 @interface RootViewController ()
 
 @end
@@ -18,34 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    self.view.backgroundColor = [UIColor whiteColor];
-    UIButton * button = [BYFactory creatButtonWithTitle:@"video" backGroundColor:[UIColor grayColor] textColor:[UIColor whiteColor] textSize:Anno750(30)];
-    button.frame = CGRectMake(100, 200, 200, 50);
-    [self.view addSubview:button];
-    
-    [button addTarget:self action:@selector(pushToView) forControlEvents:UIControlEventTouchUpInside];
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Left"
-                                                                             style:UIBarButtonItemStylePlain
-                                                                            target:self
-                                                                            action:@selector(presentLeftMenuViewController)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Right"
-                                                                              style:UIBarButtonItemStylePlain
-                                                                             target:self
-                                                                             action:@selector(presentRightMenuViewController)];
-    
 }
-- (void)presentLeftMenuViewController{
-    [self.sideMenuViewController presentLeftMenuViewController];
-}
-- (void)presentRightMenuViewController{
-    [self.sideMenuViewController presentRightMenuViewController];
-}
-- (void)pushToView{
-    [self.navigationController pushViewController:[VideoViewController new] animated:YES];
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
