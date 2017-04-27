@@ -29,6 +29,7 @@
     return self;
 }
 - (void)creatUI{
+    self.backgroundColor = [UIColor clearColor];
     self.teamerOne = [[HomeTeamerView alloc]init];
     self.teamerTwo = [[HomeTeamerView alloc]init];
     
@@ -39,7 +40,7 @@
     [super layoutSubviews];
     
     [self.teamerOne mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(@(Anno750(-24)));
+        make.left.equalTo(@(Anno750(24)));
         make.width.equalTo(@(Anno750(341)));
         make.top.equalTo(@0);
         make.bottom.equalTo(@0);

@@ -39,10 +39,10 @@
 - (void)layoutSubviews{
     [super layoutSubviews];
     [self.groundView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(@(Anno750(30)));
-        make.top.bottom.equalTo(@(Anno750(40)));
-        make.right.equalTo(@(-Anno750(30)));
-        make.bottom.equalTo(@(-Anno750(20)));
+        make.left.equalTo(@(Anno750(24)));
+        make.right.equalTo(@(Anno750(-24)));
+        make.top.equalTo(@0);
+        make.bottom.equalTo(@0);
     }];
     [self.leftButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@(Anno750(20)));
@@ -59,16 +59,17 @@
     [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.leftButton.mas_right);
         make.right.equalTo(self.rightButton.mas_left);
-        make.centerY.equalTo(@(-Anno750(10)));
+        make.centerY.equalTo(@0);
         make.height.equalTo(@(Anno750(310)));
     }];
 }
+
 - (void)updateScrollViewWithArray:(NSArray *)arr andIndex:(NSInteger)index{
     self.models = arr;
-    self.scrollView.contentSize = CGSizeMake(Anno750(590) * arr.count, Anno750(310));
-    self.scrollView.contentOffset = CGPointMake(Anno750(590) * index, Anno750(310));
+    self.scrollView.contentSize = CGSizeMake(Anno750(602) * arr.count, Anno750(310));
+    self.scrollView.contentOffset = CGPointMake(Anno750(602) * index, Anno750(310));
     for (int i = 0; i<arr.count; i++) {
-        HomeScoreView * scoreView = [[HomeScoreView alloc]initWithFrame:CGRectMake(Anno750(590) * i, 0, Anno750(590), Anno750(310))];
+        HomeScoreView * scoreView = [[HomeScoreView alloc]initWithFrame:CGRectMake(Anno750(602) * i, 0, Anno750(602), Anno750(310))];
         FixtureModel * model = arr[i];
         scoreView.tag = 1000+i;
         [scoreView updateWithHomeGameModel:model];
@@ -101,8 +102,8 @@
         btn.enabled = YES;
     });
     CGPoint point = CGPointMake(self.scrollView.contentOffset.x, self.scrollView.contentOffset.y);
-    if (point.x / Anno750(590) >0) {
-        [self.scrollView setContentOffset:CGPointMake(point.x - Anno750(590), 0) animated:YES];
+    if (point.x / Anno750(602) >0) {
+        [self.scrollView setContentOffset:CGPointMake(point.x - Anno750(602), 0) animated:YES];
     }
 }
 - (void)colllcetViewMoveRight:(UIButton *)btn{
@@ -110,8 +111,8 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         btn.enabled = YES;
     });
-    if (self.scrollView.contentOffset.x < (self.models.count - 2) * Anno750(590)) {
-        [self.scrollView setContentOffset:CGPointMake(self.scrollView.contentOffset.x + Anno750(590), 0) animated:YES];
+    if (self.scrollView.contentOffset.x < (self.models.count - 2) * Anno750(602)) {
+        [self.scrollView setContentOffset:CGPointMake(self.scrollView.contentOffset.x + Anno750(602), 0) animated:YES];
     }
 }
 @end

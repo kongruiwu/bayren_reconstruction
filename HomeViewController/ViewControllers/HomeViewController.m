@@ -38,7 +38,7 @@
 - (void)creatUI{
     self.viewModel = [[HomeViewModel alloc]init];
     
-    self.tabview = [BYFactory creatTabviewWithFrame:CGRectMake(0, 0, UI_WIDTH, UI_HEGIHT) style:UITableViewStyleGrouped];
+    self.tabview = [BYFactory creatTabviewWithFrame:CGRectMake(0, 0, UI_WIDTH, UI_HEGIHT - 64) style:UITableViewStyleGrouped];
     self.tabview.delegate = self;
     self.tabview.dataSource = self;
     [self.view addSubview:self.tabview];
@@ -80,6 +80,8 @@
         return Anno750(100);
     }else if(section == 2){
         return Anno750(340);
+    }else if(section == 1){
+        return Anno750(20);
     }
     return 0.01;
 }
@@ -130,7 +132,7 @@
         }];
         [checkAllNews addTarget:self action:@selector(checkAllNews) forControlEvents:UIControlEventTouchUpInside];
         return footerView;
-    }else if(section == 3){
+    }else if(section == 2){
         HomeScroeHeadView * headView = [[HomeScroeHeadView alloc]initWithFrame:CGRectMake(0, 0, UI_WIDTH, Anno750(340))];
         if (self.viewModel.fixtures.count>0) {
             [headView updateScrollViewWithArray:self.viewModel.fixtures andIndex:self.viewModel.index];

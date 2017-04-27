@@ -31,8 +31,10 @@
 //赛程相关
 #define Route_Fixture   @"match"
 #define Page_Schedules  @"schedules"
+#define Page_Right_Sched    @"lastSchedules"
 //积分相关
 #define Page_Rank       @"team_rank"
+#define Page_Right_Rank @"right_team_rank"
 //视频相关
 #define Route_Video     @"video"
 #define Page_VideoList  @"get_list"

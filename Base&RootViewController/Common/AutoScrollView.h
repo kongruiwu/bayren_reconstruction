@@ -11,6 +11,8 @@
 #import "BYPageControl.h"
 @interface AutoScrollView : UIView
 
+@property (nonatomic, assign) float with;
+
 @property (nonatomic, strong) BYPageControl * pageControl;
 /**轮播图描述*/
 @property (nonatomic, strong) NSArray * descs;

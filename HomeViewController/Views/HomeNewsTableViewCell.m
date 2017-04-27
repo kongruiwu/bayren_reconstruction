@@ -41,15 +41,15 @@
                                          textColor:BYColor_Tag
                                      textAlignment:NSTextAlignmentLeft];
     self.descLabel.numberOfLines = 0;
-    self.timeLabel = [BYFactory creatLabelWithText:@"22:12"
-                                         fontValue:font750(26)
-                                         textColor:BYColor_Tag
-                                     textAlignment:NSTextAlignmentRight];
+//    self.timeLabel = [BYFactory creatLabelWithText:@"22:12"
+//                                         fontValue:font750(26)
+//                                         textColor:BYColor_Tag
+//                                     textAlignment:NSTextAlignmentRight];
     [self addSubview:self.groundView];
     [self.groundView addSubview:self.icon];
     [self.groundView addSubview:self.titleLabel];
     [self.groundView addSubview:self.descLabel];
-    [self.groundView addSubview:self.timeLabel];
+//    [self.groundView addSubview:self.timeLabel];
 }
 - (void)layoutSubviews{
     [super layoutSubviews];
@@ -71,19 +71,20 @@
     }];
     [self.descLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.titleLabel.mas_left);
-        make.top.equalTo(self.titleLabel.mas_bottom).offset(Anno750(15));
+        make.top.equalTo(self.titleLabel.mas_bottom);
         make.right.equalTo(@(-Anno750(24)));
+        make.bottom.equalTo(@(-Anno750(10)));
     }];
-    [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(@(Anno750(-20)));
-        make.bottom.equalTo(self.icon.mas_bottom);
-    }];
+//    [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.right.equalTo(@(Anno750(-20)));
+//        make.bottom.equalTo(self.icon.mas_bottom);
+//    }];
 }
 - (void)updateWithModel:(NewsListModel *)model{
     NSURL * url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",Base_ImgHost,model.pic]];
     [self.icon sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"news_defult"]];
     self.titleLabel.text = model.title;
     self.descLabel.text = model.content;
-    self.timeLabel.text = model.date;
+//    self.timeLabel.text = model.date;
 }
 @end

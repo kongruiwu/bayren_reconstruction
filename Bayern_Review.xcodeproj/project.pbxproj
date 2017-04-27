@@ -70,6 +70,9 @@
 		8BA675521EA8ACF800AA0EEC /* TeamerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA675511EA8ACF800AA0EEC /* TeamerModel.m */; };
 		8BA675591EA8BB9A00AA0EEC /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA675581EA8BB9A00AA0EEC /* SettingViewController.m */; };
 		8BA6755C1EA8C1E300AA0EEC /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA6755B1EA8C1E300AA0EEC /* SettingCell.m */; };
+		8BB117731EB1A5D9001971AF /* RightStandingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB117721EB1A5D9001971AF /* RightStandingCell.m */; };
+		8BB117761EB1A861001971AF /* RightStandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB117751EB1A861001971AF /* RightStandModel.m */; };
+		8BB117791EB1A926001971AF /* RightHeadScoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB117781EB1A926001971AF /* RightHeadScoreCell.m */; };
 		8BB652C91EA0C310007E5048 /* FindPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB652C81EA0C310007E5048 /* FindPwdViewController.m */; };
 		8BB652CC1EA0C31B007E5048 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB652CB1EA0C31B007E5048 /* RegisterViewController.m */; };
 		8BB652CF1EA0C433007E5048 /* FindPwdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB652CE1EA0C433007E5048 /* FindPwdTableViewCell.m */; };
@@ -247,6 +250,12 @@
 		8BA675581EA8BB9A00AA0EEC /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		8BA6755A1EA8C1E300AA0EEC /* SettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingCell.h; sourceTree = "<group>"; };
 		8BA6755B1EA8C1E300AA0EEC /* SettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingCell.m; sourceTree = "<group>"; };
+		8BB117711EB1A5D9001971AF /* RightStandingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RightStandingCell.h; path = HomeViewController/Models/RightStandingCell.h; sourceTree = SOURCE_ROOT; };
+		8BB117721EB1A5D9001971AF /* RightStandingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RightStandingCell.m; path = HomeViewController/Models/RightStandingCell.m; sourceTree = SOURCE_ROOT; };
+		8BB117741EB1A861001971AF /* RightStandModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RightStandModel.h; path = HomeViewController/Models/RightStandModel.h; sourceTree = SOURCE_ROOT; };
+		8BB117751EB1A861001971AF /* RightStandModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RightStandModel.m; path = HomeViewController/Models/RightStandModel.m; sourceTree = SOURCE_ROOT; };
+		8BB117771EB1A926001971AF /* RightHeadScoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RightHeadScoreCell.h; path = HomeViewController/Models/RightHeadScoreCell.h; sourceTree = SOURCE_ROOT; };
+		8BB117781EB1A926001971AF /* RightHeadScoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RightHeadScoreCell.m; path = HomeViewController/Models/RightHeadScoreCell.m; sourceTree = SOURCE_ROOT; };
 		8BB652C71EA0C310007E5048 /* FindPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPwdViewController.h; sourceTree = "<group>"; };
 		8BB652C81EA0C310007E5048 /* FindPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPwdViewController.m; sourceTree = "<group>"; };
 		8BB652CA1EA0C31B007E5048 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
@@ -796,6 +805,8 @@
 		8B5904781E84FB1C00474E52 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8BB117741EB1A861001971AF /* RightStandModel.h */,
+				8BB117751EB1A861001971AF /* RightStandModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -812,6 +823,10 @@
 		8B59047A1E84FB1C00474E52 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8BB117711EB1A5D9001971AF /* RightStandingCell.h */,
+				8BB117721EB1A5D9001971AF /* RightStandingCell.m */,
+				8BB117771EB1A926001971AF /* RightHeadScoreCell.h */,
+				8BB117781EB1A926001971AF /* RightHeadScoreCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1232,6 +1247,7 @@
 				8B349AE01E7FA4A2001FFF06 /* NSString+MD5Addition.m in Sources */,
 				8BBF31B01E8114070037A3E7 /* MainWebViewController.m in Sources */,
 				8BA6754F1EA8A53C00AA0EEC /* TeamerBottomCell.m in Sources */,
+				8BB117761EB1A861001971AF /* RightStandModel.m in Sources */,
 				8B6263C01EA870D4008DFCA0 /* TeamerViewController.m in Sources */,
 				8B06D8C01E88C5C7007B270B /* LeftTableViewCell.m in Sources */,
 				8BA6755C1EA8C1E300AA0EEC /* SettingCell.m in Sources */,
@@ -1239,6 +1255,7 @@
 				8B50A54F1EAE0FA100D1C13F /* NewsDetailViewController.m in Sources */,
 				8BB652C91EA0C310007E5048 /* FindPwdViewController.m in Sources */,
 				8B06D8C61E88FC38007B270B /* LeftUserHeadCell.m in Sources */,
+				8BB117791EB1A926001971AF /* RightHeadScoreCell.m in Sources */,
 				8B88196F1EAF436F00C86CCB /* HomeTeamerModel.m in Sources */,
 				8B50A5461EADFF9600D1C13F /* NewsListModel.m in Sources */,
 				8B4D024F1E94F9E3004973EE /* NewsListViewController.m in Sources */,
@@ -1271,6 +1288,7 @@
 				8B50A5431EADF01F00D1C13F /* HomeNewsTableViewCell.m in Sources */,
 				8B88195D1EAF31C400C86CCB /* HomeTeamerTableViewCell.m in Sources */,
 				8B88195A1EAF302400C86CCB /* HomeVideoTableViewCell.m in Sources */,
+				8BB117731EB1A5D9001971AF /* RightStandingCell.m in Sources */,
 				8B24D4891EA47DC1009A9D15 /* StandingViewController.m in Sources */,
 				8B4D02591E94FEF5004973EE /* LoginViewController.m in Sources */,
 				8BED374E1E8A3CE20025726E /* BQActivityView.m in Sources */,

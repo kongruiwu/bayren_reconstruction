@@ -29,6 +29,7 @@
     return self;
 }
 - (void)creatUI{
+    
     self.dayTimeLable = [BYFactory creatLabelWithText:@"2015-3-11"
                                             fontValue:font750(26)
                                             textColor:[UIColor whiteColor]
@@ -199,6 +200,16 @@
     self.homeLabel.textColor = [UIColor blackColor];
     self.awayLabel.textColor = [UIColor blackColor];
     self.model = model;
+}
+- (void)updateTheColor{
+    /*day home away score  half info*/
+    self.backgroundColor = [UIColor clearColor];
+    self.dayTimeLable.textColor = [UIColor whiteColor];
+    self.homeLabel.textColor = [UIColor whiteColor];
+    self.awayLabel.textColor = [UIColor whiteColor];
+    self.scoreLabel.textColor = [UIColor whiteColor];
+    self.halfScoreLabel.textColor = BYColor_Tag;
+    self.infoLabel.textColor = [UIColor whiteColor];
 }
 - (BOOL)isGameOverWithDate:(NSString *)dateStr {
     

@@ -24,6 +24,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         [self creatUI:frame];
+        self.with = frame.size.width;
     }
     return self;
 }
@@ -36,7 +37,7 @@
     self.mainScrol.delegate = self;
     self.mainScrol.bounces = NO;//关闭弹簧效果
     self.mainScrol.pagingEnabled = YES;
-    self.mainScrol.contentOffset =CGPointMake(UI_WIDTH, 0);
+    self.mainScrol.contentOffset =CGPointMake(frame.size.width, 0);
     
     UIImageView * imageview = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"banner_defult"]];
     imageview.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
@@ -68,9 +69,9 @@
     
     //设置类似阴影效果
     CAGradientLayer * colorLayer = [CAGradientLayer layer];
-    colorLayer.frame = CGRectMake(-Anno750(24), -Anno750(15) ,frame.size.width+Anno750(24), Anno750(60));
+    colorLayer.frame = CGRectMake(-Anno750(24), -Anno750(15) ,frame.size.width, Anno750(60));
     [self.titleLabel.layer addSublayer:colorLayer];
-    colorLayer.colors = @[(__bridge id)UIColorFromRGBA(0x000000, 0.1).CGColor,(__bridge id)UIColorFromRGBA(0x000000, 0.9).CGColor];
+    colorLayer.colors = @[(__bridge id)UIColorFromRGBA(0x000000, 0.05).CGColor,(__bridge id)UIColorFromRGBA(0x000000, 0.9).CGColor];
     colorLayer.startPoint = CGPointMake(0, 0);
     colorLayer.endPoint = CGPointMake(0, 1);
 }
@@ -115,7 +116,7 @@
 }
 - (void)updateTimer{
     [UIView animateWithDuration:1.5 animations:^{
-        self.mainScrol.contentOffset = CGPointMake(self.mainScrol.contentOffset.x + UI_WIDTH, 0);
+        self.mainScrol.contentOffset = CGPointMake(self.mainScrol.contentOffset.x + self.with, 0);
     }];
     
     [self scrollViewDidEndDecelerating:self.mainScrol];
@@ -125,17 +126,17 @@
     if (scrollView == self.mainScrol) {
         CGFloat offsetX = scrollView.contentOffset.x;
         if (offsetX == 0) {
-            scrollView.contentOffset = CGPointMake(UI_WIDTH * self.images.count, 0);
+            scrollView.contentOffset = CGPointMake(self.with * self.images.count, 0);
         }
-        else if(offsetX == UI_WIDTH *(self.images.count +1)){
-            scrollView.contentOffset = CGPointMake(UI_WIDTH, 0);
+        else if(offsetX == self.with *(self.images.count +1)){
+            scrollView.contentOffset = CGPointMake(self.with, 0);
         }
     }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     CGFloat offsetX = scrollView.contentOffset.x;
-    _pageControl.currentPage =(offsetX /UI_WIDTH) - 1;
+    _pageControl.currentPage =(offsetX /self.with) - 1;
     int index = (int)self.pageControl.currentPage;
     self.titleLabel.text = self.descs[index];
 }

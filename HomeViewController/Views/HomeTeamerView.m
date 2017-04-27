@@ -60,7 +60,7 @@
     }];
 }
 - (void)updateWithModel:(HomeTeamerModel *)model{
-    NSString * imageStr = [NSString stringWithFormat:@"%@%@",Base_ImgHost,model.pic];
+    NSString * imageStr = [NSString stringWithFormat:@"%@",model.pic];
     [self.teamerImg sd_setImageWithURL:[NSURL URLWithString:imageStr] placeholderImage:[UIImage imageNamed:@"teamerDefault"]];
     self.numLabel.text = model.number;
     self.nameLabel.text = model.name;

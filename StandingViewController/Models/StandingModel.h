@@ -38,4 +38,6 @@
 @property(nonatomic,retain)NSNumber * win;
 //是否时拜仁球队
 @property(nonatomic,assign) BOOL isBer;
+
+
 @end

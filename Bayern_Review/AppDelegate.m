@@ -11,7 +11,7 @@
 #import "RootViewController.h"
 #import "LeftViewController.h"
 #import "RightViewController.h"
-#import "VideoViewController.h"
+#import "HomeViewController.h"
 
 
 
@@ -29,7 +29,9 @@
     self.sidePaneVC.shouldDelegateAutorotateToVisiblePanel = NO;
     self.sidePaneVC.leftPanel = [LeftViewController new];
     self.sidePaneVC.rightPanel = [RightViewController new];
-    self.sidePaneVC.centerPanel = [[UINavigationController alloc]initWithRootViewController:[VideoViewController new]];
+    self.sidePaneVC.rightGapPercentage =0.9;
+    self.sidePaneVC.leftGapPercentage = 0.8;
+    self.sidePaneVC.centerPanel = [[UINavigationController alloc]initWithRootViewController:[HomeViewController new]];
     [self.window setRootViewController:self.sidePaneVC];
 
     [self.window makeKeyAndVisible];

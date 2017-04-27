@@ -36,10 +36,8 @@
                                          textColor:BYColor_Main textAlignment:NSTextAlignmentCenter];
     self.redView = [BYFactory creatViewWithColor:BYColor_Main];
     self.grayView = [BYFactory creatViewWithColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1]];
-    self.redView.alpha = 0.5;
-    self.grayView.alpha = 0.5;
-//    self.redView.hidden = YES;
-//    self.grayView.hidden = YES;
+    self.redView.hidden = YES;
+    self.grayView.hidden = YES;
     [self addSubview:self.redView];
     [self addSubview:self.grayView];
     [self addSubview:self.headIcon];

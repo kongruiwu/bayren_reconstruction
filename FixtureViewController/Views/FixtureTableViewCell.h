@@ -33,4 +33,5 @@
 @property (nonatomic, assign) id <FixtureCellDelegate> delegtae;
 @property (nonatomic, strong) FixtureModel * model;
 - (void)cellUpdateWithModel:(FixtureModel *)model;
+- (void)updateTheColor;
 @end

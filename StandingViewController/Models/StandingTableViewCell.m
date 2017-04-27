@@ -44,7 +44,7 @@
 }
 - (UILabel *)creatLabeL{
     UILabel * label = [BYFactory creatLabelWithText:@""
-                                          fontValue:font750(24)
+                                          fontValue:font750(28)
                                           textColor:BYColor_Title
                                       textAlignment:NSTextAlignmentCenter];
     [self addSubview:label];
