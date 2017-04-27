@@ -10,4 +10,6 @@
 
 @interface FindPwdViewController : BaseViewController
 
+@property (nonatomic, assign) BOOL isPresent;
+
 @end

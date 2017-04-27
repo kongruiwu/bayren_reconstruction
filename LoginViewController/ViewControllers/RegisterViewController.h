@@ -10,4 +10,6 @@
 
 @interface RegisterViewController : BaseViewController
 
+@property (nonatomic, assign) BOOL isPresent;
+
 @end

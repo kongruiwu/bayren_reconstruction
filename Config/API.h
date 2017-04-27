@@ -27,31 +27,51 @@
 #define Page_HomeTeamer @"get_home_player"
 //首页新闻
 #define Page_HomeNews   @"get_news_list"
-
 //赛程相关
 #define Route_Fixture   @"match"
+//赛程列表
 #define Page_Schedules  @"schedules"
+//抽屉右边赛程列表
 #define Page_Right_Sched    @"lastSchedules"
 //积分相关
 #define Page_Rank       @"team_rank"
+//抽屉右边积分列表
 #define Page_Right_Rank @"right_team_rank"
 //视频相关
 #define Route_Video     @"video"
+//视屏列表
 #define Page_VideoList  @"get_list"
+//视屏焦点图
 #define Page_VideoFocus @"get_focus_2016"
-
 //新闻相关
 #define Route_News      @"news"
+//新闻焦点图
 #define Page_NewsFocus  @"get_focus_2016"
+//新闻列表
 #define Page_NewsList   @"get_list_2016"
 //球队
 #define Route_Team      @"team"
+//球队列表
 #define Page_TeamList   @"get_list"
+//队员详情
 #define Page_detail     @"get_detail"
 //图集
 #define Route_Photo     @"album"
+//图集列表
 #define Page_PhotoList  @"get_list"
+//图片详情
 #define Page_PhotoDetail    @"get_detail"
-
-
+//用户
+#define Route_User      @"user"
+//登陆
+#define Page_login      @"login"
+//找回密码
+#define Page_GetRecode  @"getRecode"
+//注册
+#define Page_register   @"register"
+//获取用户信息
+#define Page_userInfo   @"profile"
+//修改用户信息统一接口
+#define Page_ChangeUserInfo @"profile_update"
+#define Page_LogOut     @"logout"
 #endif /* API_h */

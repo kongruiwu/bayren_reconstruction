@@ -18,6 +18,8 @@
 @property (nonatomic, strong) MJRefreshNormalHeader * refreshHeader;
 @property (nonatomic, strong) MJRefreshAutoNormalFooter * refreshFooter;
 @property (nonatomic, strong) NetNullView * nullview;
+//设置界面是返回 还是 显示左右两边框
+@property (nonatomic, assign) BOOL isPush;
 
 - (void)drawMainTabItem;
 - (void)drawBackButton;
@@ -29,4 +31,6 @@
 - (void)creatBackGroundImage;
 - (void)nullviewShow;
 - (void)nullViewHidden;
+- (void)setNavAlpha;
+- (void)setNavUnAlpha;
 @end

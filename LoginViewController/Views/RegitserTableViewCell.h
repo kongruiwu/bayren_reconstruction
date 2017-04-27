@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "logoView.h"
+@protocol RegitserTableViewCellDelegate <NSObject>
+
+- (void)pushToProtocolViewController;
+- (void)backToLoginViewController;
+- (void)userRegisterWith:(NSString *)userName email:(NSString *)email password:(NSString *)pwd;
+
+@end
+
+
 @interface RegitserTableViewCell : UITableViewCell
 @property (nonatomic, strong) logoView * logView;
 @property (nonatomic, strong) UITextField * nameTextf;
@@ -18,4 +27,5 @@
 @property (nonatomic, strong) UIButton * protoBtn;
 @property (nonatomic, strong) UIButton * registerButton;
 @property (nonatomic, strong) UIButton * loginBtn;
+@property (nonatomic, assign) id delegate;
 @end

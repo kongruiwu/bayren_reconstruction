@@ -22,12 +22,13 @@
 #import "PhotoListViewController.h"
 #import "NewsListViewController.h"
 #import "HomeViewController.h"
+#import "UserCenterViewController.h"
+#import "UserManager.h"
 @interface LeftViewController ()<UITableViewDelegate,UITableViewDataSource>
 
-@property (nonatomic, strong) UITableView * tabview;
+
 @property (nonatomic, strong) LeftViewModel * viewModel;
-//当前被选位置  默认为1 首页
-@property (nonatomic, assign) NSInteger index;
+
 
 @end
 
@@ -97,7 +98,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UINavigationController * nav;
     if (indexPath.row == 0) {
-        nav = [[UINavigationController alloc]initWithRootViewController:[LoginViewController new]];
+        if ([UserManager manager].isLogin) {
+            nav = [[UINavigationController alloc]initWithRootViewController:[UserCenterViewController new]];
+        }else{
+            nav = [[UINavigationController alloc]initWithRootViewController:[LoginViewController new]];
+        }
     }else if (indexPath.row == 1) {
         nav = [[UINavigationController alloc]initWithRootViewController:[HomeViewController new]];
     }else if(indexPath.row == 2){

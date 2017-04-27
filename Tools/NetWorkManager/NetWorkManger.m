@@ -43,7 +43,29 @@
         error1.errorMessage = error.description;
         byerror(error1);
     }];
-    
+}
+- (void)postRequest:(NSString *)action route:(NSString *)route withParams:(NSDictionary *)dataDic complete:(CompleteBlock)complete error:(ErrorBlock)byerror{
+    NSString * url = [NSString stringWithFormat:@"%@/%@",Base_ApiHost,route];
+    NSDictionary * params = [self newParamsWithPublicSetting:dataDic action:action];
+    DLog(@"APIurlStar*******\n%@\n*******APIurlEnd",url);
+    DLog(@"ParamsStar*******\n%@\n*******ParamsEnd",params);
+    AFHTTPSessionManager * manger = [AFHTTPSessionManager manager];
+    [manger POST:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSDictionary * resultDic = (NSDictionary *)responseObject;
+        if ([resultDic[@"code"] integerValue] == 0) {
+            complete(resultDic);
+        }else{
+            BYError * error = [[BYError alloc]init];
+            error.errorCode = [NSString stringWithFormat:@"%@",resultDic[@"code"]];
+            error.errorMessage = resultDic[@"msg"];
+            byerror(error);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        BYError * error1 = [[BYError alloc]init];
+        error1.errorCode = [NSString stringWithFormat:@"%ld",error.code];
+        error1.errorMessage = error.description;
+        byerror(error1);
+    }];
 }
 - (NSDictionary *)newParamsWithPublicSetting:(NSDictionary *)dic action:(NSString *)action{
     NSString * version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];

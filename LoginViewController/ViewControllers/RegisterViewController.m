@@ -8,8 +8,13 @@
 
 #import "RegisterViewController.h"
 #import "RegitserTableViewCell.h"
-@interface RegisterViewController ()<UITableViewDelegate,UITableViewDataSource>
+#import "MainWebViewController.h"
+#import "UserManager.h"
+#import "LeftViewController.h"
+#import "HomeViewController.h"
+@interface RegisterViewController ()<UITableViewDelegate,UITableViewDataSource,RegitserTableViewCellDelegate>
 @property (nonatomic, strong) UITableView * tabview;
+@property (nonatomic, strong) UIButton * selectBtn;
 @end
 
 @implementation RegisterViewController
@@ -17,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNavigationTitle:@"注册"];
+    [self drawBackButton];
     [self creatBackGroundImage];
     [self creatUI];
 }
@@ -39,6 +45,43 @@
     if (!cell) {
         cell = [[RegitserTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];
     }
+    self.selectBtn = cell.imageBtn;
+    cell.delegate = self;
     return cell;
+}
+- (void)pushToProtocolViewController{
+    MainWebViewController * web = [[MainWebViewController alloc]initWithTitle:@"协议详情" url:@"http://www.fcbayern.cn/terms_and_conditions?app=1"];
+    web.isPush = YES;
+    [self.navigationController pushViewController:web animated:YES];
+}
+- (void)backToLoginViewController{
+    [super doBack];
+}
+- (void)userRegisterWith:(NSString *)userName email:(NSString *)email password:(NSString *)pwd{
+    if (!self.selectBtn.selected) {
+        [ToastView presentToastWithin:self.view withIcon:APToastIconNone text:@"您还没有同意中国官网服务协议，请阅读后勾选" duration:1.5f];
+        return;
+    }
+    NSDictionary * params = @{
+                              @"username":userName,
+                              @"password":pwd,
+                              @"email":email
+                              };
+    [[NetWorkManger manager] postRequest:Page_register route:Route_User withParams:params complete:^(NSDictionary *result) {
+        NSDictionary * dic = result[@"data"];
+        [UserManager manager].user = [[UserModel alloc]initWithDictionary:dic];
+        [ToastView presentToastWithin:self.view withIcon:APToastIconNone text:@"登陆成功" duration:1.0f];
+        LeftViewController * leftvc = (LeftViewController *)self.sidePanelController.leftPanel;
+        leftvc.index = 1;
+        [leftvc.tabview reloadData];
+        if (self.isPresent) {
+            [super doBack];
+        }else{
+            UINavigationController * nvc = [[UINavigationController alloc]initWithRootViewController:[HomeViewController new]];
+            [self.sidePanelController setCenterPanel:nvc];
+        }
+    } error:^(BYError *byerror) {
+        [ToastView presentToastWithin:self.view withIcon:APToastIconNone text:byerror.errorMessage duration:1.0f];
+    }];
 }
 @end

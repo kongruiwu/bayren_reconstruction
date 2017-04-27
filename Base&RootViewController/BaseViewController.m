@@ -29,15 +29,20 @@
 
 //用于首页，左右切换页面滑动
 - (void)drawMainTabItem {
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"item"] style:UIBarButtonItemStylePlain target:self action:@selector(presentLeftViewController)];
-    self.navigationItem.leftBarButtonItem = item;
-    
-    UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"game"] style:UIBarButtonItemStylePlain target:self action:@selector(presentRightViewController)];
-    self.navigationItem.rightBarButtonItem = item2;
+    if (self.isPush) {
+        UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"back_2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(doBack)];
+        self.navigationItem.leftBarButtonItem = leftItem;
+    }else{
+        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"item"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(presentLeftViewController)];
+        self.navigationItem.leftBarButtonItem = item;
+        
+        UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"game"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(presentRightViewController)];
+        self.navigationItem.rightBarButtonItem = item2;
+    }
 }
 
 - (void)drawBackButton{
-    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back_2"] style:UIBarButtonItemStylePlain target:self action:@selector(doBack)];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"back_2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(doBack)];
     self.navigationItem.leftBarButtonItem = leftItem;
 }
 - (void)creatNullView{
@@ -113,5 +118,20 @@
     [self.refreshFooter setTitle:@"就是要加载" forState:MJRefreshStateWillRefresh];
     [self.refreshFooter setTitle:@"加载中 ..." forState:MJRefreshStateRefreshing];
     [self.refreshFooter setTitle:@"已经全部加载完毕" forState:MJRefreshStateNoMoreData];
+}
+
+- (void)setNavAlpha{
+    self.navigationController.navigationBar.translucent = YES;
+    UIView * clearView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, UI_WIDTH, 20)];
+    [self.view addSubview:clearView];
+    //    导航栏变为透明
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:0];
+    //    让黑线消失的方法
+    self.navigationController.navigationBar.shadowImage=[UIImage new];
+}
+- (void)setNavUnAlpha{
+    self.navigationController.navigationBar.translucent = NO;
+    [self.navigationController.navigationBar setBackgroundImage:nil forBarMetrics:0];
+    self.navigationController.navigationBar.shadowImage = nil;
 }
 @end

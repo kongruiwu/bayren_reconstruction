@@ -49,6 +49,7 @@ typedef NS_ENUM(NSInteger, SelectorBackType){
 
 #define BYColor_Title   UIColorFromRGB(0x444444)
 #define BYColor_Tag     UIColorFromRGB(0x999999)
+#define BYColor_gray_6  UIColorFromRGB(0x666666)
 #define BYColor_gray_3  UIColorFromRGB(0x333333)
 //总体背景色
 #define BYColor_Ground  UIColorFromRGB(0xf2f2f2)

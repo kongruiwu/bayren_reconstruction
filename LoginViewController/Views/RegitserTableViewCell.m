@@ -78,6 +78,11 @@
     [self.logView addSubview:self.protoBtn];
     [self.logView addSubview:self.registerButton];
     [self.logView addSubview:self.loginBtn];
+    
+    [self.imageBtn addTarget:self action:@selector(goSureTheProtocol:) forControlEvents:UIControlEventTouchUpInside];
+    [self.protoBtn addTarget:self action:@selector(checkTheProtocol) forControlEvents:UIControlEventTouchUpInside];
+    [self.registerButton addTarget:self action:@selector(registerBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.loginBtn addTarget:self action:@selector(backToLog) forControlEvents:UIControlEventTouchUpInside];
 }
 - (void)layoutSubviews{
     [super layoutSubviews];
@@ -133,5 +138,23 @@
         make.centerX.equalTo(@0);
         make.top.equalTo(self.registerButton.mas_bottom).offset(Anno750(20));
     }];
+}
+- (void)goSureTheProtocol:(UIButton *)btn{
+    btn.selected = !btn.selected;
+}
+- (void)checkTheProtocol{
+    if ([self.delegate respondsToSelector:@selector(pushToProtocolViewController)]) {
+        [self.delegate pushToProtocolViewController];
+    }
+}
+- (void)registerBtnClick{
+    if ([self.delegate respondsToSelector:@selector(userRegisterWith:email:password:)]) {
+        [self.delegate userRegisterWith:self.nameTextf.text email:self.emailTextf.text password:self.pwdTextf.text];
+    }
+}
+- (void)backToLog{
+    if ([self.delegate respondsToSelector:@selector(backToLoginViewController)]) {
+        [self.delegate backToLoginViewController];
+    }
 }
 @end

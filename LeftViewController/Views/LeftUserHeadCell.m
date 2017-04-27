@@ -7,7 +7,7 @@
 //
 
 #import "LeftUserHeadCell.h"
-
+#import "UserManager.h"
 @implementation LeftUserHeadCell
 
 - (void)awakeFromNib {
@@ -32,7 +32,12 @@
 }
 - (void)creatUI{
     self.headIcon = [[UIImageView alloc]init];
-    self.nameLabel = [BYFactory creatLabelWithText:@"" fontValue:font750(30)
+    if ([UserManager manager].isLogin) {
+        [self.headIcon sd_setImageWithURL:[NSURL URLWithString:[UserManager manager].userIcon]];
+    }else{
+        [self.headIcon setImage:[UIImage imageNamed:[UserManager manager].userIcon]];
+    }
+    self.nameLabel = [BYFactory creatLabelWithText:[UserManager manager].userName fontValue:font750(30)
                                          textColor:BYColor_Main textAlignment:NSTextAlignmentCenter];
     self.redView = [BYFactory creatViewWithColor:BYColor_Main];
     self.grayView = [BYFactory creatViewWithColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1]];
@@ -69,8 +74,14 @@
     }];
 }
 - (void)updateUserInfo{
-    self.headIcon.image = [UIImage imageNamed:@"leftnav_avatar"];
-    self.nameLabel.text = @"登 录 / 注 册";
+    if ([UserManager manager].isLogin) {
+        [self.headIcon sd_setImageWithURL:[NSURL URLWithString:[UserManager manager].user.avatar] placeholderImage:[UIImage imageNamed:@"leftnav_avatar"]];
+        [[NSUserDefaults standardUserDefaults] setObject:[UserManager manager].user.avatar forKey:@"userImage"];
+        self.nameLabel.text = [UserManager manager].user.username;
+    }else{
+        self.headIcon.image = [UIImage imageNamed:@"leftnav_avatar"];
+        self.nameLabel.text = @"登 录 / 注 册";
+    }
 }
 
 

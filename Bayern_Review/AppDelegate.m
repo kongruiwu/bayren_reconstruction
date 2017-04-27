@@ -12,8 +12,8 @@
 #import "LeftViewController.h"
 #import "RightViewController.h"
 #import "HomeViewController.h"
-
-
+#import <IQKeyboardManager.h>
+#import "UserManager.h"
 
 @interface AppDelegate ()
 
@@ -23,7 +23,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    [[UserManager manager] getUserInfo];
+    [self registIQKeyBoard];
+    [self setRootViewController];
+    return YES;
+}
+- (void)setRootViewController{
     self.window = [[UIWindow alloc]initWithFrame:UI_BOUNDS];
     self.sidePaneVC = [[JASidePanelController alloc]init];
     self.sidePaneVC.shouldDelegateAutorotateToVisiblePanel = NO;
@@ -33,15 +38,13 @@
     self.sidePaneVC.leftGapPercentage = 0.8;
     self.sidePaneVC.centerPanel = [[UINavigationController alloc]initWithRootViewController:[HomeViewController new]];
     [self.window setRootViewController:self.sidePaneVC];
-
     [self.window makeKeyAndVisible];
-    
-    
-    
-    return YES;
 }
-
-
+- (void)registIQKeyBoard{
+    [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
+    [IQKeyboardManager sharedManager].shouldShowTextFieldPlaceholder = NO;
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

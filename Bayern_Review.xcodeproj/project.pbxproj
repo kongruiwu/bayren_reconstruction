@@ -73,6 +73,15 @@
 		8BB117731EB1A5D9001971AF /* RightStandingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB117721EB1A5D9001971AF /* RightStandingCell.m */; };
 		8BB117761EB1A861001971AF /* RightStandModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB117751EB1A861001971AF /* RightStandModel.m */; };
 		8BB117791EB1A926001971AF /* RightHeadScoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB117781EB1A926001971AF /* RightHeadScoreCell.m */; };
+		8BB1177D1EB1CC61001971AF /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB1177C1EB1CC61001971AF /* UserModel.m */; };
+		8BB117801EB1CDF1001971AF /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB1177F1EB1CDF1001971AF /* UserManager.m */; };
+		8BB117871EB1E5EC001971AF /* UserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB117861EB1E5EC001971AF /* UserCenterViewController.m */; };
+		8BB1178A1EB1E657001971AF /* UserCenterHeadview.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB117891EB1E657001971AF /* UserCenterHeadview.m */; };
+		8BB1178D1EB1EC63001971AF /* UserCenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB1178C1EB1EC63001971AF /* UserCenterCell.m */; };
+		8BB117901EB1EDC1001971AF /* SetProViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB1178F1EB1EDC1001971AF /* SetProViewController.m */; };
+		8BB117931EB1EDD2001971AF /* SetCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB117921EB1EDD2001971AF /* SetCityViewController.m */; };
+		8BB117961EB1EDE8001971AF /* SetGenerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB117951EB1EDE8001971AF /* SetGenerViewController.m */; };
+		8BB117991EB1EDFB001971AF /* SetBrithViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB117981EB1EDFB001971AF /* SetBrithViewController.m */; };
 		8BB652C91EA0C310007E5048 /* FindPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB652C81EA0C310007E5048 /* FindPwdViewController.m */; };
 		8BB652CC1EA0C31B007E5048 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB652CB1EA0C31B007E5048 /* RegisterViewController.m */; };
 		8BB652CF1EA0C433007E5048 /* FindPwdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB652CE1EA0C433007E5048 /* FindPwdTableViewCell.m */; };
@@ -256,6 +265,24 @@
 		8BB117751EB1A861001971AF /* RightStandModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RightStandModel.m; path = HomeViewController/Models/RightStandModel.m; sourceTree = SOURCE_ROOT; };
 		8BB117771EB1A926001971AF /* RightHeadScoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RightHeadScoreCell.h; path = HomeViewController/Models/RightHeadScoreCell.h; sourceTree = SOURCE_ROOT; };
 		8BB117781EB1A926001971AF /* RightHeadScoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RightHeadScoreCell.m; path = HomeViewController/Models/RightHeadScoreCell.m; sourceTree = SOURCE_ROOT; };
+		8BB1177B1EB1CC61001971AF /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		8BB1177C1EB1CC61001971AF /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		8BB1177E1EB1CDF1001971AF /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		8BB1177F1EB1CDF1001971AF /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
+		8BB117851EB1E5EC001971AF /* UserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterViewController.h; sourceTree = "<group>"; };
+		8BB117861EB1E5EC001971AF /* UserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterViewController.m; sourceTree = "<group>"; };
+		8BB117881EB1E657001971AF /* UserCenterHeadview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterHeadview.h; sourceTree = "<group>"; };
+		8BB117891EB1E657001971AF /* UserCenterHeadview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterHeadview.m; sourceTree = "<group>"; };
+		8BB1178B1EB1EC63001971AF /* UserCenterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCenterCell.h; sourceTree = "<group>"; };
+		8BB1178C1EB1EC63001971AF /* UserCenterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCenterCell.m; sourceTree = "<group>"; };
+		8BB1178E1EB1EDC1001971AF /* SetProViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetProViewController.h; sourceTree = "<group>"; };
+		8BB1178F1EB1EDC1001971AF /* SetProViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetProViewController.m; sourceTree = "<group>"; };
+		8BB117911EB1EDD2001971AF /* SetCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCityViewController.h; sourceTree = "<group>"; };
+		8BB117921EB1EDD2001971AF /* SetCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCityViewController.m; sourceTree = "<group>"; };
+		8BB117941EB1EDE8001971AF /* SetGenerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetGenerViewController.h; sourceTree = "<group>"; };
+		8BB117951EB1EDE8001971AF /* SetGenerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetGenerViewController.m; sourceTree = "<group>"; };
+		8BB117971EB1EDFB001971AF /* SetBrithViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetBrithViewController.h; sourceTree = "<group>"; };
+		8BB117981EB1EDFB001971AF /* SetBrithViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetBrithViewController.m; sourceTree = "<group>"; };
 		8BB652C71EA0C310007E5048 /* FindPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPwdViewController.h; sourceTree = "<group>"; };
 		8BB652C81EA0C310007E5048 /* FindPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPwdViewController.m; sourceTree = "<group>"; };
 		8BB652CA1EA0C31B007E5048 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
@@ -384,6 +411,7 @@
 		8B349A8C1E7F83DA001FFF06 = {
 			isa = PBXGroup;
 			children = (
+				8BB1177A1EB1CB63001971AF /* UserInfo */,
 				8BB652D31EA0D247007E5048 /* ViewControllers */,
 				8B5059081E9760850042A5A3 /* Test */,
 				8BBF31C11E8120940037A3E7 /* Common */,
@@ -915,9 +943,66 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		8BB1177A1EB1CB63001971AF /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				8BB1177B1EB1CC61001971AF /* UserModel.h */,
+				8BB1177C1EB1CC61001971AF /* UserModel.m */,
+				8BB1177E1EB1CDF1001971AF /* UserManager.h */,
+				8BB1177F1EB1CDF1001971AF /* UserManager.m */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		8BB117811EB1E595001971AF /* UserViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8BB117821EB1E595001971AF /* Models */,
+				8BB117831EB1E595001971AF /* ViewControllers */,
+				8BB117841EB1E595001971AF /* Views */,
+			);
+			path = UserViewController;
+			sourceTree = "<group>";
+		};
+		8BB117821EB1E595001971AF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8BB117831EB1E595001971AF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8BB117851EB1E5EC001971AF /* UserCenterViewController.h */,
+				8BB117861EB1E5EC001971AF /* UserCenterViewController.m */,
+				8BB1178E1EB1EDC1001971AF /* SetProViewController.h */,
+				8BB1178F1EB1EDC1001971AF /* SetProViewController.m */,
+				8BB117911EB1EDD2001971AF /* SetCityViewController.h */,
+				8BB117921EB1EDD2001971AF /* SetCityViewController.m */,
+				8BB117941EB1EDE8001971AF /* SetGenerViewController.h */,
+				8BB117951EB1EDE8001971AF /* SetGenerViewController.m */,
+				8BB117971EB1EDFB001971AF /* SetBrithViewController.h */,
+				8BB117981EB1EDFB001971AF /* SetBrithViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		8BB117841EB1E595001971AF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8BB117881EB1E657001971AF /* UserCenterHeadview.h */,
+				8BB117891EB1E657001971AF /* UserCenterHeadview.m */,
+				8BB1178B1EB1EC63001971AF /* UserCenterCell.h */,
+				8BB1178C1EB1EC63001971AF /* UserCenterCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		8BB652D31EA0D247007E5048 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8BB117811EB1E595001971AF /* UserViewController */,
 				8B50A53A1EADEF4700D1C13F /* HomeViewController */,
 				8B50A52D1EADD7F200D1C13F /* PhotoViewController */,
 				8BA675531EA8BB8900AA0EEC /* SettingViewController */,
@@ -1256,6 +1341,7 @@
 				8BB652C91EA0C310007E5048 /* FindPwdViewController.m in Sources */,
 				8B06D8C61E88FC38007B270B /* LeftUserHeadCell.m in Sources */,
 				8BB117791EB1A926001971AF /* RightHeadScoreCell.m in Sources */,
+				8BB117801EB1CDF1001971AF /* UserManager.m in Sources */,
 				8B88196F1EAF436F00C86CCB /* HomeTeamerModel.m in Sources */,
 				8B50A5461EADFF9600D1C13F /* NewsListModel.m in Sources */,
 				8B4D024F1E94F9E3004973EE /* NewsListViewController.m in Sources */,
@@ -1266,10 +1352,12 @@
 				8BB652DA1EA0D2B0007E5048 /* FixtureViewController.m in Sources */,
 				8B349AD11E7F8A62001FFF06 /* BaseViewController.m in Sources */,
 				8B349ADD1E7FA48F001FFF06 /* UIDevice+IdentifierAddition.m in Sources */,
+				8BB1178D1EB1EC63001971AF /* UserCenterCell.m in Sources */,
 				8B50A52C1EADB7A300D1C13F /* ChangePwdTableViewCell.m in Sources */,
 				8B8819631EAF39E500C86CCB /* HomeScoreView.m in Sources */,
 				8B349AE31E7FAA32001FFF06 /* NSDictionary+AXNetworkingMethods.m in Sources */,
 				8B50A5391EADDECA00D1C13F /* PhotoListModel.m in Sources */,
+				8BB117901EB1EDC1001971AF /* SetProViewController.m in Sources */,
 				8B6263C91EA88B6E008DFCA0 /* ListTeamerModel.m in Sources */,
 				8B50A5491EADFFF800D1C13F /* NewsFoucesModel.m in Sources */,
 				8BB652E01EA0D6CB007E5048 /* FixtureTableViewCell.m in Sources */,
@@ -1288,6 +1376,7 @@
 				8B50A5431EADF01F00D1C13F /* HomeNewsTableViewCell.m in Sources */,
 				8B88195D1EAF31C400C86CCB /* HomeTeamerTableViewCell.m in Sources */,
 				8B88195A1EAF302400C86CCB /* HomeVideoTableViewCell.m in Sources */,
+				8BB1178A1EB1E657001971AF /* UserCenterHeadview.m in Sources */,
 				8BB117731EB1A5D9001971AF /* RightStandingCell.m in Sources */,
 				8B24D4891EA47DC1009A9D15 /* StandingViewController.m in Sources */,
 				8B4D02591E94FEF5004973EE /* LoginViewController.m in Sources */,
@@ -1295,9 +1384,13 @@
 				8B349AF71E7FB918001FFF06 /* BaseModel.m in Sources */,
 				8B349AD41E7F8A77001FFF06 /* RootViewController.m in Sources */,
 				8B349A9A1E7F83DA001FFF06 /* main.m in Sources */,
+				8BB117991EB1EDFB001971AF /* SetBrithViewController.m in Sources */,
 				8B5059111E9761E30042A5A3 /* ViewModel.m in Sources */,
+				8BB1177D1EB1CC61001971AF /* UserModel.m in Sources */,
+				8BB117871EB1E5EC001971AF /* UserCenterViewController.m in Sources */,
 				8B50A5401EADEF5600D1C13F /* HomeViewController.m in Sources */,
 				8BED374A1E8A0FB40025726E /* NetNullView.m in Sources */,
+				8BB117961EB1EDE8001971AF /* SetGenerViewController.m in Sources */,
 				8BBF31C71E812E700037A3E7 /* BYPageControl.m in Sources */,
 				8B349AF41E7FB42D001FFF06 /* BYFactory.m in Sources */,
 				8B6263C31EA87196008DFCA0 /* TeamerListViewController.m in Sources */,
@@ -1306,6 +1399,7 @@
 				8B349AD81E7F8F6A001FFF06 /* NetWorkManger.m in Sources */,
 				8B8819751EAF48E500C86CCB /* HomeViewModel.m in Sources */,
 				8B349AE61E7FAA3F001FFF06 /* NSArray+AXNetworkingMethods.m in Sources */,
+				8BB117931EB1EDD2001971AF /* SetCityViewController.m in Sources */,
 				8BBF31AC1E8109BE0037A3E7 /* VideoListModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

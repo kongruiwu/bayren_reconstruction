@@ -9,5 +9,7 @@
 #import "BaseViewController.h"
 
 @interface LeftViewController : UIViewController
-
+@property (nonatomic, strong) UITableView * tabview;
+//当前被选位置  默认为1 首页
+@property (nonatomic, assign) NSInteger index;
 @end
