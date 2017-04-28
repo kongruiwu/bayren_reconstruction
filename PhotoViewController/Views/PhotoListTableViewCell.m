@@ -85,6 +85,6 @@
     [self.backImg sd_setImageWithURL:imgUrl placeholderImage:[UIImage imageNamed:@"news_defult"]];
     self.titlelabel.text = model.title;
     self.timeLabel.text = model.date;
-//    self.countLabel
+    self.countLabel.text = [NSString stringWithFormat:@"%@",model.count];
 }
 @end

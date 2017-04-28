@@ -15,7 +15,6 @@
 @property (nonatomic, strong) NSArray * titles;
 @property (nonatomic, strong) UIScrollView * mainScroll;
 @property (nonatomic, strong) NSMutableArray * viewControllers;
-@property (nonatomic, strong) NSMutableArray * dataArray;
 @end
 
 @implementation TeamerViewController
@@ -24,10 +23,10 @@
     [super viewDidLoad];
     [self setNavigationTitle:@"球队"];
     [self drawMainTabItem];
-    [self creatNullView];
-    [self getData];
+    [self creatUI];
 }
 - (void)creatUI{
+    self.titles = @[@"门将",@"后卫",@"中场",@"前锋",@"教练"];
     self.segmentControl = [[HMSegmentedControl alloc]initWithSectionTitles:self.titles];
     self.segmentControl.frame = CGRectMake(0, 0, UI_WIDTH, Anno750(80));
     //设置字体
@@ -63,8 +62,8 @@
     for (int i = 0 ; i<self.titles.count; i++) {
         if (i == 0) {
             TeamerListViewController *vc = [TeamerListViewController new];
+            vc.teamerTitle = self.titles[i];
             vc.view.frame = CGRectMake(UI_WIDTH * i, 0, UI_WIDTH , UI_HEGIHT - Anno750(80));
-            vc.dataArray = self.dataArray[i];
             [self.mainScroll addSubview:vc.view];
             [self addChildViewController:vc];
             [self.viewControllers addObject:vc];
@@ -79,7 +78,7 @@
     [self.segmentControl setIndexChangeBlock:^(NSInteger index) {
         if (![weakSelf.viewControllers[index] isKindOfClass:[UIViewController class]]) {
             TeamerListViewController *vc = [TeamerListViewController new];
-            vc.dataArray = weakSelf.dataArray[index];
+            vc.teamerTitle = weakSelf.titles[index];
             vc.view.frame = CGRectMake(UI_WIDTH * index, 0, UI_WIDTH , UI_HEGIHT - Anno750(80));
             [weakSelf.mainScroll addSubview:vc.view];
             [weakSelf addChildViewController:vc];
@@ -95,7 +94,7 @@
     [self.segmentControl setSelectedSegmentIndex:index animated:YES];
     if (![self.viewControllers[index] isKindOfClass:[UIViewController class]]) {
         TeamerListViewController *vc = [TeamerListViewController new];
-        vc.dataArray = self.dataArray[index];
+        vc.teamerTitle = self.titles[index];
         vc.view.frame = CGRectMake(UI_WIDTH * index, 0, UI_WIDTH , UI_HEGIHT - Anno750(80));
         [self.mainScroll addSubview:vc.view];
         [self addChildViewController:vc];
@@ -103,29 +102,9 @@
     }
 }
 - (void)getData{
-    self.titles = @[@"门将",@"后卫",@"中场",@"前锋",@"教练"];
-    self.dataArray = [NSMutableArray new];
-    [[NetWorkManger manager] sendRequest:Page_TeamList route:Route_Team withParams:@{} complete:^(NSDictionary *result) {
-        [self nullViewHidden];
-        NSDictionary * dic = result[@"data"];
-        if (dic.count >0) {
-            for (int i = 0; i<dic.count; i++) {
-                NSString * key = [NSString stringWithFormat:@"%d",i+1];
-                NSArray * arr = dic[key];
-                NSMutableArray * muarr = [NSMutableArray new];
-                for (int j= 0; j<arr.count; j++) {
-                    ListTeamerModel * model = [[ListTeamerModel alloc]initWithDictionary:arr[j]];
-                    model.cate = self.titles[i];
-                    [muarr addObject:model];
-                }
-                [self.dataArray addObject:muarr];
-            }
-        }
-        [self creatUI];
-    } error:^(BYError *byerror) {
-        [ToastView presentToastWithin:self.view withIcon:APToastIconNone text:@"请求超时，请重试" duration:1.0f];
-        [self nullviewShow];
-    }];
+    
+//    self.dataArray = [NSMutableArray new];
+    
 }
 
 

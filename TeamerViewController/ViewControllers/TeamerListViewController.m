@@ -12,6 +12,7 @@
 
 @interface TeamerListViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView * tabview;
+@property (nonatomic, strong) NSMutableArray * dataArray;
 @end
 
 @implementation TeamerListViewController
@@ -19,8 +20,10 @@
     [super viewDidLoad];
     
     [self creatUI];
+    [self getData];
 }
 - (void)creatUI{
+    self.dataArray = [NSMutableArray new];
     self.view.backgroundColor = [UIColor whiteColor];
     self.tabview = [BYFactory creatTabviewWithFrame:CGRectMake(0, 0, UI_WIDTH, UI_HEGIHT - Anno750(80) - 64) style:UITableViewStylePlain];
     self.tabview.delegate = self;
@@ -58,5 +61,35 @@
     vc.teamerid =model.id;
     [self.navigationController pushViewController:vc animated:YES];
 }
-
+- (void)getData{
+    NSString * key;
+    if ([self.teamerTitle isEqualToString:@"门将"]) {
+        key = @"1";
+    }else if ([self.teamerTitle isEqualToString:@"后卫"]){
+        key = @"2";
+    }else if ([self.teamerTitle isEqualToString:@"中场"]){
+        key = @"3";
+    }else if ([self.teamerTitle isEqualToString:@"前锋"]){
+        key = @"4";
+    }else if ([self.teamerTitle isEqualToString:@"教练"]){
+        key = @"5";
+    }
+    NSDictionary * params = @{
+                              @"data_key":key
+                              };
+    [[NetWorkManger manager] sendRequest:Page_TeamList route:Route_Team withParams:params complete:^(NSDictionary *result) {
+        [self nullViewHidden];
+        NSDictionary * dic = result[@"data"];
+        NSArray * datas = dic[key];
+        for (int j= 0; j<datas.count; j++) {
+            ListTeamerModel * model = [[ListTeamerModel alloc]initWithDictionary:datas[j]];
+            model.cate = self.teamerTitle;
+            [self.dataArray addObject:model];
+        }
+        [self.tabview reloadData];
+    } error:^(BYError *byerror) {
+        [ToastView presentToastWithin:self.view withIcon:APToastIconNone text:@"请求超时，请重试" duration:1.0f];
+        [self nullviewShow];
+    }];
+}
 @end

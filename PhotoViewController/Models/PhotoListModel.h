@@ -23,5 +23,6 @@
 @property (nonatomic, strong) NSString * date;
 /**展示的图片数组  弃用*/
 @property (nonatomic, strong) NSArray * thmub;
-
+/**图片数量*/
+@property (nonatomic, retain) NSNumber * count;
 @end

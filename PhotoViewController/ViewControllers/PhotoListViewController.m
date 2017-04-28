@@ -84,7 +84,7 @@
                               @"last_time":INCASE_EMPTY([self.dataArray lastObject].date , @""),
                               @"limit":@10
                               };
-    [[NetWorkManger manager] sendRequest:Page_PhotoList route:Route_News withParams:params complete:^(NSDictionary *result) {
+    [[NetWorkManger manager] sendRequest:Page_PhotoList route:Route_Photo withParams:params complete:^(NSDictionary *result) {
         [self nullViewHidden];
         NSArray * arr = result[@"data"];
         if (arr.count<10 && self.dataArray.count>=10) {

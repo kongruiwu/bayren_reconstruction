@@ -29,6 +29,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self creatBackGroundImage];
     [self setNavigationTitle:@"首页"];
     [self drawMainTabItem];
@@ -47,6 +48,9 @@
 }
 - (void)creatHeadView{
     self.headScolView = [[AutoScrollView alloc]initWithFrame:CGRectMake(0, 0, UI_WIDTH, Anno750(330))];
+    if (self.viewModel.headFocus.count>0) {
+        [self.headScolView updateWithImages:self.viewModel.HeadFocusImages descs:self.viewModel.HeadFocusTitles];
+    }
     self.tabview.tableHeaderView = self.headScolView;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -207,6 +211,8 @@
     //首页焦点
     [[NetWorkManger manager] sendRequest:Page_HomeFocus route:Route_Home withParams:@{} complete:^(NSDictionary *result) {
         NSArray * datas = result[@"data"];
+        NSData * data = [NSJSONSerialization dataWithJSONObject:datas options:NSJSONWritingPrettyPrinted error:nil];
+        [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"homeFocus"];
         NSMutableArray * muarr = [NSMutableArray new];
         for (int i = 0; i<datas.count; i++) {
             NSDictionary * dic = datas[i];
@@ -221,6 +227,8 @@
     //首页新闻
     [[NetWorkManger manager]sendRequest:Page_HomeNews route:Route_Home withParams:@{@"limit":@"3"} complete:^(NSDictionary *result) {
         NSArray * datas = result[@"data"];
+        NSData * data = [NSJSONSerialization dataWithJSONObject:datas options:NSJSONWritingPrettyPrinted error:nil];
+        [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"homeNews"];
         NSMutableArray * muarr = [NSMutableArray new];
         for (int i = 0; i<datas.count; i++) {
             NSDictionary * dic = datas[i];
@@ -235,6 +243,8 @@
     //首页广告
     [[NetWorkManger manager] sendRequest:Page_HomeAd route:Route_Home withParams:@{} complete:^(NSDictionary *result) {
         NSArray * datas = result[@"data"];
+        NSData * data = [NSJSONSerialization dataWithJSONObject:datas options:NSJSONWritingPrettyPrinted error:nil];
+        [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"homeAd"];
         if (datas.count>0) {
             self.viewModel.adModel = [[HomeAdModel alloc]initWithDictionary:datas[0]];
             [self.tabview reloadSections:[NSIndexSet indexSetWithIndex:1] withRowAnimation:UITableViewRowAnimationMiddle];
@@ -245,6 +255,8 @@
     //首页视频
     [[NetWorkManger manager] sendRequest:Page_HomeVideo route:Route_Home withParams:@{} complete:^(NSDictionary *result) {
         NSArray * datas = result[@"data"];
+        NSData * data = [NSJSONSerialization dataWithJSONObject:datas options:NSJSONWritingPrettyPrinted error:nil];
+        [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"homeVideos"];
         NSMutableArray * muarr = [NSMutableArray new];
         for (int i = 0; i<datas.count; i++) {
             NSDictionary * dic = datas[i];
@@ -259,6 +271,8 @@
     //首页赛程
     [[NetWorkManger manager] sendRequest:Page_HomeFixture route:Route_Home withParams:@{} complete:^(NSDictionary *result) {
         NSArray * datas = result[@"data"];
+        NSData * data = [NSJSONSerialization dataWithJSONObject:datas options:NSJSONWritingPrettyPrinted error:nil];
+        [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"homeFixture"];
         NSMutableArray * muarr = [NSMutableArray new];
         for (int i = 0; i<datas.count; i++) {
             NSDictionary * dic = datas[i];
@@ -273,6 +287,8 @@
     //首页队员
     [[NetWorkManger manager] sendRequest:Page_HomeTeamer route:Route_Home withParams:@{} complete:^(NSDictionary *result) {
         NSArray * datas = result[@"data"];
+        NSData * data = [NSJSONSerialization dataWithJSONObject:datas options:NSJSONWritingPrettyPrinted error:nil];
+        [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"homeTeamers"];
         NSMutableArray * muarr = [NSMutableArray new];
         for (int i = 0; i<datas.count; i++) {
             NSDictionary * dic = datas[i];

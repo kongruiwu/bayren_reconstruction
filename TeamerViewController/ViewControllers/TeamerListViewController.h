@@ -9,5 +9,6 @@
 #import "BaseViewController.h"
 
 @interface TeamerListViewController : BaseViewController
-@property (nonatomic, strong) NSArray * dataArray;
+@property (nonatomic, strong) NSString * teamerTitle;
+
 @end
