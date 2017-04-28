@@ -54,6 +54,7 @@
 		8B6263C61EA87292008DFCA0 /* TeamListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6263C51EA87292008DFCA0 /* TeamListTableViewCell.m */; };
 		8B6263C91EA88B6E008DFCA0 /* ListTeamerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6263C81EA88B6E008DFCA0 /* ListTeamerModel.m */; };
 		8B6263CC1EA89025008DFCA0 /* TeamerDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6263CB1EA89025008DFCA0 /* TeamerDetailViewController.m */; };
+		8B63442E1EB2EF4500A93B45 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B63442D1EB2EF4500A93B45 /* area.plist */; };
 		8B88195A1EAF302400C86CCB /* HomeVideoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8819591EAF302400C86CCB /* HomeVideoTableViewCell.m */; };
 		8B88195D1EAF31C400C86CCB /* HomeTeamerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B88195C1EAF31C400C86CCB /* HomeTeamerTableViewCell.m */; };
 		8B8819601EAF39A100C86CCB /* HomeScroeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B88195F1EAF39A100C86CCB /* HomeScroeHeadView.m */; };
@@ -80,7 +81,6 @@
 		8BB1178D1EB1EC63001971AF /* UserCenterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB1178C1EB1EC63001971AF /* UserCenterCell.m */; };
 		8BB117901EB1EDC1001971AF /* SetProViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB1178F1EB1EDC1001971AF /* SetProViewController.m */; };
 		8BB117931EB1EDD2001971AF /* SetCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB117921EB1EDD2001971AF /* SetCityViewController.m */; };
-		8BB117961EB1EDE8001971AF /* SetGenerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB117951EB1EDE8001971AF /* SetGenerViewController.m */; };
 		8BB117991EB1EDFB001971AF /* SetBrithViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB117981EB1EDFB001971AF /* SetBrithViewController.m */; };
 		8BB652C91EA0C310007E5048 /* FindPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB652C81EA0C310007E5048 /* FindPwdViewController.m */; };
 		8BB652CC1EA0C31B007E5048 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB652CB1EA0C31B007E5048 /* RegisterViewController.m */; };
@@ -227,6 +227,7 @@
 		8B6263C81EA88B6E008DFCA0 /* ListTeamerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTeamerModel.m; sourceTree = "<group>"; };
 		8B6263CA1EA89025008DFCA0 /* TeamerDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamerDetailViewController.h; sourceTree = "<group>"; };
 		8B6263CB1EA89025008DFCA0 /* TeamerDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamerDetailViewController.m; sourceTree = "<group>"; };
+		8B63442D1EB2EF4500A93B45 /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
 		8B8819581EAF302400C86CCB /* HomeVideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVideoTableViewCell.h; sourceTree = "<group>"; };
 		8B8819591EAF302400C86CCB /* HomeVideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVideoTableViewCell.m; sourceTree = "<group>"; };
 		8B88195B1EAF31C400C86CCB /* HomeTeamerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTeamerTableViewCell.h; sourceTree = "<group>"; };
@@ -279,8 +280,6 @@
 		8BB1178F1EB1EDC1001971AF /* SetProViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetProViewController.m; sourceTree = "<group>"; };
 		8BB117911EB1EDD2001971AF /* SetCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCityViewController.h; sourceTree = "<group>"; };
 		8BB117921EB1EDD2001971AF /* SetCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCityViewController.m; sourceTree = "<group>"; };
-		8BB117941EB1EDE8001971AF /* SetGenerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetGenerViewController.h; sourceTree = "<group>"; };
-		8BB117951EB1EDE8001971AF /* SetGenerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetGenerViewController.m; sourceTree = "<group>"; };
 		8BB117971EB1EDFB001971AF /* SetBrithViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetBrithViewController.h; sourceTree = "<group>"; };
 		8BB117981EB1EDFB001971AF /* SetBrithViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetBrithViewController.m; sourceTree = "<group>"; };
 		8BB652C71EA0C310007E5048 /* FindPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPwdViewController.h; sourceTree = "<group>"; };
@@ -974,14 +973,13 @@
 		8BB117831EB1E595001971AF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8B63442D1EB2EF4500A93B45 /* area.plist */,
 				8BB117851EB1E5EC001971AF /* UserCenterViewController.h */,
 				8BB117861EB1E5EC001971AF /* UserCenterViewController.m */,
 				8BB1178E1EB1EDC1001971AF /* SetProViewController.h */,
 				8BB1178F1EB1EDC1001971AF /* SetProViewController.m */,
 				8BB117911EB1EDD2001971AF /* SetCityViewController.h */,
 				8BB117921EB1EDD2001971AF /* SetCityViewController.m */,
-				8BB117941EB1EDE8001971AF /* SetGenerViewController.h */,
-				8BB117951EB1EDE8001971AF /* SetGenerViewController.m */,
 				8BB117971EB1EDFB001971AF /* SetBrithViewController.h */,
 				8BB117981EB1EDFB001971AF /* SetBrithViewController.m */,
 			);
@@ -1237,6 +1235,7 @@
 				8BBF31BF1E81182F0037A3E7 /* toast_success@2x.png in Resources */,
 				8B349AA81E7F83DA001FFF06 /* LaunchScreen.storyboard in Resources */,
 				8B349AA51E7F83DA001FFF06 /* Assets.xcassets in Resources */,
+				8B63442E1EB2EF4500A93B45 /* area.plist in Resources */,
 				8BBF31BC1E81182F0037A3E7 /* toast_failure@2x.png in Resources */,
 				8BBF31BE1E81182F0037A3E7 /* toast_net_failure@2x.png in Resources */,
 			);
@@ -1390,7 +1389,6 @@
 				8BB117871EB1E5EC001971AF /* UserCenterViewController.m in Sources */,
 				8B50A5401EADEF5600D1C13F /* HomeViewController.m in Sources */,
 				8BED374A1E8A0FB40025726E /* NetNullView.m in Sources */,
-				8BB117961EB1EDE8001971AF /* SetGenerViewController.m in Sources */,
 				8BBF31C71E812E700037A3E7 /* BYPageControl.m in Sources */,
 				8B349AF41E7FB42D001FFF06 /* BYFactory.m in Sources */,
 				8B6263C31EA87196008DFCA0 /* TeamerListViewController.m in Sources */,

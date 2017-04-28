@@ -14,7 +14,6 @@
 #import "SetProViewController.h"
 #import "SetCityViewController.h"
 #import "SetBrithViewController.h"
-#import "SetGenerViewController.h"
 
 @interface UserCenterViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -33,6 +32,7 @@
     self.descStrs = @[[UserManager manager].user.gender,[UserManager manager].user.birth,[UserManager manager].user.area,[UserManager manager].user.email];
     [self.tabview reloadData];
     [[UserManager manager] getUserInfo];
+    [self setNavAlpha];
 }
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
@@ -161,6 +161,7 @@
         LeftViewController * leftvc = (LeftViewController *)self.sidePanelController.leftPanel;
         leftvc.index = 1;
         [leftvc.tabview reloadData];
+        [ToastView presentToastWithin:self.view.window withIcon:APToastIconNone text:@"登出成功" duration:2.0f];
         if (self.isPush) {
             [super doBack];
         }else{

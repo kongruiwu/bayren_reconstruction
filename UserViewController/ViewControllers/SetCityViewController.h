@@ -9,5 +9,6 @@
 #import "BaseViewController.h"
 
 @interface SetCityViewController : BaseViewController
-
+@property (nonatomic, strong) NSArray * dataArray;
+@property (nonatomic, strong) NSString * addressPre;
 @end

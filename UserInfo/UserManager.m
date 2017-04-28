@@ -14,7 +14,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         manger = [[UserManager alloc]init];
-        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"userid"]) {
+        if ([[NSUserDefaults standardUserDefaults] objectForKey:@"userid"] && [[[NSUserDefaults standardUserDefaults] objectForKey:@"userid"] intValue] != 0) {
             manger.userid = [[NSUserDefaults standardUserDefaults] objectForKey:@"userid"];
             manger.userName = [[NSUserDefaults standardUserDefaults] objectForKey:@"userName"];
             manger.userIcon = [[NSUserDefaults standardUserDefaults] objectForKey:@"userImage"];
@@ -34,7 +34,9 @@
     if (user != nil) {
         _user = user;
         _userid = user.uid;
-        _token = user.callback_verify;
+        if (user.callback_verify) {
+            _token = user.callback_verify;
+        }
         self.isLogin = YES;
     }else{
         _user = nil;

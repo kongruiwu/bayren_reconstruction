@@ -70,7 +70,7 @@
     [[NetWorkManger manager] postRequest:Page_register route:Route_User withParams:params complete:^(NSDictionary *result) {
         NSDictionary * dic = result[@"data"];
         [UserManager manager].user = [[UserModel alloc]initWithDictionary:dic];
-        [ToastView presentToastWithin:self.view withIcon:APToastIconNone text:@"登陆成功" duration:1.0f];
+        [ToastView presentToastWithin:self.view.window withIcon:APToastIconNone text:@"登陆成功" duration:1.0f];
         LeftViewController * leftvc = (LeftViewController *)self.sidePanelController.leftPanel;
         leftvc.index = 1;
         [leftvc.tabview reloadData];
