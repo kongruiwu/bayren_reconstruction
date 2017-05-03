@@ -27,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNavigationTitle:@"视屏"];
-    [self drawMainTabItem];
+    [self drawMainSearchTabItem];
     [self creatUI];
     [self RefreshSetting];
     [self creatNullView];
@@ -135,7 +135,7 @@
     if (self.dataArray[indexPath.row].link.length>0) {
         NSString * link = self.dataArray[indexPath.row].link;
         MainWebViewController * webVC = [[MainWebViewController alloc]initWithTitle:@"视屏" url:link];
-        webVC.needBack = YES;
+        webVC.isPush = YES;
         [self.navigationController pushViewController:webVC animated:YES];
     }else{
         [ToastView presentToastWithin:self.view withIcon:APToastIconNone text:@"链接丢失啦～～～" duration:1.5f];
@@ -147,7 +147,7 @@
     NSString * link = self.bannerFocus[index].url;
     if (link.length>0) {
         MainWebViewController * webVC = [[MainWebViewController alloc]initWithTitle:@"视屏" url:link];
-        webVC.needBack = YES;
+        webVC.isPush = YES;
         [self.navigationController pushViewController:webVC animated:YES];
     }else{
         [ToastView presentToastWithin:self.view withIcon:APToastIconNone text:@"链接丢失啦～～～" duration:1.5f];

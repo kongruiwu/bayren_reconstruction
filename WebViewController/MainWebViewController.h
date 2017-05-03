@@ -10,7 +10,6 @@
 
 @interface MainWebViewController : BaseViewController
 
-@property (nonatomic, assign) BOOL needBack;
 
 - (instancetype)initWithTitle:(NSString *)title url:(NSString *)urlStr;
 

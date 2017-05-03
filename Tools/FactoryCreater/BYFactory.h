@@ -27,5 +27,7 @@
 
 + (UITextField *)creatLoginTextFieldWithPlaceHolder:(NSString *)placeHolder cornerRadius:(CGFloat)cornerRadius textFont:(CGFloat)font textAlignment:(NSTextAlignment)aligment;
 
++ (UITextField *)creatTextFieldWithPlaceHolder:(NSString *)placeHolder textAlignment:(NSTextAlignment)alignment textColor:(UIColor *)textColor;
+
 + (CGSize)getSize:(NSString *)text maxSize:(CGSize)maxSize font:(UIFont*)font;
 @end

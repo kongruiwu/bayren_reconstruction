@@ -46,8 +46,8 @@
     self.tabview.delegate = self;
     self.tabview.dataSource = self;
     [self.view addSubview:self.tabview];
-    
 }
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
@@ -101,7 +101,9 @@
         if ([UserManager manager].isLogin) {
             nav = [[UINavigationController alloc]initWithRootViewController:[UserCenterViewController new]];
         }else{
-            nav = [[UINavigationController alloc]initWithRootViewController:[LoginViewController new]];
+            LoginViewController * vc = [[LoginViewController alloc]init];
+            vc.isFromLeft = YES;
+            nav = [[UINavigationController alloc]initWithRootViewController:vc];
         }
     }else if (indexPath.row == 1) {
         nav = [[UINavigationController alloc]initWithRootViewController:[HomeViewController new]];

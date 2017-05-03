@@ -45,10 +45,20 @@
 #define Page_VideoFocus @"get_focus_2016"
 //新闻相关
 #define Route_News      @"news"
+//评论列表
+#define Page_commentList    @"comment_list"
+//点赞
+#define Page_AtCommet   @"comment_good"
+//获取新闻详情
+#define Page_NewsDetail @"get_detail"
+//发表评论
+#define Page_AddComment @"add_comment"
 //新闻焦点图
 #define Page_NewsFocus  @"get_focus_2016"
 //新闻列表
 #define Page_NewsList   @"get_list_2016"
+//标签新闻列表
+#define Page_TagList    @"get_tag_list"
 //球队
 #define Route_Team      @"team"
 //球队列表
@@ -73,5 +83,12 @@
 #define Page_userInfo   @"profile"
 //修改用户信息统一接口
 #define Page_ChangeUserInfo @"profile_update"
+//登出
 #define Page_LogOut     @"logout"
+//路由 其他
+#define Route_Else      @"other"
+//获取投票的分享信息
+#define Page_getVote    @"get_vote"
+//搜索
+#define Page_Search     @"search"
 #endif /* API_h */

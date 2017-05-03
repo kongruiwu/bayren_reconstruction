@@ -33,7 +33,7 @@
     self.sidePaneVC = [[JASidePanelController alloc]init];
     self.sidePaneVC.shouldDelegateAutorotateToVisiblePanel = NO;
     self.sidePaneVC.leftPanel = [LeftViewController new];
-    self.sidePaneVC.rightPanel = [RightViewController new];
+    self.sidePaneVC.rightPanel =[RightViewController new];
     self.sidePaneVC.rightGapPercentage =0.9;
     self.sidePaneVC.leftGapPercentage = 0.8;
     self.sidePaneVC.centerPanel = [[UINavigationController alloc]initWithRootViewController:[HomeViewController new]];

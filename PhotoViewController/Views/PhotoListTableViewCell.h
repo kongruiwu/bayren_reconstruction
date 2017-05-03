@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ConfigHeader.h"
 #import "PhotoListModel.h"
+#import "SearchResultModel.h"
 @interface PhotoListTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) UIImageView * backImg;
@@ -18,4 +19,5 @@
 @property (nonatomic, strong) UIImageView * countImg;
 @property (nonatomic, strong) UILabel * countLabel;
 - (void)updateWithModel:(PhotoListModel *)model;
+- (void)updateWithSearchModel:(SearchResultModel *)model;
 @end

@@ -20,6 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setNavigationTitle:@"球队"];
+    [self drawBackButton];
     [self creatUI];
     [self creatNullView];
     [self loadData];

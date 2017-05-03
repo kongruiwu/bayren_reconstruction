@@ -33,4 +33,5 @@
 - (void)nullViewHidden;
 - (void)setNavAlpha;
 - (void)setNavUnAlpha;
+- (void)drawMainSearchTabItem;
 @end

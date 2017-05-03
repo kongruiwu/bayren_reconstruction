@@ -12,7 +12,15 @@
 #import "RightHeadScoreCell.h"
 #import "RightStandModel.h"
 #import "FixtureModel.h"
-@interface RightViewController ()<UITableViewDelegate,UITableViewDataSource>
+#import "FixtureViewController.h"
+#import "ScoresViewController.h"
+#import "NewsDetailViewController.h"
+#import "PhotoDetailViewController.h"
+
+#import "AppDelegate.h"
+#import "StandingViewController.h"
+#import "FixtureViewController.h"
+@interface RightViewController ()<UITableViewDelegate,UITableViewDataSource,FixtureCellDelegate>
 
 @property (nonatomic, strong) UITableView * tabview;
 //积分
@@ -117,6 +125,7 @@
         }
         [cell cellUpdateWithModel:self.matchs[indexPath.row]];
         [cell updateTheColor];
+        cell.delegtae = self;
         return cell;
     }
     if (indexPath.section == 1) {
@@ -134,6 +143,7 @@
                 cell = [[RightStandingCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];
             }
             [cell updateWithTeamRankModel:self.standings[indexPath.row -1]];
+            
             return cell;
         }
     }
@@ -165,7 +175,41 @@
         
     }];
 }
+- (void)checkNewsDetail:(NSNumber *)newsid{
+    NewsDetailViewController * vc = [[NewsDetailViewController alloc]initWithNewsid:newsid];
+    vc.backType = SelectorBackTypeDismiss;
+    AppDelegate * delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    UIViewController * vc1 = delegate.sidePaneVC.centerPanel;
+    [vc1 presentViewController:[[UINavigationController alloc]initWithRootViewController:vc] animated:YES completion:nil];
+}
+- (void)checkPicsDetail:(NSNumber *)picid{
+    PhotoDetailViewController * vc = [[PhotoDetailViewController alloc]initWithPhotoDetailid:picid];
+    vc.backType = SelectorBackTypeDismiss;
+    AppDelegate * delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    UIViewController * vc1 = delegate.sidePaneVC.centerPanel;
+    [vc1 presentViewController:[[UINavigationController alloc]initWithRootViewController:vc] animated:YES completion:nil];
+//    if ([vc1 isKindOfClass:[UINavigationController class]]) {
+//        [(UINavigationController *)vc1 pushViewController:vc animated:NO];
+//        [delegate.sidePaneVC showCenterPanelAnimated:YES];
+//    }
+}
 - (void)footerButtonClick:(UIButton *)btn{
+    AppDelegate * delegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    UIViewController * vc = delegate.sidePaneVC.centerPanel;
+    if ([btn.titleLabel.text isEqualToString:@"查看完整积分榜"]) {
+        StandingViewController * score = [StandingViewController new];
+        score.isPush = YES;
+        score.backType = SelectorBackTypeDismiss;
+        [vc presentViewController:[[UINavigationController alloc] initWithRootViewController:score] animated:YES completion:nil];
+    }else{
+        FixtureViewController * fix = [FixtureViewController new];
+        fix.isPush = YES;
+        fix.backType = SelectorBackTypeDismiss;
+        [vc presentViewController:[[UINavigationController alloc] initWithRootViewController:fix] animated:YES completion:nil];
+    }
+    
+    
+    
 
 }
 @end

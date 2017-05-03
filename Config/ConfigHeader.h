@@ -16,6 +16,8 @@
 #import "BQActivityView.h"
 #import <ReactiveObjC.h>
 #import <UIImageView+WebCache.h>
+#import "UserManager.h"
+
 
 //全局返回通用配置选项
 typedef NS_ENUM(NSInteger, SelectorBackType){

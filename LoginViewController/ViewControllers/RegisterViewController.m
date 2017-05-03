@@ -11,6 +11,7 @@
 #import "MainWebViewController.h"
 #import "UserManager.h"
 #import "LeftViewController.h"
+#import "AppDelegate.h"
 #import "HomeViewController.h"
 @interface RegisterViewController ()<UITableViewDelegate,UITableViewDataSource,RegitserTableViewCellDelegate>
 @property (nonatomic, strong) UITableView * tabview;
@@ -71,14 +72,18 @@
         NSDictionary * dic = result[@"data"];
         [UserManager manager].user = [[UserModel alloc]initWithDictionary:dic];
         [ToastView presentToastWithin:self.view.window withIcon:APToastIconNone text:@"登陆成功" duration:1.0f];
-        LeftViewController * leftvc = (LeftViewController *)self.sidePanelController.leftPanel;
-        leftvc.index = 1;
+        AppDelegate * appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+        LeftViewController * leftvc = (LeftViewController *)appdelegate.sidePaneVC.leftPanel;
+        leftvc.index = self.index;
+        if (self.isFromeLeft) {
+            leftvc.index = 1;
+        }
         [leftvc.tabview reloadData];
-        if (self.isPresent) {
-            [super doBack];
-        }else{
+        if (self.isFromeLeft) {
             UINavigationController * nvc = [[UINavigationController alloc]initWithRootViewController:[HomeViewController new]];
             [self.sidePanelController setCenterPanel:nvc];
+        }else{
+            [super doBack];
         }
     } error:^(BYError *byerror) {
         [ToastView presentToastWithin:self.view withIcon:APToastIconNone text:byerror.errorMessage duration:1.0f];

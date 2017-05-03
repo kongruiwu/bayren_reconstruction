@@ -13,6 +13,7 @@
 #import "UserManager.h"
 #import "LeftViewController.h"
 #import "HomeViewController.h"
+#import "AppDelegate.h"
 @interface LoginViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView * tabview;
@@ -56,11 +57,11 @@
         @strongify(self);
         if ([str isEqualToString:@"找回密码"]) {
             FindPwdViewController * vc = [FindPwdViewController new];
-            vc.isPresent = self.isPresent;
             [self.navigationController pushViewController:vc animated:YES];
         }else if([str isEqualToString:@"注册"]){
             RegisterViewController * vc = [RegisterViewController new];
-            vc.isPresent = self.isPresent;
+            vc.isFromeLeft = self.isFromLeft;
+            vc.index = self.index;
             [self.navigationController pushViewController:vc animated:YES];
         }
     }];
@@ -80,14 +81,18 @@
         NSDictionary * dic = result[@"data"];
         [UserManager manager].user = [[UserModel alloc]initWithDictionary:dic];
         [ToastView presentToastWithin:self.view.window withIcon:APToastIconNone text:@"登陆成功" duration:1.0f];
-        LeftViewController * leftvc = (LeftViewController *)self.sidePanelController.leftPanel;
-        leftvc.index = 1;
+        AppDelegate * appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+        LeftViewController * leftvc = (LeftViewController *)appdelegate.sidePaneVC.leftPanel;
+        leftvc.index = self.index;
+        if (self.isFromLeft) {
+            leftvc.index = 1;
+        }
         [leftvc.tabview reloadData];
-        if (self.isPresent) {
-            [super doBack];
-        }else{
+        if (self.isFromLeft) {
             UINavigationController * nvc = [[UINavigationController alloc]initWithRootViewController:[HomeViewController new]];
             [self.sidePanelController setCenterPanel:nvc];
+        }else{
+            [super doBack];
         }
     } error:^(BYError *byerror) {
         [ToastView presentToastWithin:self.view withIcon:APToastIconNone text:byerror.errorMessage duration:2.0f];

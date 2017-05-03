@@ -33,9 +33,9 @@
 @property (nonatomic, strong) NSString * half_score;
 //比赛状态
 @property (nonatomic, strong) NSString * game_status;
-//新闻链接
+//新闻ID
 @property (nonatomic, strong) NSNumber * news_link;
-//图集链接
+//图集ID
 @property (nonatomic, strong) NSNumber * album_link;
 //转播信息
 @property (nonatomic, strong) NSString * relay_info;

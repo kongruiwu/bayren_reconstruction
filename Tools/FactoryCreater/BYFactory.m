@@ -102,6 +102,14 @@
     return textF;
 }
 
++ (UITextField *)creatTextFieldWithPlaceHolder:(NSString *)placeHolder textAlignment:(NSTextAlignment)alignment textColor:(UIColor *)textColor{
+    UITextField * textfield = [[UITextField alloc]init];
+    textfield.placeholder = placeHolder;
+    textfield.textAlignment = alignment;
+    textfield.textColor = textColor;
+    return textfield;
+}
+
 + (CGSize)getSize:(NSString *)text maxSize:(CGSize)maxSize font:(UIFont*)font{
     CGSize sizeFirst = [text boundingRectWithSize:maxSize options:NSStringDrawingUsesFontLeading|NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingTruncatesLastVisibleLine attributes:@{NSFontAttributeName:font} context:nil].size;
     return sizeFirst;

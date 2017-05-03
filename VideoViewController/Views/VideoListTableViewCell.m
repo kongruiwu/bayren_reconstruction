@@ -106,5 +106,20 @@
     self.nameLabel.text = model.title;
     self.timeLabel.text = model.date;
 }
+- (void)updateWithSearchModel:(SearchResultModel *)model{
+    NSURL * picUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",Base_ImgHost,model.pic]];
+    [self.videoIcon sd_setImageWithURL:picUrl placeholderImage:[UIImage imageNamed:@"news_defult"]];
+    NSMutableString * tags = [[NSMutableString alloc]init];
+    for (int i = 0; i<model.tags.count; i++) {
+        if (i == 0) {
+            [tags appendString:model.tags[i]];
+        }else{
+            [tags appendString:[NSString stringWithFormat:@"  %@",model.tags[i]]];
+        }
+    }
+    self.tagLabel.text = tags;
+    self.nameLabel.text = model.title;
+    self.timeLabel.text = model.date;
+}
 
 @end

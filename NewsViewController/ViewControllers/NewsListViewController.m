@@ -27,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNavigationTitle:@"新闻"];
-    [self drawMainTabItem];
+    [self drawMainSearchTabItem];
     [self creatUI];
     [self RefreshSetting];
     [self creatNullView];
@@ -121,15 +121,12 @@
     });
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NewsDetailViewController * vc = [NewsDetailViewController new];
-    
+    NewsDetailViewController * vc = [[NewsDetailViewController alloc]initWithNewsid:self.dataArray[indexPath.row].id];
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (void)pushToNewsDetail{
     NSInteger index = self.bannerView.pageControl.currentPage;
-    NSString * link = self.bannerFocus[index].url;
-    NewsDetailViewController * vc = [NewsDetailViewController new];
-    
+    NewsDetailViewController * vc = [[NewsDetailViewController alloc]initWithNewsid:self.bannerFocus[index].id];
     [self.navigationController pushViewController:vc animated:YES];
     
 }

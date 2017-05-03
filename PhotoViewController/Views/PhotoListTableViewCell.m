@@ -87,4 +87,11 @@
     self.timeLabel.text = model.date;
     self.countLabel.text = [NSString stringWithFormat:@"%@",model.count];
 }
+- (void)updateWithSearchModel:(SearchResultModel *)model{
+    NSURL * imgUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",Base_ImgHost,model.pic]];
+    [self.backImg sd_setImageWithURL:imgUrl placeholderImage:[UIImage imageNamed:@"news_defult"]];
+    self.titlelabel.text = model.title;
+    self.timeLabel.text = model.date;
+    self.countLabel.text = [NSString stringWithFormat:@"%@",model.count];
+}
 @end

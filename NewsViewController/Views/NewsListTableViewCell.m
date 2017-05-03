@@ -38,7 +38,7 @@
                                          fontValue:font750(24)
                                          textColor:BYColor_Tag
                                      textAlignment:NSTextAlignmentLeft];
-    self.descLabel.numberOfLines = 0;
+    self.descLabel.numberOfLines = 2;
     self.timeLabel = [BYFactory creatLabelWithText:@"22:12"
                                          fontValue:font750(24)
                                          textColor:BYColor_Tag
@@ -80,6 +80,13 @@
     }];
 }
 - (void)updateWithModel:(NewsListModel *)model{
+    NSURL * imgUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",Base_ImgHost,model.pic]];
+    [self.icon sd_setImageWithURL:imgUrl placeholderImage:[UIImage imageNamed:@"news_defult"]];
+    self.titleLabel.text = model.title;
+    self.descLabel.text = model.content;
+    self.timeLabel.text = model.date;
+}
+- (void)updateWithSerachModel:(SearchResultModel *)model{
     NSURL * imgUrl = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",Base_ImgHost,model.pic]];
     [self.icon sd_setImageWithURL:imgUrl placeholderImage:[UIImage imageNamed:@"news_defult"]];
     self.titleLabel.text = model.title;

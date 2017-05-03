@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewController.h"
-
+#import "SearchViewController.h"
 @interface BaseViewController ()
 
 @end
@@ -40,7 +40,22 @@
         self.navigationItem.rightBarButtonItem = item2;
     }
 }
-
+- (void)drawMainSearchTabItem{
+    if (self.isPush) {
+        UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"back_2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(doBack)];
+        self.navigationItem.leftBarButtonItem = leftItem;
+    }else{
+        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"item"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(presentLeftViewController)];
+        self.navigationItem.leftBarButtonItem = item;
+        
+        UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"game"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(presentRightViewController)];
+        UIBarButtonItem *item3 = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"nav_search"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(searchBtnClick)];
+        self.navigationItem.rightBarButtonItems = @[item2,item3];
+    }
+}
+- (void)searchBtnClick{
+    [self.navigationController pushViewController:[SearchViewController new] animated:YES];
+}
 - (void)drawBackButton{
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"back_2"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(doBack)];
     self.navigationItem.leftBarButtonItem = leftItem;

@@ -9,6 +9,7 @@
 #import "SettingViewController.h"
 #import "SettingCell.h"
 #import "ChagePwdViewController.h"
+#import "LoginViewController.h"
 @interface SettingViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView * tabview;
 @property (nonatomic, strong) NSArray * titles;
@@ -76,7 +77,16 @@
             [self.tabview reloadData];
         }];
     }else if(indexPath.row == 0){
-        [self.navigationController pushViewController:[ChagePwdViewController new] animated:YES];
+        if (![UserManager manager].isLogin) {
+            [ToastView presentToastWithin:self.view.window withIcon:APToastIconNone text:@"您还没有登陆，请先登陆" duration:2.0f];
+            LoginViewController * vc = [LoginViewController new];
+            vc.isPush = YES;
+            vc.index = 10;
+            vc.backType = SelectorBackTypePopBack;
+            [self.navigationController pushViewController:vc animated:YES];
+        }else{
+            [self.navigationController pushViewController:[ChagePwdViewController new] animated:YES];
+        }
     }
 }
 - (void)creatFootView{

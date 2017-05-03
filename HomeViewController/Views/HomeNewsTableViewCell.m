@@ -40,7 +40,7 @@
                                          fontValue:font750(24)
                                          textColor:BYColor_Tag
                                      textAlignment:NSTextAlignmentLeft];
-    self.descLabel.numberOfLines = 0;
+    self.descLabel.numberOfLines = 2;
 //    self.timeLabel = [BYFactory creatLabelWithText:@"22:12"
 //                                         fontValue:font750(26)
 //                                         textColor:BYColor_Tag
@@ -68,6 +68,7 @@
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.icon.mas_right).offset(Anno750(20));
         make.top.equalTo(self.icon.mas_top);
+        make.right.equalTo(@(-Anno750(24)));
     }];
     [self.descLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.titleLabel.mas_left);

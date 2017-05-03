@@ -33,11 +33,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNavigationTitle:self.titleStr];
-    if (self.needBack) {
-        [self drawBackButton];
-    }else{
-        [self drawMainTabItem];
-    }
+
+    [self drawMainTabItem];
     
     [self creatUI];
 }

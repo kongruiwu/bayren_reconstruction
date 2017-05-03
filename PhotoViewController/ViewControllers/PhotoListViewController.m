@@ -9,6 +9,8 @@
 #import "PhotoListViewController.h"
 #import "PhotoListTableViewCell.h"
 #import "PhotoListModel.h"
+#import "PhotoDetailViewController.h"
+
 @interface PhotoListViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView * tabview;
@@ -21,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setNavigationTitle:@"图片"];
-    [self drawMainTabItem];
+    [self drawMainSearchTabItem];
     [self creatUI];
     [self RefreshSetting];
     [self creatNullView];
@@ -67,6 +69,9 @@
     }
     [cell updateWithModel:self.dataArray[indexPath.section]];
     return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.navigationController pushViewController:[PhotoDetailViewController new] animated:YES];
 }
 - (void)nullViewClick{
     [self refreshData];

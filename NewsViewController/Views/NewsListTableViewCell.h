@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ConfigHeader.h"
 #import "NewsListModel.h"
+#import "SearchResultModel.h"
 @interface NewsListTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) UIImageView * icon;
@@ -17,4 +18,5 @@
 @property (nonatomic, strong) UILabel * timeLabel;
 @property (nonatomic, strong) UIView * line;
 - (void)updateWithModel:(NewsListModel *)model;
+- (void)updateWithSerachModel:(SearchResultModel *)model;
 @end

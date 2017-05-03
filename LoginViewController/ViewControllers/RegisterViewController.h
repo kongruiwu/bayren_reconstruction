@@ -10,6 +10,7 @@
 
 @interface RegisterViewController : BaseViewController
 
-@property (nonatomic, assign) BOOL isPresent;
+@property (nonatomic, assign) BOOL isFromeLeft;
+@property (nonatomic, assign) NSInteger index;
 
 @end

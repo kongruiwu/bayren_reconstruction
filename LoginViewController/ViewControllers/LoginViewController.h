@@ -9,7 +9,8 @@
 #import "BaseViewController.h"
 
 @interface LoginViewController : BaseViewController
-//判断返回方式  是否是dismis 还是 设置为首页
-@property (nonatomic, assign) BOOL isPresent;
+
+@property (nonatomic, assign) BOOL isFromLeft;
+@property (nonatomic, assign) NSInteger index;
 
 @end

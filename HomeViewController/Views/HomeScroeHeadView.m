@@ -80,6 +80,7 @@
         [self.scrollView addSubview:scoreView];
     }
 }
+
 - (void)newsButtonClick:(UIButton *)btn{
     UIView * superView = [btn superview];
     int index = (int)superView.tag - 1000;
@@ -114,5 +115,8 @@
     if (self.scrollView.contentOffset.x < (self.models.count - 2) * Anno750(602)) {
         [self.scrollView setContentOffset:CGPointMake(self.scrollView.contentOffset.x + Anno750(602), 0) animated:YES];
     }
+}
+- (void)update{
+    [self layoutSubviews];
 }
 @end

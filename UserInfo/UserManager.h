@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) UserModel * user;
 @property (nonatomic, strong) NSNumber * userid;
+/**是否登陆*/
 @property (nonatomic, assign) BOOL isLogin;
 //缓存使用
 @property (nonatomic, strong) NSString * userName;

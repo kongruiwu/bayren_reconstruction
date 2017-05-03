@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ConfigHeader.h"
 #import "VideoListModel.h"
+#import "SearchResultModel.h"
 @interface VideoListTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) UIImageView * videoIcon;
@@ -18,4 +19,5 @@
 @property (nonatomic, strong) UIImageView * playIcon;
 @property (nonatomic, strong) UIView * line;
 - (void)updateWithModel:(VideoListModel *)model;
+- (void)updateWithSearchModel:(SearchResultModel *)model;
 @end

@@ -19,6 +19,7 @@
 @property (nonatomic, strong) NSNumber * show_type;
 /**视频标题*/
 @property (nonatomic, strong) NSString * title;
+/**数据展示类型  1 新闻  2图片  3 视屏*/
 @property (nonatomic, strong) NSNumber * type;
 /**视屏地址*/
 @property (nonatomic, strong) NSString * url;

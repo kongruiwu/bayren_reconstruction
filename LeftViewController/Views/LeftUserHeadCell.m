@@ -32,6 +32,8 @@
 }
 - (void)creatUI{
     self.headIcon = [[UIImageView alloc]init];
+    self.headIcon.layer.masksToBounds = YES;
+    self.headIcon.layer.cornerRadius = Anno750(50);
     if ([UserManager manager].isLogin) {
         [self.headIcon sd_setImageWithURL:[NSURL URLWithString:[UserManager manager].userIcon]];
     }else{

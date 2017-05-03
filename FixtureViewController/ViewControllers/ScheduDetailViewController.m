@@ -8,6 +8,8 @@
 
 #import "ScheduDetailViewController.h"
 #import "FixtureTableViewCell.h"
+#import "PhotoDetailViewController.h"
+#import "NewsDetailViewController.h"
 #import "FixtureModel.h"
 @interface ScheduDetailViewController ()<UITableViewDelegate, UITableViewDataSource,FixtureCellDelegate>
 @property (nonatomic, strong) NSMutableArray<FixtureModel *> * dataArray;
@@ -90,9 +92,11 @@
     [self getdata];
 }
 - (void)checkPicsDetail:(NSNumber *)picid{
-    NSLog(@"%@",picid);
+    PhotoDetailViewController * vc = [[PhotoDetailViewController alloc]initWithPhotoDetailid:picid];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 - (void)checkNewsDetail:(NSNumber *)newsid{
-    NSLog(@"%@",newsid);
+    NewsDetailViewController * vc = [[NewsDetailViewController alloc]initWithNewsid:newsid];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 @end

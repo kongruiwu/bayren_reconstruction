@@ -55,7 +55,7 @@
     [self.numLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@(Anno750(20)));
         make.centerY.equalTo(@0);
-        make.width.equalTo(@(Anno750(30)));
+        make.width.equalTo(@(Anno750(35)));
     }];
     [self.teamIcon mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.numLabel.mas_right).offset(Anno750(10));
@@ -66,7 +66,7 @@
     [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.teamIcon.mas_right);
         make.centerY.equalTo(@0);
-        make.width.equalTo(@(Anno750(150)));
+        make.width.equalTo(@(Anno750(145)));
     }];
     [self.winLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(self.nameLabel.mas_right);

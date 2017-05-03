@@ -12,17 +12,23 @@
 #import "HomeAdTableViewCell.h"
 #import "HomeVideoTableViewCell.h"
 #import "HomeTeamerTableViewCell.h"
-#import "HomeScroeHeadView.h"
+#import "HomeFixtureCell.h"
 #import "HomeViewModel.h"
 #import "NewsListModel.h"
 
-@interface HomeViewController ()<UITableViewDelegate, UITableViewDataSource,HomeScoreHeadViewDelegate>
+
+#import "PhotoDetailViewController.h"
+#import "NewsDetailViewController.h"
+#import "TeamerDetailViewController.h"
+#import "MainWebViewController.h"
+#import "NewsListViewController.h"
+
+@interface HomeViewController ()<UITableViewDelegate, UITableViewDataSource,HomeTeamerDelegate,HomeFixtureDelegate>
 
 @property (nonatomic, strong) UITableView * tabview;
 @property (nonatomic, strong) AutoScrollView * headScolView;
 @property (nonatomic, strong) AutoScrollView * videoScolView;
 @property (nonatomic, strong) HomeViewModel * viewModel;
-
 @end
 
 @implementation HomeViewController
@@ -32,7 +38,7 @@
     
     [self creatBackGroundImage];
     [self setNavigationTitle:@"首页"];
-    [self drawMainTabItem];
+    [self drawMainSearchTabItem];
     [self creatUI];
     [self creatNetWorkQueue];
 }
@@ -43,7 +49,6 @@
     self.tabview.delegate = self;
     self.tabview.dataSource = self;
     [self.view addSubview:self.tabview];
-    
     [self creatHeadView];
 }
 - (void)creatHeadView{
@@ -51,6 +56,8 @@
     if (self.viewModel.headFocus.count>0) {
         [self.headScolView updateWithImages:self.viewModel.HeadFocusImages descs:self.viewModel.HeadFocusTitles];
     }
+    UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(HeadFocusClick:)];
+    [self.headScolView addGestureRecognizer:tap];
     self.tabview.tableHeaderView = self.headScolView;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -70,7 +77,7 @@
         case 1:
             return Anno750(140);
         case 2:
-            return Anno750(20);
+            return Anno750(340);
         case 3:
         case 4:
             return Anno750(200);
@@ -82,8 +89,6 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     if (section == 0) {
         return Anno750(100);
-    }else if(section == 2){
-        return Anno750(340);
     }else if(section == 1){
         return Anno750(20);
     }
@@ -91,19 +96,21 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     if (section == 2) {
-        return Anno750(380);
+        return Anno750(400);
     }
     return Anno750(20);
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     if (section == 2) {
         UIView * header = [BYFactory creatViewWithColor:[UIColor clearColor]];
-        header.frame = CGRectMake(0, 0, UI_WIDTH, Anno750(380));
+        header.frame = CGRectMake(0, 0, UI_WIDTH, Anno750(400));
         self.videoScolView = [[AutoScrollView alloc]initWithFrame:CGRectMake(Anno750(24), 0, Anno750(702), Anno750(380))];
         if (self.viewModel.videoFocus.count>0) {
             [self.videoScolView updateWithImages:self.viewModel.VideoFocusImages descs:self.viewModel.VideoFocusTitles];
         }
         [header addSubview:self.videoScolView];
+        UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(videoFocuClick)];
+        [self.videoScolView addGestureRecognizer:tap];
         return header;
     }
     return nil;
@@ -136,13 +143,6 @@
         }];
         [checkAllNews addTarget:self action:@selector(checkAllNews) forControlEvents:UIControlEventTouchUpInside];
         return footerView;
-    }else if(section == 2){
-        HomeScroeHeadView * headView = [[HomeScroeHeadView alloc]initWithFrame:CGRectMake(0, 0, UI_WIDTH, Anno750(340))];
-        if (self.viewModel.fixtures.count>0) {
-            [headView updateScrollViewWithArray:self.viewModel.fixtures andIndex:self.viewModel.index];
-        }
-        headView.delegate = self;
-        return headView;
     }
     return nil;
 }
@@ -172,12 +172,13 @@
         }
         case 2:
         {
-            static NSString * cellid = @"blankCell";
-            UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellid];
+            static NSString * cellid = @"FixtueTabCell";
+            HomeFixtureCell * cell = [tableView dequeueReusableCellWithIdentifier:cellid];
             if (!cell) {
-                cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];
+                cell = [[HomeFixtureCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellid];
             }
-            cell.hidden = YES;
+            cell.delegate = self;
+            [cell updateWithFixtures:self.viewModel.fixtures andindex:self.viewModel.index];
             return cell;
         }
         case 3:
@@ -197,6 +198,7 @@
                     [cell updateWithArrays:@[self.viewModel.teamers[2],self.viewModel.teamers[3]]];
                 }
             }
+            cell.delegate = self;
             return cell;
         }
         default:
@@ -301,11 +303,86 @@
         
     }];
 }
-
+#pragma mark 头部bannar点击
+- (void)HeadFocusClick:(UITapGestureRecognizer *)tap{
+    NSInteger index = self.headScolView.pageControl.currentPage;
+    VideoFocusModel * model = self.viewModel.headFocus[index];
+    switch ([model.show_type intValue]) {
+        case 1://新闻
+        {
+            [self checkNewsDetailWithNewsid:model.id];
+        }
+            break;
+        case 2://图集
+        {
+            [self checkPhotoDetailWithid:model.id];
+        }
+            break;
+        case 3://视屏
+        {
+            [self checkVideoDetailWithLink:model.url];
+        }
+            break;
+        default:
+            
+            break;
+    }
+}
+#pragma mark 中间视频bannar点击
+- (void)videoFocuClick{
+    NSInteger index = self.videoScolView.pageControl.currentPage;
+    HomeVideoFocusModel * model = self.viewModel.videoFocus[index];
+    [self checkVideoDetailWithLink:model.url];
+}
+- (void)checkPicDetailWithPicid:(NSNumber *)picid{
+    [self checkPhotoDetailWithid:picid];
+}
+- (void)checkNewDetailWithNewsid:(NSNumber *)newsid{
+    [self checkNewsDetailWithNewsid:newsid];
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+#pragma mark 新闻
+    if (indexPath.section == 0) {
+        NewsListModel * model = self.viewModel.news[indexPath.row];
+        [self checkNewsDetailWithNewsid:model.id];
+    }else if(indexPath.section == 1){
+#pragma mark 广告
+        MainWebViewController * webVC = [[MainWebViewController alloc]initWithTitle:@"广告" url:self.viewModel.adModel.url];
+        webVC.isPush = YES;
+        [self.navigationController pushViewController:webVC animated:YES];
+    }
+}
+#pragma mark 球员点击
+- (void)homeTeamerClickWithTeamerid:(NSNumber *)teamerid isTeamer:(BOOL)rec{
+    [self checkTeamerDetailWithTeamerid:teamerid isTeamer:rec];
+}
+#pragma mark 界面跳转
+- (void)checkNewsDetailWithNewsid:(NSNumber *)newsid{
+    NewsDetailViewController * vc = [[NewsDetailViewController alloc]initWithNewsid:newsid];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
+- (void)checkPhotoDetailWithid:(NSNumber *)photoid{
+    PhotoDetailViewController * vc = [[PhotoDetailViewController alloc]initWithPhotoDetailid:photoid];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+- (void)checkVideoDetailWithLink:(NSString *)link{
+    MainWebViewController * webVC = [[MainWebViewController alloc]initWithTitle:@"视屏" url:link];
+    webVC.isPush = YES;
+    [self.navigationController pushViewController:webVC animated:YES];
+}
+- (void)checkTeamerDetailWithTeamerid:(NSNumber *)num isTeamer:(BOOL)rec{
+    TeamerDetailViewController * vc = [[TeamerDetailViewController alloc]init];
+    vc.isTeamer = rec;
+    vc.teamerid = num;
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 #pragma mark 查看全部新闻
 - (void)checkAllNews{
-
+    NewsListViewController * vc = [[NewsListViewController alloc]init];
+    vc.isPush = YES;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

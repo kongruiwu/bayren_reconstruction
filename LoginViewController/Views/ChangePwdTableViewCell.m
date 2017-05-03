@@ -44,7 +44,7 @@
                                                       cornerRadius:Anno750(44)
                                                           textFont:font750(28)
                                                      textAlignment:NSTextAlignmentCenter];
-    self.changeButton = [BYFactory creatButtonWithTitle:@"注册"
+    self.changeButton = [BYFactory creatButtonWithTitle:@"修改密码"
                                           backGroundColor:BYColor_Main
                                                 textColor:[UIColor whiteColor]
                                                  textSize:font750(32)];
