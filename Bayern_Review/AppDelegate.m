@@ -14,7 +14,8 @@
 #import "HomeViewController.h"
 #import <IQKeyboardManager.h>
 #import "UserManager.h"
-
+#import "AppKeyDefine.h"
+#import <JPUSHService.h>
 @interface AppDelegate ()
 
 @end
@@ -25,7 +26,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[UserManager manager] getUserInfo];
     [self registIQKeyBoard];
+    [self UmengShareSetting];
     [self setRootViewController];
+    [self JpushSettingWithDic:launchOptions];
     return YES;
 }
 - (void)setRootViewController{
@@ -44,6 +47,19 @@
     [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     [IQKeyboardManager sharedManager].shouldShowTextFieldPlaceholder = NO;
+}
+- (void)UmengShareSetting{
+    [UMSocialManager defaultManager].umSocialAppkey = UmengAppKey;
+    [[UMSocialManager defaultManager] openLog:YES];
+    //设置微信的appKey和appSecret
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:WXAppId appSecret:WXAppSecret redirectURL:@"bayren"];
+    //设置分享到QQ互联的appKey和appSecret
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_QQ appKey:QQAppId appSecret:nil redirectURL:@"bayren"];
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Qzone appKey:nil appSecret:QQAppSecret redirectURL:@"bayren"];
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Sina appKey:SinaAppId  appSecret:SinaAppSecret redirectURL:@"bayren"];
+}
+- (void)JpushSettingWithDic:(NSDictionary *)launchOptions{
+    [JPUSHService setupWithOption:launchOptions appKey:JPUSHKey channel:@"App Store" apsForProduction:YES advertisingIdentifier:nil];
 }
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

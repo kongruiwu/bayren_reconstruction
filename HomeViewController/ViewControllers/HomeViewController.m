@@ -320,7 +320,7 @@
             break;
         case 3://视屏
         {
-            [self checkVideoDetailWithLink:model.url];
+            [self checkVideoDetailWithLink:model.url title:model.title content:model.content];
         }
             break;
         default:
@@ -332,7 +332,7 @@
 - (void)videoFocuClick{
     NSInteger index = self.videoScolView.pageControl.currentPage;
     HomeVideoFocusModel * model = self.viewModel.videoFocus[index];
-    [self checkVideoDetailWithLink:model.url];
+    [self checkVideoDetailWithLink:model.url title:model.title content:model.content];
 }
 - (void)checkPicDetailWithPicid:(NSNumber *)picid{
     [self checkPhotoDetailWithid:picid];
@@ -347,7 +347,7 @@
         [self checkNewsDetailWithNewsid:model.id];
     }else if(indexPath.section == 1){
 #pragma mark 广告
-        MainWebViewController * webVC = [[MainWebViewController alloc]initWithTitle:@"广告" url:self.viewModel.adModel.url];
+        MainWebViewController * webVC = [[MainWebViewController alloc]initWithTitle:@"广告" url:self.viewModel.adModel.url andFromType:FromTypeWeb];
         webVC.isPush = YES;
         [self.navigationController pushViewController:webVC animated:YES];
     }
@@ -366,8 +366,9 @@
     PhotoDetailViewController * vc = [[PhotoDetailViewController alloc]initWithPhotoDetailid:photoid];
     [self.navigationController pushViewController:vc animated:YES];
 }
-- (void)checkVideoDetailWithLink:(NSString *)link{
-    MainWebViewController * webVC = [[MainWebViewController alloc]initWithTitle:@"视屏" url:link];
+- (void)checkVideoDetailWithLink:(NSString *)link title:(NSString *)title content:(NSString *)content{
+    MainWebViewController * webVC = [[MainWebViewController alloc]initWithTitle:@"视屏" url:link andFromType:FromTypeVideo];
+    [webVC updateShareSettingWithTitle:title content:content image:@""];
     webVC.isPush = YES;
     [self.navigationController pushViewController:webVC animated:YES];
 }

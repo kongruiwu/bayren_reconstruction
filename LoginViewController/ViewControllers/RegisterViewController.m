@@ -51,7 +51,7 @@
     return cell;
 }
 - (void)pushToProtocolViewController{
-    MainWebViewController * web = [[MainWebViewController alloc]initWithTitle:@"协议详情" url:@"http://www.fcbayern.cn/terms_and_conditions?app=1"];
+    MainWebViewController * web = [[MainWebViewController alloc]initWithTitle:@"协议详情" url:@"http://www.fcbayern.cn/terms_and_conditions?app=1" andFromType:FromTypeWeb];
     web.isPush = YES;
     [self.navigationController pushViewController:web animated:YES];
 }

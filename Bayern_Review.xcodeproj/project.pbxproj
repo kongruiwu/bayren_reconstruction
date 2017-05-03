@@ -293,6 +293,7 @@
 		8B6FA2091EB98EC00026100F /* CommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentViewController.m; sourceTree = "<group>"; };
 		8B6FA2111EB9D1C80026100F /* TagNewsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagNewsListViewController.h; sourceTree = "<group>"; };
 		8B6FA2121EB9D1C80026100F /* TagNewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TagNewsListViewController.m; sourceTree = "<group>"; };
+		8B6FA2141EB9EC5D0026100F /* AppKeyDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppKeyDefine.h; sourceTree = "<group>"; };
 		8B8819581EAF302400C86CCB /* HomeVideoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeVideoTableViewCell.h; sourceTree = "<group>"; };
 		8B8819591EAF302400C86CCB /* HomeVideoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVideoTableViewCell.m; sourceTree = "<group>"; };
 		8B88195B1EAF31C400C86CCB /* HomeTeamerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTeamerTableViewCell.h; sourceTree = "<group>"; };
@@ -559,6 +560,7 @@
 			children = (
 				8B349ACD1E7F8471001FFF06 /* ConfigHeader.h */,
 				8B349AD91E7F917E001FFF06 /* API.h */,
+				8B6FA2141EB9EC5D0026100F /* AppKeyDefine.h */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -1363,7 +1365,7 @@
 				TargetAttributes = {
 					8B349A941E7F83DA001FFF06 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = JY5X7GG4HU;
+						DevelopmentTeam = 2Y7KX3X9K6;
 						ProvisioningStyle = Automatic;
 					};
 					8B349AAD1E7F83DA001FFF06 = {
@@ -1734,7 +1736,7 @@
 			baseConfigurationReference = E2E3E0C82FB11C99B2844D7D /* Pods-Bayern_Review.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = JY5X7GG4HU;
+				DEVELOPMENT_TEAM = 2Y7KX3X9K6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Tools/UMSocial/SocialLibraries/QQ",
@@ -1743,7 +1745,7 @@
 				INFOPLIST_FILE = Bayern_Review/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wurui.Bayern-Review";
+				PRODUCT_BUNDLE_IDENTIFIER = com.51jianshe.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1753,7 +1755,7 @@
 			baseConfigurationReference = 6AD3F78A0F7EF957527E19FC /* Pods-Bayern_Review.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = JY5X7GG4HU;
+				DEVELOPMENT_TEAM = 2Y7KX3X9K6;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Tools/UMSocial/SocialLibraries/QQ",
@@ -1762,7 +1764,7 @@
 				INFOPLIST_FILE = Bayern_Review/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wurui.Bayern-Review";
+				PRODUCT_BUNDLE_IDENTIFIER = com.51jianshe.debug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

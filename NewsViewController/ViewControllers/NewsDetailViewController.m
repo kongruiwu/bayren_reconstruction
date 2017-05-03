@@ -68,7 +68,6 @@
     self.webView = [[WKWebView alloc]initWithFrame:CGRectMake(0, 0, UI_WIDTH, UI_HEGIHT - 64 - Anno750(80))];
     [self.view addSubview:self.webView];
     self.webView.navigationDelegate = self;
-//    self.webView.UIDelegate = self;
     [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.urlStr]]];
     
     self.progressView = [[UIProgressView alloc]initWithFrame:CGRectMake(0, 0, UI_WIDTH, Anno750(30))];
@@ -264,18 +263,6 @@
         [self.commentView.textView showAllUI:NO];
     }
 }
-//- (void)commenLikeButtonClick:(UIButton *)btn{
-//    
-//    if ([UserManager manager].isLogin) {
-//        UITableViewCell * cell = (UITableViewCell *)[btn superview];
-//        NSIndexPath * indexpath = [self.tabview indexPathForCell:cell];
-//        [self likeCommentRequestWithIndexPath:indexpath];
-//        
-//    }else{
-//        
-//        [self showLoginMessage];
-//    }
-//}
 - (void)registerNotification{
     [self creatBlackView];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillShow:) name:UIKeyboardWillChangeFrameNotification object:nil];

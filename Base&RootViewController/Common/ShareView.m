@@ -123,7 +123,7 @@
         make.left.equalTo(@0);
         make.right.equalTo(@0);
         make.top.equalTo(@0);
-        make.bottom.equalTo(@(-Anno750(330)));
+        make.bottom.equalTo(@(-Anno750(450)));
     }];
 }
 - (ShareButton *)creatShareButtonWithTitle:(NSString *)title imageName:(NSString *)imageName{
@@ -197,7 +197,8 @@
         messageObject.text = [NSString stringWithFormat:@"%@%@",self.shareDesc,self.targeturl];
         messageObject.shareObject = shareImage;
     }
-    [[UMSocialManager defaultManager] shareToPlatform:type messageObject:messageObject currentViewController:self completion:^(id data, NSError *error) {
+    [[UMSocialManager defaultManager] shareToPlatform:type messageObject:messageObject currentViewController:nil completion:^(id data, NSError *error) {
+        NSLog(@"%@",error);
     }];
     [self dissmiss];
 

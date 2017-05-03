@@ -39,7 +39,7 @@
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         BYError * error1 = [[BYError alloc]init];
-        error1.errorCode = [NSString stringWithFormat:@"%ld",error.code];
+        error1.errorCode = [NSString stringWithFormat:@"%ld",(long)error.code];
         error1.errorMessage = error.description;
         byerror(error1);
     }];
@@ -62,7 +62,7 @@
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         BYError * error1 = [[BYError alloc]init];
-        error1.errorCode = [NSString stringWithFormat:@"%ld",error.code];
+        error1.errorCode = [NSString stringWithFormat:@"%ld",(long)error.code];
         error1.errorMessage = error.description;
         byerror(error1);
     }];

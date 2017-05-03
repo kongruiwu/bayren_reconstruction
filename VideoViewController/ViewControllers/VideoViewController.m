@@ -134,7 +134,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (self.dataArray[indexPath.row].link.length>0) {
         NSString * link = self.dataArray[indexPath.row].link;
-        MainWebViewController * webVC = [[MainWebViewController alloc]initWithTitle:@"视屏" url:link];
+        MainWebViewController * webVC = [[MainWebViewController alloc]initWithTitle:@"视屏" url:link
+                                         andFromType:FromTypeVideo];
+        [webVC updateShareSettingWithTitle:self.dataArray[indexPath.row].title content:self.dataArray[indexPath.row].content image:@""];
         webVC.isPush = YES;
         [self.navigationController pushViewController:webVC animated:YES];
     }else{
@@ -146,7 +148,9 @@
     NSInteger index = self.bannerView.pageControl.currentPage;
     NSString * link = self.bannerFocus[index].url;
     if (link.length>0) {
-        MainWebViewController * webVC = [[MainWebViewController alloc]initWithTitle:@"视屏" url:link];
+        MainWebViewController * webVC = [[MainWebViewController alloc]initWithTitle:@"视屏" url:link
+                                         andFromType:FromTypeVideo];
+        [webVC updateShareSettingWithTitle:self.bannerFocus[index].title content:self.bannerFocus[index].content image:@""];
         webVC.isPush = YES;
         [self.navigationController pushViewController:webVC animated:YES];
     }else{

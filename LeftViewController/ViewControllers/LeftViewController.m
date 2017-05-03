@@ -120,10 +120,10 @@
     }else if(indexPath.row == 7){
         nav = [[UINavigationController alloc]initWithRootViewController:[TeamerViewController new]];
     }else if(indexPath.row == 8){
-        MainWebViewController * web = [[MainWebViewController alloc]initWithTitle:@"俱乐部" url:@"http://www.fcbayern.cn/club?app=1"];
+        MainWebViewController * web = [[MainWebViewController alloc]initWithTitle:@"俱乐部" url:@"http://www.fcbayern.cn/club?app=1" andFromType:FromTypeWeb];
         nav = [[UINavigationController alloc]initWithRootViewController:web];
     }else if(indexPath.row == 9){
-        MainWebViewController * web = [[MainWebViewController alloc]initWithTitle:@"商店" url:@"http://fcb.tmall.hk"];
+        MainWebViewController * web = [[MainWebViewController alloc]initWithTitle:@"商店" url:@"http://fcb.tmall.hk" andFromType:FromTypeWeb];
         nav = [[UINavigationController alloc]initWithRootViewController:web];
     }else if(indexPath.row == 10){
         nav = [[UINavigationController alloc]initWithRootViewController:[SettingViewController new]];

@@ -2,4 +2,54 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Base&amp;RootViewController/Common/ShareView.m"
+            timestampString = "515503655.89637"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
+            landmarkName = "-doShareWithButton:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ShareView doShareWithButton:]"
+                  moduleName = "Bayern_Review"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wukongrui/Desktop/bayren_reconstruction/Base&amp;RootViewController/Common/ShareView.m"
+                  timestampString = "515504509.189324"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "200"
+                  endingLineNumber = "200"
+                  offsetFromSymbolStart = "1100">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__31-[ShareView doShareWithButton:]_block_invoke"
+                  moduleName = "Bayern_Review"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/wukongrui/Desktop/bayren_reconstruction/Base&amp;RootViewController/Common/ShareView.m"
+                  timestampString = "515504509.190902"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "201"
+                  endingLineNumber = "201"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
