@@ -48,6 +48,7 @@
     return cell;
 }
 - (void)getdata{
+    [SVProgressHUD show];
     NSString * leadgue_id = @"5";
     switch (self.scheduType) {
         case ScheduTypeBundesliga:

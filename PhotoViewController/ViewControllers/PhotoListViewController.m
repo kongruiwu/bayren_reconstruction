@@ -71,12 +71,15 @@
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [self.navigationController pushViewController:[PhotoDetailViewController new] animated:YES];
+    
+    PhotoDetailViewController * vc = [[PhotoDetailViewController alloc]initWithPhotoDetailid:self.dataArray[indexPath.section].id];;
+    [self.navigationController pushViewController:vc animated:YES];
 }
 - (void)nullViewClick{
     [self refreshData];
 }
 - (void)refreshData{
+    [SVProgressHUD show];
     [self.dataArray removeAllObjects];
     [self getData];
 }

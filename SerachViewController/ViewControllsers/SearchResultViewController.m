@@ -277,6 +277,7 @@
     [self loadData];
 }
 - (void)loadData{
+    [SVProgressHUD show];
     NSString * idStr = @"";
     if (self.resultArray.lastObject.id ) {
         idStr = [NSString stringWithFormat:@"%@",self.resultArray.lastObject.id];

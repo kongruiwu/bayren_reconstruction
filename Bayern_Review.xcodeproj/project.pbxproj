@@ -42,7 +42,6 @@
 		8B37F6A21EB88BDC0073A783 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B37F69A1EB88BDC0073A783 /* SearchViewController.m */; };
 		8B4D024F1E94F9E3004973EE /* NewsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D024E1E94F9E3004973EE /* NewsListViewController.m */; };
 		8B4D02591E94FEF5004973EE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D02581E94FEF5004973EE /* LoginViewController.m */; };
-		8B5059111E9761E30042A5A3 /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5059101E9761E30042A5A3 /* ViewModel.m */; };
 		8B50A5261EADB05500D1C13F /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B50A5251EADB05500D1C13F /* UserNotifications.framework */; };
 		8B50A5291EADB6CF00D1C13F /* ChagePwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B50A5281EADB6CF00D1C13F /* ChagePwdViewController.m */; };
 		8B50A52C1EADB7A300D1C13F /* ChangePwdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B50A52B1EADB7A300D1C13F /* ChangePwdTableViewCell.m */; };
@@ -84,6 +83,8 @@
 		8B88196F1EAF436F00C86CCB /* HomeTeamerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B88196E1EAF436F00C86CCB /* HomeTeamerModel.m */; };
 		8B8819721EAF44A000C86CCB /* HomeVideoFocusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8819711EAF44A000C86CCB /* HomeVideoFocusModel.m */; };
 		8B8819751EAF48E500C86CCB /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B8819741EAF48E500C86CCB /* HomeViewModel.m */; };
+		8B940A3B1EC01E1D00CF6B1A /* JpushModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B940A3A1EC01E1D00CF6B1A /* JpushModel.m */; };
+		8B940A3F1EC0211500CF6B1A /* JpushHander.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B940A3E1EC0211500CF6B1A /* JpushHander.m */; };
 		8BA524121EAF257C0003F031 /* HomeAdTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA524111EAF257C0003F031 /* HomeAdTableViewCell.m */; };
 		8BA524151EAF25970003F031 /* HomeTeamerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA524141EAF25970003F031 /* HomeTeamerView.m */; };
 		8BA675491EA89ECE00AA0EEC /* TeamerHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA675481EA89ECE00AA0EEC /* TeamerHeadCell.m */; };
@@ -122,12 +123,13 @@
 		8BBF31C41E8120B20037A3E7 /* AutoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF31C31E8120B20037A3E7 /* AutoScrollView.m */; };
 		8BBF31C71E812E700037A3E7 /* BYPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF31C61E812E700037A3E7 /* BYPageControl.m */; };
 		8BBF31CA1E813C570037A3E7 /* VideoFocusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BBF31C91E813C570037A3E7 /* VideoFocusModel.m */; };
+		8BDCA1B11EBB08F30007FCBD /* PhotoScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BDCA1B01EBB08F30007FCBD /* PhotoScrollView.m */; };
+		8BDCA1B41EBB2A7A0007FCBD /* PhotoDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BDCA1B31EBB2A7A0007FCBD /* PhotoDetailModel.m */; };
 		8BEB867D1E95EB5200C8D0E6 /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEB867A1E95EB5200C8D0E6 /* JASidePanelController.m */; };
 		8BEB867E1E95EB5200C8D0E6 /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEB867C1E95EB5200C8D0E6 /* UIViewController+JASidePanel.m */; };
 		8BEB86811E95F20C00C8D0E6 /* LogModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEB86801E95F20C00C8D0E6 /* LogModelCell.m */; };
 		8BEB86841E95F38200C8D0E6 /* logoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEB86831E95F38200C8D0E6 /* logoView.m */; };
 		8BED374A1E8A0FB40025726E /* NetNullView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BED37491E8A0FB40025726E /* NetNullView.m */; };
-		8BED374E1E8A3CE20025726E /* BQActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BED374D1E8A3CE20025726E /* BQActivityView.m */; };
 		C8E33C8580BA99D74ACA536A /* libPods-Bayern_Review.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D6D50E3352DAEA4E5F2A91 /* libPods-Bayern_Review.a */; };
 /* End PBXBuildFile section */
 
@@ -223,10 +225,6 @@
 		8B4D024E1E94F9E3004973EE /* NewsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsListViewController.m; sourceTree = "<group>"; };
 		8B4D02571E94FEF5004973EE /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		8B4D02581E94FEF5004973EE /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		8B50590F1E9761E30042A5A3 /* ViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
-		8B5059101E9761E30042A5A3 /* ViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
-		8B5059151E9763400042A5A3 /* NavigationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationProtocol.h; sourceTree = "<group>"; };
-		8B5059161E9765E50042A5A3 /* ViewModelServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewModelServices.h; sourceTree = "<group>"; };
 		8B50A5251EADB05500D1C13F /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		8B50A5271EADB6CF00D1C13F /* ChagePwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChagePwdViewController.h; sourceTree = "<group>"; };
 		8B50A5281EADB6CF00D1C13F /* ChagePwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChagePwdViewController.m; sourceTree = "<group>"; };
@@ -310,6 +308,11 @@
 		8B8819711EAF44A000C86CCB /* HomeVideoFocusModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeVideoFocusModel.m; sourceTree = "<group>"; };
 		8B8819731EAF48E500C86CCB /* HomeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewModel.h; sourceTree = "<group>"; };
 		8B8819741EAF48E500C86CCB /* HomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewModel.m; sourceTree = "<group>"; };
+		8B940A391EC01E1D00CF6B1A /* JpushModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JpushModel.h; sourceTree = "<group>"; };
+		8B940A3A1EC01E1D00CF6B1A /* JpushModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JpushModel.m; sourceTree = "<group>"; };
+		8B940A3C1EC01E6900CF6B1A /* Bayern_Review.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bayern_Review.entitlements; sourceTree = "<group>"; };
+		8B940A3D1EC0211500CF6B1A /* JpushHander.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JpushHander.h; sourceTree = "<group>"; };
+		8B940A3E1EC0211500CF6B1A /* JpushHander.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JpushHander.m; sourceTree = "<group>"; };
 		8BA524101EAF257C0003F031 /* HomeAdTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeAdTableViewCell.h; sourceTree = "<group>"; };
 		8BA524111EAF257C0003F031 /* HomeAdTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeAdTableViewCell.m; sourceTree = "<group>"; };
 		8BA524131EAF25970003F031 /* HomeTeamerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTeamerView.h; sourceTree = "<group>"; };
@@ -382,6 +385,10 @@
 		8BBF31C61E812E700037A3E7 /* BYPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYPageControl.m; sourceTree = "<group>"; };
 		8BBF31C81E813C570037A3E7 /* VideoFocusModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoFocusModel.h; sourceTree = "<group>"; };
 		8BBF31C91E813C570037A3E7 /* VideoFocusModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoFocusModel.m; sourceTree = "<group>"; };
+		8BDCA1AF1EBB08F30007FCBD /* PhotoScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoScrollView.h; sourceTree = "<group>"; };
+		8BDCA1B01EBB08F30007FCBD /* PhotoScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoScrollView.m; sourceTree = "<group>"; };
+		8BDCA1B21EBB2A7A0007FCBD /* PhotoDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoDetailModel.h; sourceTree = "<group>"; };
+		8BDCA1B31EBB2A7A0007FCBD /* PhotoDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoDetailModel.m; sourceTree = "<group>"; };
 		8BEB86791E95EB5200C8D0E6 /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JASidePanelController.h; sourceTree = "<group>"; };
 		8BEB867A1E95EB5200C8D0E6 /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JASidePanelController.m; sourceTree = "<group>"; };
 		8BEB867B1E95EB5200C8D0E6 /* UIViewController+JASidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JASidePanel.h"; sourceTree = "<group>"; };
@@ -392,8 +399,6 @@
 		8BEB86831E95F38200C8D0E6 /* logoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = logoView.m; sourceTree = "<group>"; };
 		8BED37481E8A0FB40025726E /* NetNullView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetNullView.h; sourceTree = "<group>"; };
 		8BED37491E8A0FB40025726E /* NetNullView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetNullView.m; sourceTree = "<group>"; };
-		8BED374C1E8A3CE20025726E /* BQActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQActivityView.h; sourceTree = "<group>"; };
-		8BED374D1E8A3CE20025726E /* BQActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQActivityView.m; sourceTree = "<group>"; };
 		E2E3E0C82FB11C99B2844D7D /* Pods-Bayern_Review.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bayern_Review.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bayern_Review/Pods-Bayern_Review.debug.xcconfig"; sourceTree = "<group>"; };
 		F3D6D50E3352DAEA4E5F2A91 /* libPods-Bayern_Review.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bayern_Review.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -480,7 +485,6 @@
 			children = (
 				8BB1177A1EB1CB63001971AF /* UserInfo */,
 				8BB652D31EA0D247007E5048 /* ViewControllers */,
-				8B5059081E9760850042A5A3 /* Test */,
 				8BBF31C11E8120940037A3E7 /* Common */,
 				8B349ACE1E7F8A13001FFF06 /* Base&RootViewController */,
 				8B349ACC1E7F8453001FFF06 /* Config */,
@@ -507,6 +511,7 @@
 		8B349A971E7F83DA001FFF06 /* Bayern_Review */ = {
 			isa = PBXGroup;
 			children = (
+				8B940A3C1EC01E6900CF6B1A /* Bayern_Review.entitlements */,
 				8B349A9B1E7F83DA001FFF06 /* AppDelegate.h */,
 				8B349A9C1E7F83DA001FFF06 /* AppDelegate.m */,
 				8B349AA41E7F83DA001FFF06 /* Assets.xcassets */,
@@ -546,7 +551,7 @@
 		8B349ACB1E7F8444001FFF06 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				8BED374B1E8A3CAD0025726E /* ProgressHUD */,
+				8B940A381EC01E0800CF6B1A /* PushHander */,
 				8BBF31B11E81182F0037A3E7 /* ToastView */,
 				8B349AF11E7FB41B001FFF06 /* FactoryCreater */,
 				8B349ADA1E7FA489001FFF06 /* DeviceTool */,
@@ -795,17 +800,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		8B5059081E9760850042A5A3 /* Test */ = {
-			isa = PBXGroup;
-			children = (
-				8B50590F1E9761E30042A5A3 /* ViewModel.h */,
-				8B5059101E9761E30042A5A3 /* ViewModel.m */,
-				8B5059151E9763400042A5A3 /* NavigationProtocol.h */,
-				8B5059161E9765E50042A5A3 /* ViewModelServices.h */,
-			);
-			path = Test;
-			sourceTree = "<group>";
-		};
 		8B50A52D1EADD7F200D1C13F /* PhotoViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -821,6 +815,8 @@
 			children = (
 				8B50A5371EADDECA00D1C13F /* PhotoListModel.h */,
 				8B50A5381EADDECA00D1C13F /* PhotoListModel.m */,
+				8BDCA1B21EBB2A7A0007FCBD /* PhotoDetailModel.h */,
+				8BDCA1B31EBB2A7A0007FCBD /* PhotoDetailModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -843,6 +839,8 @@
 				8B50A5351EADD88400D1C13F /* PhotoListTableViewCell.m */,
 				8B37F6841EB82AFA0073A783 /* PhotoDetailCell.h */,
 				8B37F6851EB82AFA0073A783 /* PhotoDetailCell.m */,
+				8BDCA1AF1EBB08F30007FCBD /* PhotoScrollView.h */,
+				8BDCA1B01EBB08F30007FCBD /* PhotoScrollView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1078,6 +1076,17 @@
 			path = ViewControllsers;
 			sourceTree = "<group>";
 		};
+		8B940A381EC01E0800CF6B1A /* PushHander */ = {
+			isa = PBXGroup;
+			children = (
+				8B940A391EC01E1D00CF6B1A /* JpushModel.h */,
+				8B940A3A1EC01E1D00CF6B1A /* JpushModel.m */,
+				8B940A3D1EC0211500CF6B1A /* JpushHander.h */,
+				8B940A3E1EC0211500CF6B1A /* JpushHander.m */,
+			);
+			path = PushHander;
+			sourceTree = "<group>";
+		};
 		8BA675531EA8BB8900AA0EEC /* SettingViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1277,15 +1286,6 @@
 			path = "Base&RootViewController/Common";
 			sourceTree = "<group>";
 		};
-		8BED374B1E8A3CAD0025726E /* ProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				8BED374C1E8A3CE20025726E /* BQActivityView.h */,
-				8BED374D1E8A3CE20025726E /* BQActivityView.m */,
-			);
-			path = ProgressHUD;
-			sourceTree = "<group>";
-		};
 		E8D31A3230D6CF17BB5FC8B2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1365,8 +1365,16 @@
 				TargetAttributes = {
 					8B349A941E7F83DA001FFF06 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 2Y7KX3X9K6;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = JY5X7GG4HU;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					8B349AAD1E7F83DA001FFF06 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1487,6 +1495,7 @@
 			files = (
 				8BB652D21EA0C602007E5048 /* RegitserTableViewCell.m in Sources */,
 				8B24D48C1EA47DDD009A9D15 /* ScoresViewController.m in Sources */,
+				8B940A3B1EC01E1D00CF6B1A /* JpushModel.m in Sources */,
 				8B50A5331EADD80100D1C13F /* PhotoListViewController.m in Sources */,
 				8B349A9D1E7F83DA001FFF06 /* AppDelegate.m in Sources */,
 				8B6344701EB34DFF00A93B45 /* FixtureCollectionViewCell.m in Sources */,
@@ -1533,11 +1542,13 @@
 				8B349AD11E7F8A62001FFF06 /* BaseViewController.m in Sources */,
 				8B349ADD1E7FA48F001FFF06 /* UIDevice+IdentifierAddition.m in Sources */,
 				8B6FA2101EB98EC00026100F /* CommentViewController.m in Sources */,
+				8BDCA1B11EBB08F30007FCBD /* PhotoScrollView.m in Sources */,
 				8BB1178D1EB1EC63001971AF /* UserCenterCell.m in Sources */,
 				8B50A52C1EADB7A300D1C13F /* ChangePwdTableViewCell.m in Sources */,
 				8B8819631EAF39E500C86CCB /* HomeScoreView.m in Sources */,
 				8B349AE31E7FAA32001FFF06 /* NSDictionary+AXNetworkingMethods.m in Sources */,
 				8B50A5391EADDECA00D1C13F /* PhotoListModel.m in Sources */,
+				8B940A3F1EC0211500CF6B1A /* JpushHander.m in Sources */,
 				8BB117901EB1EDC1001971AF /* SetProViewController.m in Sources */,
 				8B6263C91EA88B6E008DFCA0 /* ListTeamerModel.m in Sources */,
 				8B63446D1EB34BA200A93B45 /* HomeFixtureCell.m in Sources */,
@@ -1568,13 +1579,11 @@
 				8BB117731EB1A5D9001971AF /* RightStandingCell.m in Sources */,
 				8B24D4891EA47DC1009A9D15 /* StandingViewController.m in Sources */,
 				8B4D02591E94FEF5004973EE /* LoginViewController.m in Sources */,
-				8BED374E1E8A3CE20025726E /* BQActivityView.m in Sources */,
 				8B349AF71E7FB918001FFF06 /* BaseModel.m in Sources */,
 				8B349AD41E7F8A77001FFF06 /* RootViewController.m in Sources */,
 				8B349A9A1E7F83DA001FFF06 /* main.m in Sources */,
 				8BB117991EB1EDFB001971AF /* SetBrithViewController.m in Sources */,
 				8B6FA20A1EB98EC00026100F /* CommentModel.m in Sources */,
-				8B5059111E9761E30042A5A3 /* ViewModel.m in Sources */,
 				8BB1177D1EB1CC61001971AF /* UserModel.m in Sources */,
 				8BB117871EB1E5EC001971AF /* UserCenterViewController.m in Sources */,
 				8B50A5401EADEF5600D1C13F /* HomeViewController.m in Sources */,
@@ -1591,6 +1600,7 @@
 				8B8819601EAF39A100C86CCB /* HomeScroeHeadView.m in Sources */,
 				8B349AD81E7F8F6A001FFF06 /* NetWorkManger.m in Sources */,
 				8B8819751EAF48E500C86CCB /* HomeViewModel.m in Sources */,
+				8BDCA1B41EBB2A7A0007FCBD /* PhotoDetailModel.m in Sources */,
 				8B349AE61E7FAA3F001FFF06 /* NSArray+AXNetworkingMethods.m in Sources */,
 				8B6FA20D1EB98EC00026100F /* CommentTableViewCell.m in Sources */,
 				8BB117931EB1EDD2001971AF /* SetCityViewController.m in Sources */,
@@ -1736,7 +1746,8 @@
 			baseConfigurationReference = E2E3E0C82FB11C99B2844D7D /* Pods-Bayern_Review.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2Y7KX3X9K6;
+				CODE_SIGN_ENTITLEMENTS = Bayern_Review/Bayern_Review.entitlements;
+				DEVELOPMENT_TEAM = JY5X7GG4HU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Tools/UMSocial/SocialLibraries/QQ",
@@ -1745,8 +1756,10 @@
 				INFOPLIST_FILE = Bayern_Review/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.51jianshe.debug;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hupu.Bayern;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b5f319a9-e151-4f3c-9cdd-eea0cfbb293e";
+				PROVISIONING_PROFILE_SPECIFIER = develop;
 			};
 			name = Debug;
 		};
@@ -1755,7 +1768,8 @@
 			baseConfigurationReference = 6AD3F78A0F7EF957527E19FC /* Pods-Bayern_Review.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2Y7KX3X9K6;
+				CODE_SIGN_ENTITLEMENTS = Bayern_Review/Bayern_Review.entitlements;
+				DEVELOPMENT_TEAM = JY5X7GG4HU;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Tools/UMSocial/SocialLibraries/QQ",
@@ -1764,8 +1778,10 @@
 				INFOPLIST_FILE = Bayern_Review/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.51jianshe.debug;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hupu.Bayern;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b5f319a9-e151-4f3c-9cdd-eea0cfbb293e";
+				PROVISIONING_PROFILE_SPECIFIER = develop;
 			};
 			name = Release;
 		};

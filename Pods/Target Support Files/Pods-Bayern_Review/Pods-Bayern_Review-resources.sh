@@ -76,6 +76,7 @@ EOM
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
   install_resource "UMengUShare/UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle"
   install_resource "UMengUShare/UShareSDK/SocialLibraries/Sina/SinaSDK/WeiboSDK.bundle"
   install_resource "UMengUShare/UShareSDK/UMSocialUI/UMSocialSDKResources.bundle"
@@ -83,6 +84,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
   install_resource "UMengUShare/UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle"
   install_resource "UMengUShare/UShareSDK/SocialLibraries/Sina/SinaSDK/WeiboSDK.bundle"
   install_resource "UMengUShare/UShareSDK/UMSocialUI/UMSocialSDKResources.bundle"

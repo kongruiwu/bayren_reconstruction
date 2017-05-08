@@ -41,6 +41,7 @@
 @property (nonatomic, strong) UIButton * clearButton;
 
 - (void)show;
+- (void)showWithNavtionBarHidden;
 - (void)dissmiss;
 //刷新界面
 - (void)updateShareInfoWithTitle:(NSString *)title desc:(NSString *)desc contentUlr:(NSString *)url imageUrl:(NSString *)imageUrl;

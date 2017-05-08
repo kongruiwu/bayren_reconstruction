@@ -62,6 +62,7 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (void)getData{
+    [SVProgressHUD show];
     NSString * key;
     if ([self.teamerTitle isEqualToString:@"门将"]) {
         key = @"1";

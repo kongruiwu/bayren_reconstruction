@@ -83,6 +83,7 @@
     return nil;
 }
 - (void)loadData{
+    [SVProgressHUD show];
     NSDictionary * params = @{
                               @"id":self.teamerid,
                               @"is_coach":@(!self.isTeamer)

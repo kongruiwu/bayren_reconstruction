@@ -8,15 +8,22 @@
 
 #import <UIKit/UIKit.h>
 #import "ConfigHeader.h"
-@interface PhotoDetailCell : UICollectionViewCell
+#import "PhotoScrollView.h"
+@protocol PhotoDetailCellDelegate <NSObject>
 
-@property (nonatomic, strong) UILabel * titleLabel;
-@property (nonatomic, strong) UILabel * descLabel;
-@property (nonatomic, strong) UILabel * pageLabel;
-@property (nonatomic, strong) UILabel * numLabel;
-@property (nonatomic, strong) UIScrollView * mainSc;
-@property (nonatomic, strong) UIView * grayView;
-@property (nonatomic, strong) UIButton * downLoadBtn;
-@property (nonatomic, strong) UIImageView * imgView;
+- (void)singleClick;
 
+@end
+
+
+@interface PhotoDetailCell : UICollectionViewCell<UIGestureRecognizerDelegate>
+
+
+
+
+@property (nonatomic, strong) PhotoScrollView * photoView;
+
+@property (nonatomic, assign) id<PhotoDetailCellDelegate> delegate;
+
+- (void)updateWithPic:(NSString *)pic;
 @end

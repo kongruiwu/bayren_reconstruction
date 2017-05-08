@@ -12,8 +12,14 @@
 #import <UMSocialWechatHandler.h>
 #import <UMSocialQQHandler.h>
 #define Bayern_APP_STORE_URL @"itms-apps://itunes.apple.com/us/app/id1014233862?mt=8"
+//#ifdef DEBUG
+#define JPUSHKey @"6c1cf57bc76529b3f47fe9b4"
+#define isProduction  NO
+//#else
+//#define JPUSHKey @"9436c5959a32e18d68a04a33"
+//#define isProduction  YES
+//#endif
 
-#define JPUSHKey @"9436c5959a32e18d68a04a33"
 #define UmengAppKey @"556fb9bf67e58e92cf001646" //Umeng app key
 
 #define WXAppId @"wxe74f684db173a3a1"

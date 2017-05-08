@@ -70,7 +70,6 @@
     return cell;
 }
 - (void)creatNetWorkQueue{
-    [BQActivityView showActiviTy];
     self.netWorkGroup = dispatch_group_create();
     dispatch_group_enter(self.netWorkGroup);
     NSDictionary * params =@{@"limit":@10};
@@ -105,7 +104,6 @@
         }else{
             self.nullview.hidden = YES;
         }
-        [BQActivityView hideActiviTy];
         [self.refreshHeader endRefreshing];
         [self.refreshFooter endRefreshing];
         [self.tabview reloadData];

@@ -65,7 +65,6 @@
  先判断是否出错，再刷新界面
  */
 - (void)creatNetWorkQueue{
-    [BQActivityView showActiviTy];
     self.netWorkGroup = dispatch_group_create();
     dispatch_group_enter(self.netWorkGroup);
     NSDictionary * params =@{@"limit":@10};
@@ -100,7 +99,6 @@
         }else{
             self.nullview.hidden = YES;
         }
-        [BQActivityView hideActiviTy];
         [self.refreshHeader endRefreshing];
         [self.refreshFooter endRefreshing];
         [self.tabview reloadData];
@@ -159,6 +157,7 @@
 }
 #pragma mark 刷新数据
 - (void)refreshData{
+    [SVProgressHUD show];
     [self.dataArray removeAllObjects];
     [self.bannerFocus removeAllObjects];
     [self creatNetWorkQueue];

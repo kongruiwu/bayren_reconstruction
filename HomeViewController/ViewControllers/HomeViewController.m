@@ -22,7 +22,7 @@
 #import "TeamerDetailViewController.h"
 #import "MainWebViewController.h"
 #import "NewsListViewController.h"
-
+#import <JPUSHService.h>
 @interface HomeViewController ()<UITableViewDelegate, UITableViewDataSource,HomeTeamerDelegate,HomeFixtureDelegate>
 
 @property (nonatomic, strong) UITableView * tabview;
@@ -42,6 +42,7 @@
     [self creatUI];
     [self creatNetWorkQueue];
 }
+
 - (void)creatUI{
     self.viewModel = [[HomeViewModel alloc]init];
     

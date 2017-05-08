@@ -28,6 +28,7 @@
     DLog(@"ParamsStar*******\n%@\n*******ParamsEnd",params);
     AFHTTPSessionManager * manger = [AFHTTPSessionManager manager];
     [manger GET:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [SVProgressHUD dismiss];
         NSDictionary * resultDic = (NSDictionary *)responseObject;
         if ([resultDic[@"code"] integerValue] == 0) {
             complete(resultDic);
@@ -42,6 +43,7 @@
         error1.errorCode = [NSString stringWithFormat:@"%ld",(long)error.code];
         error1.errorMessage = error.description;
         byerror(error1);
+        [SVProgressHUD dismiss];
     }];
 }
 - (void)postRequest:(NSString *)action route:(NSString *)route withParams:(NSDictionary *)dataDic complete:(CompleteBlock)complete error:(ErrorBlock)byerror{
@@ -51,6 +53,7 @@
     DLog(@"ParamsStar*******\n%@\n*******ParamsEnd",params);
     AFHTTPSessionManager * manger = [AFHTTPSessionManager manager];
     [manger POST:url parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [SVProgressHUD dismiss];
         NSDictionary * resultDic = (NSDictionary *)responseObject;
         if ([resultDic[@"code"] integerValue] == 0) {
             complete(resultDic);
@@ -65,6 +68,7 @@
         error1.errorCode = [NSString stringWithFormat:@"%ld",(long)error.code];
         error1.errorMessage = error.description;
         byerror(error1);
+        [SVProgressHUD dismiss];
     }];
 }
 - (NSDictionary *)newParamsWithPublicSetting:(NSDictionary *)dic action:(NSString *)action{

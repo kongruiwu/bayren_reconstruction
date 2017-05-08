@@ -13,9 +13,9 @@
 #import <Masonry.h>
 #import "ToastView.h"
 #import "NetWorkManger.h"
-#import "BQActivityView.h"
 #import <ReactiveObjC.h>
 #import <UIImageView+WebCache.h>
+#import <SVProgressHUD.h>
 #import "UserManager.h"
 
 

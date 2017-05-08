@@ -10,6 +10,7 @@
 #define API_h
 
 #define Base_ApiHost    @"http://api.fcbayern.cn"
+//#define Base_ImgHost    @"https://bayern-cn.hupucdn.com"
 #define Base_ImgHost    @"http://7xj11p.com1.z0.glb.clouddn.com/"
 #define Base_WebHost    @"www.fcbayern.cn"
 #define BER_APP_KEY     @"54NexY5d69M24bg"

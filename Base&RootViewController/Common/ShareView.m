@@ -198,7 +198,6 @@
         messageObject.shareObject = shareImage;
     }
     [[UMSocialManager defaultManager] shareToPlatform:type messageObject:messageObject currentViewController:nil completion:^(id data, NSError *error) {
-        NSLog(@"%@",error);
     }];
     [self dissmiss];
 
@@ -210,6 +209,15 @@
     [UIView animateWithDuration:0.5 animations:^{
         self.backgroundColor = UIColorFromRGBA(0x000000, 0.3);
         self.showView.frame = CGRectMake(0, UI_HEGIHT - ShareViewHeigh, UI_WIDTH, ShareViewHeigh);
+    }];
+}
+- (void)showWithNavtionBarHidden{
+    if (self.hidden) {
+        self.hidden = NO;
+    }
+    [UIView animateWithDuration:0.5 animations:^{
+        self.backgroundColor = UIColorFromRGBA(0x000000, 0.3);
+        self.showView.frame = CGRectMake(0, UI_HEGIHT - ShareViewHeigh + 64, UI_WIDTH, ShareViewHeigh);
     }];
 }
 - (void)dissmiss{

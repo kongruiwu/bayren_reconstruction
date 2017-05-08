@@ -126,6 +126,7 @@
     return cell;
 }
 - (void)loadData{
+    [SVProgressHUD show];
     [self.dataArray removeAllObjects];
     [[NetWorkManger manager] sendRequest:Page_Rank route:Route_Fixture withParams:@{} complete:^(NSDictionary *result) {
         [self nullViewHidden];
