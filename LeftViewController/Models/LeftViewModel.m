@@ -22,7 +22,7 @@
                    @"left_team",@"left_club",@"left_shop",
                    @"left_set"];
     self.ZNtitles = @[@"首   页",@"新   闻",@"图   片",
-                    @"视   屏",@"赛   程",@"积   分",
+                    @"视   频",@"赛   程",@"积   分",
                     @"球   队",@"俱乐部",@"商   店",
                     @"设   置"];
     self.ENtitles = @[@"Home",@"News",@"Photos",

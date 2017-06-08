@@ -100,6 +100,7 @@
     if (indexPath.row == 0) {
         if ([UserManager manager].isLogin) {
             nav = [[UINavigationController alloc]initWithRootViewController:[UserCenterViewController new]];
+            [MobClick event:EventID_Topbar attributes:@{KN_MainNav:@"TabUserInfo"}];
         }else{
             LoginViewController * vc = [[LoginViewController alloc]init];
             vc.isFromLeft = YES;
@@ -107,26 +108,36 @@
         }
     }else if (indexPath.row == 1) {
         nav = [[UINavigationController alloc]initWithRootViewController:[HomeViewController new]];
+        [MobClick event:EventID_Topbar attributes:@{KN_MainNav:@"TabIndex"}];
     }else if(indexPath.row == 2){
         nav = [[UINavigationController alloc]initWithRootViewController:[NewsListViewController new]];
+        [MobClick event:EventID_Topbar attributes:@{KN_MainNav:@"TabNews"}];
     }else if(indexPath.row == 3){
         nav = [[UINavigationController alloc]initWithRootViewController:[PhotoListViewController new]];
+        [MobClick event:EventID_Topbar attributes:@{KN_MainNav:@"TabPhotos"}];
     }else if(indexPath.row == 4){
         nav = [[UINavigationController alloc]initWithRootViewController:[VideoViewController new]];
+        [MobClick event:EventID_Topbar attributes:@{KN_MainNav:@"TabVideos"}];
     }else if(indexPath.row == 5){
         nav = [[UINavigationController alloc]initWithRootViewController:[FixtureViewController new]];
+        [MobClick event:EventID_Topbar attributes:@{KN_MainNav:@"TabFixtures"}];
     }else if(indexPath.row == 6){
         nav = [[UINavigationController alloc]initWithRootViewController:[StandingViewController new]];
+        [MobClick event:EventID_Topbar attributes:@{KN_MainNav:@"TabStandings"}];
     }else if(indexPath.row == 7){
         nav = [[UINavigationController alloc]initWithRootViewController:[TeamerViewController new]];
+        [MobClick event:EventID_Topbar attributes:@{KN_MainNav:@"TabTeam"}];
     }else if(indexPath.row == 8){
         MainWebViewController * web = [[MainWebViewController alloc]initWithTitle:@"俱乐部" url:@"http://www.fcbayern.cn/club?app=1" andFromType:FromTypeWeb];
         nav = [[UINavigationController alloc]initWithRootViewController:web];
+        [MobClick event:EventID_Topbar attributes:@{KN_MainNav:@"TabClub"}];
     }else if(indexPath.row == 9){
         MainWebViewController * web = [[MainWebViewController alloc]initWithTitle:@"商店" url:@"http://fcb.tmall.hk" andFromType:FromTypeWeb];
         nav = [[UINavigationController alloc]initWithRootViewController:web];
+        [MobClick event:EventID_Topbar attributes:@{KN_MainNav:@"TabShop"}];
     }else if(indexPath.row == 10){
         nav = [[UINavigationController alloc]initWithRootViewController:[SettingViewController new]];
+        [MobClick event:EventID_Topbar attributes:@{KN_MainNav:@"TabSettings"}];
     }
     self.index = indexPath.row;
     [self.tabview reloadData];

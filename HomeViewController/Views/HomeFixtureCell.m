@@ -47,7 +47,6 @@
     self.fixtureView.pagingEnabled = YES;
     self.fixtureView.delegate = self;
     self.fixtureView.dataSource = self;
-    self.fixtureView.backgroundColor = [UIColor clearColor];
     self.fixtureView.showsVerticalScrollIndicator = NO;
     self.fixtureView.showsHorizontalScrollIndicator = NO;
     

@@ -33,9 +33,9 @@
 
 @implementation HomeViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self creatBackGroundImage];
     [self setNavigationTitle:@"首页"];
     [self drawMainSearchTabItem];
@@ -368,7 +368,7 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 - (void)checkVideoDetailWithLink:(NSString *)link title:(NSString *)title content:(NSString *)content{
-    MainWebViewController * webVC = [[MainWebViewController alloc]initWithTitle:@"视屏" url:link andFromType:FromTypeVideo];
+    MainWebViewController * webVC = [[MainWebViewController alloc]initWithTitle:@"视频" url:link andFromType:FromTypeVideo];
     [webVC updateShareSettingWithTitle:title content:content image:@""];
     webVC.isPush = YES;
     [self.navigationController pushViewController:webVC animated:YES];

@@ -117,6 +117,7 @@
     [view addSubview:descLabel];
     [view addSubview:statusLabel];
     [view addSubview:line];
+    descLabel.hidden = rec;
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@(Anno750(24)));
         if (rec) {

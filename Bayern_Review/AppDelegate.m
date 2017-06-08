@@ -16,6 +16,7 @@
 #import "UserManager.h"
 #import "AppKeyDefine.h"
 #import "JpushHander.h"
+
 @interface AppDelegate ()
 
 @end
@@ -27,6 +28,7 @@
     [[UserManager manager] getUserInfo];
     [self registIQKeyBoard];
     [self UmengShareSetting];
+    [self UmengClickSetting];
     [self setRootViewController];
     [self JpushSettingWithDic:launchOptions];
     return YES;
@@ -47,6 +49,12 @@
     [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     [IQKeyboardManager sharedManager].shouldShowTextFieldPlaceholder = NO;
+}
+- (void)UmengClickSetting{
+    UMConfigInstance.appKey =UmengAppKey;
+    UMConfigInstance.channelId = @"App Store";
+    [MobClick startWithConfigure:UMConfigInstance];//配置以上参数后调用此方法初始化SDK！
+    [MobClick setCrashReportEnabled:YES];
 }
 - (void)UmengShareSetting{
     [UMSocialManager defaultManager].umSocialAppkey = UmengAppKey;

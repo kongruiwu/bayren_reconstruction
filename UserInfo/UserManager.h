@@ -20,6 +20,10 @@
 @property (nonatomic, strong) NSString * userName;
 @property (nonatomic, strong) NSString * userIcon;
 @property (nonatomic, strong) NSString * token;
+//是否超过提示日期
+@property (nonatomic, assign) BOOL isTimeOut;
+//用户是否完善了信息
+@property (nonatomic, assign) BOOL isComplete;
 
 + (instancetype)manager;
 

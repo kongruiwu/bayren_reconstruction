@@ -12,10 +12,10 @@
 		8B06D8C61E88FC38007B270B /* LeftUserHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B06D8C51E88FC38007B270B /* LeftUserHeadCell.m */; };
 		8B24D4891EA47DC1009A9D15 /* StandingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B24D4881EA47DC1009A9D15 /* StandingViewController.m */; };
 		8B24D48C1EA47DDD009A9D15 /* ScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B24D48B1EA47DDD009A9D15 /* ScoresViewController.m */; };
+		8B2A9C2A1EE81084000A6177 /* CompleteMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2A9C291EE81084000A6177 /* CompleteMessageView.m */; };
 		8B349A9A1E7F83DA001FFF06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B349A991E7F83DA001FFF06 /* main.m */; };
 		8B349A9D1E7F83DA001FFF06 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B349A9C1E7F83DA001FFF06 /* AppDelegate.m */; };
 		8B349AA51E7F83DA001FFF06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B349AA41E7F83DA001FFF06 /* Assets.xcassets */; };
-		8B349AA81E7F83DA001FFF06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B349AA61E7F83DA001FFF06 /* LaunchScreen.storyboard */; };
 		8B349AB31E7F83DA001FFF06 /* Bayern_ReviewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B349AB21E7F83DA001FFF06 /* Bayern_ReviewTests.m */; };
 		8B349ABE1E7F83DA001FFF06 /* Bayern_ReviewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B349ABD1E7F83DA001FFF06 /* Bayern_ReviewUITests.m */; };
 		8B349AD11E7F8A62001FFF06 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B349AD01E7F8A62001FFF06 /* BaseViewController.m */; };
@@ -162,12 +162,13 @@
 		8B24D4881EA47DC1009A9D15 /* StandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandingViewController.m; sourceTree = "<group>"; };
 		8B24D48A1EA47DDD009A9D15 /* ScoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoresViewController.h; sourceTree = "<group>"; };
 		8B24D48B1EA47DDD009A9D15 /* ScoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoresViewController.m; sourceTree = "<group>"; };
+		8B2A9C281EE81084000A6177 /* CompleteMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompleteMessageView.h; sourceTree = "<group>"; };
+		8B2A9C291EE81084000A6177 /* CompleteMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompleteMessageView.m; sourceTree = "<group>"; };
 		8B349A951E7F83DA001FFF06 /* Bayern_Review.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bayern_Review.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B349A991E7F83DA001FFF06 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8B349A9B1E7F83DA001FFF06 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8B349A9C1E7F83DA001FFF06 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8B349AA41E7F83DA001FFF06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8B349AA71E7F83DA001FFF06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B349AA91E7F83DA001FFF06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B349AAE1E7F83DA001FFF06 /* Bayern_ReviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Bayern_ReviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B349AB21E7F83DA001FFF06 /* Bayern_ReviewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bayern_ReviewTests.m; sourceTree = "<group>"; };
@@ -515,7 +516,6 @@
 				8B349A9B1E7F83DA001FFF06 /* AppDelegate.h */,
 				8B349A9C1E7F83DA001FFF06 /* AppDelegate.m */,
 				8B349AA41E7F83DA001FFF06 /* Assets.xcassets */,
-				8B349AA61E7F83DA001FFF06 /* LaunchScreen.storyboard */,
 				8B349AA91E7F83DA001FFF06 /* Info.plist */,
 				8B349A981E7F83DA001FFF06 /* Supporting Files */,
 			);
@@ -900,6 +900,8 @@
 				8B63446C1EB34BA200A93B45 /* HomeFixtureCell.m */,
 				8B63446E1EB34DFF00A93B45 /* FixtureCollectionViewCell.h */,
 				8B63446F1EB34DFF00A93B45 /* FixtureCollectionViewCell.m */,
+				8B2A9C281EE81084000A6177 /* CompleteMessageView.h */,
+				8B2A9C291EE81084000A6177 /* CompleteMessageView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1416,7 +1418,6 @@
 				8BBF31BB1E81182F0037A3E7 /* toast_bg@2x.png in Resources */,
 				8BBF31BD1E81182F0037A3E7 /* toast_icon_bg@2x.png in Resources */,
 				8BBF31BF1E81182F0037A3E7 /* toast_success@2x.png in Resources */,
-				8B349AA81E7F83DA001FFF06 /* LaunchScreen.storyboard in Resources */,
 				8B349AA51E7F83DA001FFF06 /* Assets.xcassets in Resources */,
 				8B63442E1EB2EF4500A93B45 /* area.plist in Resources */,
 				8BBF31BC1E81182F0037A3E7 /* toast_failure@2x.png in Resources */,
@@ -1555,6 +1556,7 @@
 				8B50A5491EADFFF800D1C13F /* NewsFoucesModel.m in Sources */,
 				8BB652E01EA0D6CB007E5048 /* FixtureTableViewCell.m in Sources */,
 				8BB652E31EA0E017007E5048 /* FixtureModel.m in Sources */,
+				8B2A9C2A1EE81084000A6177 /* CompleteMessageView.m in Sources */,
 				8B6FA20F1EB98EC00026100F /* CommentView.m in Sources */,
 				8B6FA2131EB9D1C80026100F /* TagNewsListViewController.m in Sources */,
 				8BBF31CA1E813C570037A3E7 /* VideoFocusModel.m in Sources */,
@@ -1638,17 +1640,6 @@
 			targetProxy = 8B349ABA1E7F83DA001FFF06 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		8B349AA61E7F83DA001FFF06 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8B349AA71E7F83DA001FFF06 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8B349AC01E7F83DA001FFF06 /* Debug */ = {
@@ -1746,6 +1737,7 @@
 			baseConfigurationReference = E2E3E0C82FB11C99B2844D7D /* Pods-Bayern_Review.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Bayern_Review/Bayern_Review.entitlements;
 				DEVELOPMENT_TEAM = JY5X7GG4HU;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1756,7 +1748,7 @@
 				INFOPLIST_FILE = Bayern_Review/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hupu.Bayern;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hupu.fcb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "b5f319a9-e151-4f3c-9cdd-eea0cfbb293e";
 				PROVISIONING_PROFILE_SPECIFIER = develop;
@@ -1768,8 +1760,10 @@
 			baseConfigurationReference = 6AD3F78A0F7EF957527E19FC /* Pods-Bayern_Review.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Bayern_Review/Bayern_Review.entitlements;
-				DEVELOPMENT_TEAM = JY5X7GG4HU;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = NB2DZJ5Z8T;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Tools/UMSocial/SocialLibraries/QQ",
@@ -1778,10 +1772,10 @@
 				INFOPLIST_FILE = Bayern_Review/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hupu.Bayern;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hupu.fcb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b5f319a9-e151-4f3c-9cdd-eea0cfbb293e";
-				PROVISIONING_PROFILE_SPECIFIER = develop;
+				PROVISIONING_PROFILE = "1e9fc2f9-121b-43c2-93ae-f6186b7c5aa8";
+				PROVISIONING_PROFILE_SPECIFIER = hupu_bayern_appstore_distrb;
 			};
 			name = Release;
 		};

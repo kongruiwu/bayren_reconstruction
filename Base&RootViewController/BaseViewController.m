@@ -14,6 +14,11 @@
 
 @implementation BaseViewController
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [SVProgressHUD dismiss];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = BYColor_Ground;
@@ -96,7 +101,8 @@
     [icon mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(@0);
         make.left.equalTo(@0);
-        make.height.with.equalTo(@(Anno750(48)));
+        make.height.equalTo(@(Anno750(48)));
+        make.width.equalTo(@(Anno750(48)));
     }];
     [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(icon.mas_right).offset(Anno750(20));

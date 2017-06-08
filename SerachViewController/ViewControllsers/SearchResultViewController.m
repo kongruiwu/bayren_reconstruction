@@ -205,7 +205,7 @@
             PhotoDetailViewController * vc = [[PhotoDetailViewController alloc]initWithPhotoDetailid:model.id];
             [self.navigationController pushViewController:vc animated:YES];
         }else if([model.cont_type intValue] == 9){
-            MainWebViewController * vc = [[MainWebViewController alloc]initWithTitle:@"视屏" url:model.link andFromType:FromTypeVideo];
+            MainWebViewController * vc = [[MainWebViewController alloc]initWithTitle:@"视频" url:model.link andFromType:FromTypeVideo];
             [vc updateShareSettingWithTitle:model.title content:model.content image:@""];
             vc.isPush = YES;
             [self.navigationController pushViewController:vc animated:YES];

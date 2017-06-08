@@ -26,6 +26,7 @@ PODS:
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
   - SVProgressHUD (2.1.2)
+  - UMengAnalytics-NO-IDFA (4.2.5)
   - UMengUShare/Core (6.4.3):
     - UMengUShare/Network
   - UMengUShare/Network (6.4.3)
@@ -52,6 +53,7 @@ DEPENDENCIES:
   - ReactiveObjC
   - SDWebImage
   - SVProgressHUD
+  - UMengAnalytics-NO-IDFA
   - UMengUShare/Social/ReducedQQ
   - UMengUShare/Social/ReducedWeChat
   - UMengUShare/Social/Sina
@@ -68,8 +70,9 @@ SPEC CHECKSUMS:
   ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
   UMengUShare: d39cb682598df87ebdd3c055d03d00eb0102d42c
 
-PODFILE CHECKSUM: 09391b8c0b87d3a48424fa59263fa5bbf391b0d3
+PODFILE CHECKSUM: d53e0087c28a933fb1992c734d77c0e04a04e134
 
 COCOAPODS: 1.1.1

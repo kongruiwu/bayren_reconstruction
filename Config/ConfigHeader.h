@@ -17,6 +17,7 @@
 #import <UIImageView+WebCache.h>
 #import <SVProgressHUD.h>
 #import "UserManager.h"
+#import <UMMobClick/MobClick.h>
 
 
 //全局返回通用配置选项
@@ -66,5 +67,19 @@ typedef NS_ENUM(NSInteger, SelectorBackType){
 //规避空值
 #define INCASE_EMPTY(str, replace) \
 ( ([(str) length]==0)?(replace):(str) )
+
+#define EventID_Topbar @"Topbar"
+#define EventID_Index @"Index"
+#define EventID_News @"News"
+#define EventID_Photos @"Photos"
+#define EventID_Videos @"Videos"
+
+#define KN_MainNav @"MainNav"
+#define KN_GameCenter @"GameCenter"
+#define KN_List @"List"
+#define KN_NewsList @"NewsList"
+#define KN_PhotosList @"PhotosList"
+#define KN_VideosList @"VideosList"
+
 
 #endif /* ConfigHeader_h */
